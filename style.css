@@ -935,7 +935,7 @@ button:hover {
 /* Small phones (max-width: 576px) */
 @media (max-width: 576px) {
   .products-section {
-    padding: 3rem 1rem; /* Reduce padding */
+    padding: 5rem 1rem; /* Reduce padding */
   }
 
   h2 {

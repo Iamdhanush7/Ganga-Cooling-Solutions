@@ -83,7 +83,7 @@ html {
 .open-menu,
 .close-menu {
   position: absolute;
-  color: #1F509A;
+  color: #327dff;
   cursor: pointer;
   font-size: 1.5rem;
   display: none;
@@ -244,7 +244,7 @@ html {
 
   .open-menu {
     right: 10px;
-    font-size: 35px;
+    font-size: 32px;
     margin-right: 15px;
   }
 
@@ -1752,8 +1752,22 @@ footer {
   .footer-section {
     margin-bottom: 10px; /* Reduce spacing between sections */
   }
+
+.footer-section.links ul li a{
+  justify-content: center;
+  align-items: center;
+}
+
+.footer-section.links h3{
+  margin-right: 40px;
+}
+
+.footer-section.links ul{
+  margin-right: 30px;
+}
+
 .footer-section.logo img{
-  margin-left: 55px;
+  margin-left: 45px;
 }
   .footer-section.location iframe {
     width: 200px;

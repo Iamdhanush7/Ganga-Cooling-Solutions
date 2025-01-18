@@ -172,33 +172,32 @@ readMore.addEventListener('click', () => {
     that combine sustainability with modern solutions.
   </p>
   
-  <!-- Cards -->
   <div class="cards-container">
-    <div class="card">
+    <div class="card" onclick="redirectToCategory('ac')">
       <div class="logo-container">
         <img src="images/ac.svg" alt="Air Conditioner">
       </div>
       <h3>Air Conditioner</h3>
       <p>An air conditioner is a device that regulates indoor temperature and humidity.</p>
     </div>
-
-    <div class="card">
+  
+    <div class="card" onclick="redirectToCategory('water-purifier')">
       <div class="logo-container">
         <img src="images/wf.svg" alt="Water Purifier">
       </div>
       <h3>Water Purifier</h3>
       <p>A water purifier is a device designed to remove contaminants from water.</p>
     </div>
-
-    <div class="card">
+  
+    <div class="card" onclick="redirectToCategory('solar-pumps')">
       <div class="logo-container">
         <img src="images/shp.svg" alt="Solar Heat Pump">
       </div>
       <h3>Solar Heat Pump</h3>
       <p>A SAHP is a machine integrating a heat pump and thermal solar panels.</p>
     </div>
-
-    <div class="card">
+  
+    <div class="card" onclick="redirectToCategory('ups')">
       <div class="logo-container">
         <img src="images/ups.svg" alt="UPS">
       </div>
@@ -206,6 +205,13 @@ readMore.addEventListener('click', () => {
       <p>An uninterruptible power supply (UPS) is a type of continual power system.</p>
     </div>
   </div>
+  
+  <script>
+    function redirectToCategory(category) {
+      window.location.href = `products.html?category=${category}`;
+    }
+  </script>
+  
 
   <!-- View All Button -->
   <div class="button-container">

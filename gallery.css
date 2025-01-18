@@ -110,11 +110,11 @@
   }
 
   .logo img {
-    width: 75px; /* Scale down logo */
+    width: 310px; /* Scale down logo */
   }
 
   .menu li {
-    padding-left: 40px; /* Reduced padding for menu items */
+    padding-left: 25px; /* Reduced padding for menu items */
   }
 
   .menu li a {
@@ -133,28 +133,27 @@
 /* Medium Screens (992px and below) */
 @media (max-width: 992px) {
   .nav-bar {
-    padding: 15px 20px; /* Further reduced padding */
-    height: 55px; /* Reduced height */
+    padding: 10px 15px;
+    height: 55px; /* Auto height for extra small screens */
   }
 
   .logo img {
-    width: 70px; /* Scale down logo */
-  }
-
-  .menu li {
-    padding-left: 30px; /* Further reduced padding */
+    width: 175px; /* Smaller logo */
+    margin-top: -70px;
   }
 
   .menu li a {
-    font-size: 14.5px; /* Reduced font size */
+    font-size: 15px;
+    font-weight: 400;
   }
 
   .open-menu {
-    display: none;
+    right: 10px;
   }
 
   .close-menu {
-    display: none;
+    top: 5px;
+    right: 5px;
   }
 }
 
@@ -168,7 +167,7 @@
 
 .logo img {
   width: 320px;
-  margin-top: -122px;
+  margin-top: -100px;
   position: absolute;
   left: 0;
   margin-left: -10px;
@@ -226,8 +225,8 @@
   }
 
   .logo img {
-    width: 77px; /* Smaller logo */
-    margin-top: -15px;
+    width: 220px; /* Smaller logo */
+    margin-top: -67px;
   }
 
   .menu li a {
@@ -550,7 +549,9 @@ footer {
   .footer-section {
     margin-bottom: 20px; /* Add spacing between sections */
   }
-
+.footer-section.logo img {
+  margin-right:20px;
+}
   .footer-section.location iframe {
     width: 300px;
     height: 200px; /* Reduce size for smaller screens */
@@ -564,6 +565,12 @@ footer {
 
   .footer-section ul li a {
     font-size: 17px; /* Adjust font size for links */
+  }
+
+  .footer-section.logo img{
+    width: 350px;
+    margin-left: 275px;
+    margin-bottom: -57px;
   }
 
   .social-icons {
@@ -603,6 +610,9 @@ footer {
 
   .footer-section {
     margin-bottom: 15px; /* Add spacing between sections */
+  }
+  .footer-section.logo img{
+    margin-left: 200px;
   }
 
   .footer-section.location iframe {
@@ -651,7 +661,11 @@ footer {
   .footer-section {
     margin-bottom: 10px; /* Reduce spacing between sections */
   }
-
+  .footer-section.logo img{
+    width: 300px;
+    margin-left: 25px;
+    margin-top: -80px;
+  }
   .footer-section.location iframe {
     width: 200px;
     height: 150px; /* Smallest size for the map */

@@ -113,10 +113,10 @@ html {
   }
 
   .logo img {
-    width: 75px; /* Scale down logo */
+    width: 175px; /* Scale down logo */
     position: absolute;
     left: 0;
-    margin-top: -25px;
+    margin-top: -67px;
   }
 
   .menu li {
@@ -144,8 +144,9 @@ html {
   }
 
   .logo img {
-    width: 70px; /* Scale down logo */
-    margin-top: -30px;
+    width: 175px; /* Scale down logo */
+    margin-top: -70px;
+    margin-left: 2px;
   }
 
   .menu li {
@@ -174,8 +175,8 @@ html {
   }
 
   .logo img {
-    width: 100px;
-    margin-top: -10px;
+    width: 300px;
+    margin-top: -80px;
     margin-left: 15px;
   }
 
@@ -232,8 +233,9 @@ html {
   }
 
   .logo img {
-    width: 80px; /* Smaller logo */
-    margin-top: -11px;
+    width: 300px; /* Smaller logo */
+    margin-top: -90px;
+    margin-left: -25px;
   }
 
   .menu li a {
@@ -1585,7 +1587,68 @@ footer {
   .footer-section {
     margin-bottom: 20px; /* Add spacing between sections */
   }
+.footer-section.logo img{
+     width:300px;
+     margin-right:-150px;
+}
+  .footer-section.location iframe {
+    width: 300px;
+    height: 200px; /* Reduce size for smaller screens */
+    margin: 20px auto; /* Center the map */
+  }
 
+  .footer-section h2,
+  .footer-section h3 {
+    font-size: 18px; /* Adjust heading font size */
+  }
+
+  .footer-section ul li a {
+    font-size: 17px; /* Adjust font size for links */
+  }
+
+  .social-icons {
+    text-align: center; /* Center-align the icons and heading */
+    margin: 0 auto; /* Center the section */
+  }
+
+  .social-icons h3 {
+    text-align: center; /* Center the "Follow Us" heading */
+    margin-bottom: 10px; /* Add spacing below the heading */
+    font-size: 18px;
+  }
+
+  .social-icons a {
+    margin-right: 10px; /* Adjust spacing between icons */
+    font-size: 25px; /* Resize icons */
+  }
+
+  .footer-bottom {
+    flex-direction: column; /* Stack elements */
+    text-align: center;
+    margin-top: 15px;
+  }
+
+  .footer-bottom p {
+    margin-bottom: 10px;
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .footer-container {
+    flex-direction: column; /* Stack sections vertically */
+    align-items: center; /* Center align sections */
+    text-align: center; /* Center align text */
+    gap: 20px; /* Space between sections */
+  }
+
+  .footer-section {
+    margin-bottom: 20px; /* Add spacing between sections */
+  }
+.footer-section.logo img{
+     width:300px;
+     margin-left:370px;
+}
   .footer-section.location iframe {
     width: 300px;
     height: 200px; /* Reduce size for smaller screens */
@@ -1645,6 +1708,9 @@ footer {
     height: 180px; /* Further reduce map size */
     margin: 15px auto; /* Center the map */
   }
+.footer-section.logo img {
+  margin-left: 230px;
+}
 
   .footer-section ul li {
     margin-bottom: 8px; /* Reduce spacing between list items */
@@ -1686,7 +1752,9 @@ footer {
   .footer-section {
     margin-bottom: 10px; /* Reduce spacing between sections */
   }
-
+.footer-section.logo img{
+  margin-left: 55px;
+}
   .footer-section.location iframe {
     width: 200px;
     height: 150px; /* Smallest size for the map */

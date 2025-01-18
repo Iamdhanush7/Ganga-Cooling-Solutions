@@ -104,11 +104,13 @@ body {
   }
 
   .logo img {
-    width: 75px; /* Scale down logo */
+    width: 305px; /* Scale down logo */
+    margin-bottom:-10px;
+    
   }
 
   .menu li {
-    padding-left: 40px; /* Reduced padding for menu items */
+    padding-left: 30px; /* Reduced padding for menu items */
   }
 
   .menu li a {
@@ -132,7 +134,7 @@ body {
   }
 
   .logo img {
-    width: 70px; /* Scale down logo */
+    width: 250px; /* Scale down logo */
   }
 
   .menu li {
@@ -250,11 +252,11 @@ body {
   }
 
   .logo img {
-    width: 70px; /* Smaller logo */
-    margin-top: -30px;
+    width: 200px; /* Smaller logo */
+    margin-top: -77px;
     position: absolute;
     left: 0;
-    margin-left: 20px;
+    margin-left: 5px;
   }
 
   .menu li a {
@@ -586,7 +588,6 @@ footer {
 }
 
 .footer-section.logo img{
-  height: 355px;
   width: 355px;
   margin-left: -55px;
   margin-top: -80px;
@@ -731,29 +732,6 @@ footer {
   text-decoration: none; /* Prevent underline on hover */
 }
 
-/* Responsive Design */
-@media (max-width: 768px) {
-  .footer-container {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-  }
-
-  .footer-section {
-    text-align: center;
-  }
-
-  .footer-section.location iframe {
-    margin: 0 auto;
-  }
-
-  .footer-bottom {
-    flex-direction: column;
-    text-align: center;
-  }
-}
-
-/*Media queries*/
 /* Medium Screens (992px and below) */
 @media (max-width: 992px) {
   .footer-container {
@@ -810,215 +788,139 @@ footer {
   }
 }
 
-/* Align "Ganga Cooling Solutions" title and description */
+/* Small Screens (768px and below) */
 @media (max-width: 768px) {
-  .footer-section.logo {
-    text-align: center; /* Center the logo section */
-    margin-bottom: 20px;
-  }
-
-  .footer-section.logo h2 {
-    font-size: 22px;
-    text-align: center; /* Center the title */
-  }
-
-  .footer-section.logo p {
-    font-size: 16px;
-    text-align: center; /* Center the description */
-    margin-top: 10px;
-  }
-}
-
-
-/* Small devices (phones, up to 576px) */
-@media (max-width: 576px) {
   .footer-container {
-    flex-direction: column;
-    padding: 0 15px;
-    gap: 10px;
+    padding: 0 15px; /* Add more padding for smaller screens */
+    gap: 15px; /* Reduce the gap between sections */
   }
 
   .footer-section {
-    flex: 1 1 100%;
-    min-width: unset;
-    text-align: center;
+    margin-bottom: 15px; /* Add spacing between sections */
   }
 
-  .footer-section.logo img {
-    margin-left: 0;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    width: 100%; /* Adjust image size */
-    max-width: 150px; /* Optional: Limit image width */
+  .footer-section.location iframe {
+    width: 250px;
+    height: 180px; /* Further reduce map size */
+    margin: 15px auto; /* Center the map */
+  }
+
+  .footer-section.logo img{
+    margin-left: 165px;
+  }
+
+  .footer-section ul li {
+    margin-bottom: 8px; /* Reduce spacing between list items */
+  }
+
+  .footer-section ul li a {
+    font-size: 16px; /* Adjust font size for links */
+  }
+
+  .social-icons {
+    text-align: center; /* Center-align the entire section */
+    margin: 20px auto; /* Add vertical spacing */
+  }
+
+  .social-icons h3 {
+    font-size: 18px; /* Adjust heading size */
+    margin-bottom: 8px; /* Add spacing below the heading */
+  }
+
+  .social-icons a {
+    font-size: 22px; /* Resize icons for smaller screens */
+    margin-right: 8px; /* Reduce space between icons */
+  }
+
+  .footer-bottom {
+    text-align: center; /* Ensure bottom section is centered */
+    font-size: 14px; /* Smaller font size */
+  }
+}
+
+/* Extra Small Screens (576px and below) */
+@media (max-width: 576px) {
+  .footer-container {
+    text-align: center; /* Center-align text */
+    padding: 0 10px; /* Adjust padding for smaller screens */
+    gap: 10px; /* Reduce gap between sections */
+  }
+
+  .footer-section {
+    margin-bottom: 10px; /* Reduce spacing between sections */
+  }
+  .footer-section.logo img{
+    width: 300px;
+    margin-left: 55px;
+    margin-top: -70px;
+  }
+  .footer-section.location iframe {
+    width: 200px;
+    height: 150px; /* Smallest size for the map */
+    margin: 10px auto; /* Center the map */
+  }
+
+  .footer-section h2{
+    font-size: 16px;
+    margin-left: 25px;
+  }
+
+  .footer-section p{
+    font-size: 15px;
+    margin-left: 10px;
+  }
+
+  .footer-section h3 {
+    font-size: 16px; /* Smaller heading size */
+  }
+
+  .footer-section ul li a {
+    font-size: 15px; /* Smallest font size for links */
+  }
+
+  .social-icons {
+    text-align: center; /* Ensure the icons are centered */
+    margin: 15px auto; /* Add smaller vertical spacing */
+  }
+
+  .social-icons h3 {
+    font-size: 16px; /* Smaller font for the heading */
+    margin-bottom: 6px; /* Reduce spacing below the heading */
+  }
+
+  .social-icons a {
+    font-size: 20px; /* Smallest icon size */
+    margin-right: 6px; /* Tighten spacing between icons */
+  }
+
+  .footer-bottom {
+    text-align: center; /* Center-align the bottom section */
+    font-size: 14px;
+  }
+}
+
+/* Large Screens (1200px and above) */
+@media (max-width: 1285px) {
+  .footer-container {
+    gap: 30px; /* Increase gap between sections */
+  }
+
+  .footer-section.location iframe {
+    width: 250px;
+    height: 200px; /* Default map size */
+    margin-left: auto;
+    margin-top: 105px;
   }
 
   .footer-section h2,
   .footer-section h3 {
-    margin-left: 0;
-  }
-
-  .footer-section p {
-    margin-left: 0;
-  }
-
-  .footer-section.location iframe {
-    width: 100%;
-    height: 200px;
-    margin-left: 0;
-    margin-top: 20px;
-  }
-
-  .footer-bottom {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .footer-bottom p {
-    margin-bottom: 10px;
-  }
-}
-
-/* Medium devices (tablets, 576px to 768px) */
-@media (max-width: 768px) {
-  .footer-container {
-    flex-direction: column;
-    padding: 0 20px;
-    gap: 15px;
-  }
-
-  .footer-section {
-    flex: 1 1 100%;
-    text-align: center;
-  }
-
-  .footer-section.logo img {
-    margin-left: 0;
-    margin-top: 20px;
-    width: 80%;
-    max-width: 200px;
-  }
-
-  .footer-section.location iframe {
-    width: 100%;
-    height: 250px;
-    margin-left: 0;
-    margin-top: 20px;
-  }
-
-  .footer-bottom {
-    flex-direction: column;
-    text-align: center;
-  }
-}
-
-/* Large devices (desktops, 768px to 992px) */
-@media (max-width: 992px) {
-  .footer-container {
-    padding: 0 20px;
-    gap: 15px;
-  }
-
-  .footer-section.logo {
-    flex: 1;
-  }
-
-  .footer-section.logo img {
-    margin-left: 0;
-    margin-top: 10px;
-    max-width: 150px;
-  }
-
-  .footer-section h2,
-  .footer-section h3,
-  .footer-section p {
-    margin-left: 0;
-  }
-
-  .footer-section.location iframe {
-    width: 80%;
-    margin-left: auto;
-    margin-right: auto;
-    display: block;
-  }
-}
-
-@media (max-width: 1280px) {
-  .footer-container {
-    padding: 0 20px;
-    gap: 15px;
-  }
-
-  .footer-section.logo {
-    flex: 1;
-  }
-
-  .footer-section.logo img {
-    margin-left: 0;
-    margin-top: 70px;
-    max-width: 150px;
-  }
-
-  .footer-section h2,
-  .footer-section h3,
-  .footer-section p {
-    margin-left: 0;
-  }
-
-  .footer-section.location iframe {
-    width: 110%;
-    margin-left: auto;
-    margin-right: auto;
-    display: block;
-  }
-}
-
-@media (max-width: 1024px) {
-  .footer-container {
-    padding: 0 20px;
-    gap: 15px;
-  }
-
-  .footer-section.logo {
-    flex: 1;
-  }
-
-  .footer-section.logo img {
-    margin-left: 0;
-    margin-top: 70px;
-    max-width: 150px;
-  }
-
-  .footer-section h2,
-  .footer-section h3,
-  .footer-section p {
-    margin-left: 0;
-  }
-
-  .footer-section.location iframe {
-    width: 70%;
-    margin-left: auto;
-    margin-right: auto;
-    display: block;
-  }
-}
-
-/* Extra small screens (up to 360px) */
-@media (max-width: 360px) {
-  .footer-section.logo img {
-    width: 80%;
-    max-width: 120px;
+    font-size: 22px; /* Slightly larger headings */
   }
 
   .social-icons a {
-    font-size: 25px;
-    margin-right: 10px;
-  }
-
-  .footer-section.location iframe {
-    height: 180px;
+    font-size: 30px; /* Larger icons */
   }
 }
-
 
 /*WhatsApp icon*/
 .whatsapp-float {

@@ -1755,6 +1755,14 @@ footer {
     margin-top: 75px;
   }
 
+  .footer-section h2{
+    margin-right: 25px;
+  }
+
+  .footer-section p{
+    margin-right: 25px;
+  }
+
 .footer-section.links ul li a{
   justify-content: center;
   align-items: center;
@@ -1769,7 +1777,7 @@ footer {
 }
 
 .footer-section.logo img{
-  margin-left: 45px;
+  margin-left: 78px;
 }
   .footer-section.location iframe {
     width: 200px;

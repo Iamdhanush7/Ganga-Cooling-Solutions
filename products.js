@@ -103,7 +103,10 @@ function toggleDescription(element, fullDescription, truncatedDescription) {
   }
 }
 
-// Handle Category Clicks
+// Product Data (unchanged)
+// Render Products Function (unchanged)
+
+// Handle Category Clicks (Highlight & Render Products)
 function handleCategoryClick(category, element) {
   document.querySelectorAll(".category").forEach((btn) => btn.classList.remove("active"));
   element.classList.add("active");
@@ -121,5 +124,15 @@ function handleCategoryClick(category, element) {
   }, 500); // Match the transition time in CSS
 }
 
-// Initial Render for AC Category
-renderProducts("ac");
+// On Page Load: Render Products for Default or Queried Category
+function loadCategoryFromQuery() {
+  const params = new URLSearchParams(window.location.search);
+  const category = params.get('category') || 'ac'; // Default to 'ac' if no category is specified
+  const categoryElement = document.querySelector(`.category[data-category="${category}"]`);
+  if (categoryElement) {
+    handleCategoryClick(category, categoryElement);
+  }
+}
+
+// Initial Render
+window.onload = loadCategoryFromQuery;

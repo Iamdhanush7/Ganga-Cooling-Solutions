@@ -80,7 +80,7 @@
 .open-menu,
 .close-menu {
   position: absolute;
-  color: #1F509A;
+  color: #327dff;
   cursor: pointer;
   font-size: 1.5rem;
   display: none;
@@ -236,11 +236,13 @@
 
   .open-menu {
     right: 10px;
+    font-size: 32px;
   }
 
   .close-menu {
     top: 5px;
     right: 5px;
+    font-size: 32px;
   }
 }
 
@@ -660,6 +662,7 @@ footer {
 
   .footer-section {
     margin-bottom: 10px; /* Reduce spacing between sections */
+    margin-top: 45px;
   }
   .footer-section.logo img{
     width: 300px;
@@ -670,6 +673,14 @@ footer {
     width: 200px;
     height: 150px; /* Smallest size for the map */
     margin: 10px auto; /* Center the map */
+  }
+
+  .footer-section.links h3{
+    margin-right: 45px;
+  }
+
+  .footer-section.links ul{
+    margin-right: 45px;
   }
 
   .footer-section h2,

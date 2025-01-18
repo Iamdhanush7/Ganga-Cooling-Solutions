@@ -75,7 +75,7 @@ body {
   .open-menu,
   .close-menu {
     position: absolute;
-    color: #1F509A;
+    color: #327dff;
     cursor: pointer;
     font-size: 1.5rem;
     display: none;
@@ -282,7 +282,7 @@ body {
   /*Products Section*/
   .products-section {
     text-align: center;
-    padding: 20px;
+    padding: 30px;
     margin-top: -65px;
   }
   
@@ -454,6 +454,7 @@ body {
 
   .products {
     grid-template-columns: repeat(2, 1fr);
+    justify-content: center; /* Center the cards */
     margin-left: 0;
     gap: 30px;
   }
@@ -483,6 +484,7 @@ body {
 
   .products {
     grid-template-columns: 1fr;
+    justify-content: center; /* Center the cards */
     gap: 20px;
   }
 
@@ -521,6 +523,7 @@ body {
 
   .products {
     grid-template-columns: 1fr;
+    justify-content: center; /* Center the cards */
     gap: 15px;
     padding: 10px;
   }
@@ -557,6 +560,7 @@ body {
     font-size: 0.75rem;
   }
 }
+
 
 
   
@@ -851,7 +855,7 @@ footer {
   }
   .footer-section.logo img{
     width: 300px;
-    margin-left: 55px;
+    margin-left: 30px;
     margin-top: -70px;
   }
   .footer-section.location iframe {
@@ -862,16 +866,24 @@ footer {
 
   .footer-section h2{
     font-size: 16px;
-    margin-left: 25px;
+    margin-left: -25px;
   }
 
   .footer-section p{
     font-size: 15px;
-    margin-left: 10px;
+    margin-left: -10px;
   }
 
   .footer-section h3 {
     font-size: 16px; /* Smaller heading size */
+  }
+
+  .footer-section.links h3{
+    margin-right: 35px;
+  }
+
+  .footer-section.links ul{
+    margin-right: 35px;
   }
 
   .footer-section ul li a {

@@ -935,7 +935,7 @@ button:hover {
 /* Small phones (max-width: 576px) */
 @media (max-width: 576px) {
   .products-section {
-    padding: 5rem 1rem; /* Reduce padding */
+    padding: 6rem 1rem; /* Reduce padding */
   }
 
   h2 {
@@ -1076,8 +1076,8 @@ button:hover {
 }
 
 .logo-card img {
-  max-width: 80%;
-  max-height: 80%;
+  max-width: 100%;
+  max-height: 91%;
 }
 
 .service-card h4 {
@@ -1164,12 +1164,13 @@ button:hover {
   }
 
   .service-card {
-    max-width: 90%;
+    max-width: 70%;
   }
 
   .service-card p {
     font-size: 0.9rem;
     max-width: 90%; /* Ensure text fits within screen */
+    margin-left: 12px;
   }
 }  
 
@@ -1751,6 +1752,7 @@ footer {
 
   .footer-section {
     margin-bottom: 10px; /* Reduce spacing between sections */
+    margin-top: 75px;
   }
 
 .footer-section.links ul li a{

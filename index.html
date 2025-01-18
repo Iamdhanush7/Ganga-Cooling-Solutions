@@ -206,13 +206,6 @@ readMore.addEventListener('click', () => {
     </div>
   </div>
   
-  <script>
-    function redirectToCategory(category) {
-      window.location.href = `products.html?category=${category}`;
-    }
-  </script>
-  
-
   <!-- View All Button -->
   <div class="button-container">
     <button onclick="redirect('products.html')">View All</button>
@@ -220,11 +213,16 @@ readMore.addEventListener('click', () => {
 </section>
 
 <script>
-  // JavaScript function to handle redirection
+  // Redirect to product.html with category query parameter
+  function redirectToCategory(category) {
+    window.location.href = `products.html?category=${category}`;
+  }
+
   function redirect(page) {
     window.location.href = page;
   }
 </script>
+
 
   <!-- Services Section -->
 <section class="services-section" id="services">
@@ -236,7 +234,7 @@ readMore.addEventListener('click', () => {
   <div class="services-container">
     <div class="service-card">
       <div class="logo-card">
-        <img src="images/s1.png" alt="Services Icon">
+        <img src="images/1.png" alt="Services Icon">
       </div>
       <h4>Services</h4>
       <p class="service-description">
@@ -248,7 +246,7 @@ readMore.addEventListener('click', () => {
     </div>
     <div class="service-card">
       <div class="logo-card">
-        <img src="images/s2.png" alt="AMC Icon">
+        <img src="images/2.png" alt="AMC Icon">
       </div>
       <h4>AMC</h4>
       <p class="service-description">
@@ -260,7 +258,7 @@ readMore.addEventListener('click', () => {
     </div>
     <div class="service-card">
       <div class="logo-card">
-        <img src="images/s3.png" alt="Sales Icon">
+        <img src="images/3.png" alt="Sales Icon">
       </div>
       <h4>Sales</h4>
       <p class="service-description">

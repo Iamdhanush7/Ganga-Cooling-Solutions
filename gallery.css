@@ -1,0 +1,742 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    font-family: "Lato", sans-serif;
+    --color1: #000000;
+    --color2: #181818;
+    }
+  
+  
+/* General Navbar */
+.nav-bar {
+  width: 100%;
+  height: 66px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  list-style: none;
+  position: fixed;
+  top: 0;
+  z-index: 10;
+  background-color: #ffffff;
+  padding: 30px 25px;
+  border-bottom: 2px solid #1F509A; /* Added blue border only at the bottom */
+}
+
+.logo img {
+  width: 320px;
+  margin-top: -122px;
+  position: absolute;
+  left: 0;
+  margin-left: -10px;
+}
+
+.menu {
+  display: flex;
+}
+
+.menu li {
+  padding-left: 55px;
+}
+
+.menu li a {
+  display: inline-block;
+  text-decoration: none;
+  color: #000000;
+  text-align: center;
+  margin-top: 37px;
+  margin-bottom: 35px;
+  font-size: 20px;
+  transition: 0.15s ease-in-out;
+  position: relative;
+  text-transform: lowercase; /* All text lowercase */
+}
+
+.menu li a:first-letter {
+  text-transform: uppercase; /* Capitalize the first letter */
+}
+
+.menu li a::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 3px;
+  background-color: #1F509A;
+  transition: 0.15s ease-in-out;
+}
+
+.menu li a:hover::after {
+  width: 100%;
+}
+
+/* Hamburger menu buttons */
+.open-menu,
+.close-menu {
+  position: absolute;
+  color: #1F509A;
+  cursor: pointer;
+  font-size: 1.5rem;
+  display: none;
+}
+
+.open-menu {
+  top: 50%;
+  right: 20px;
+  transform: translateY(-50%);
+}
+
+.close-menu {
+  top: 20px;
+  right: 20px;
+}
+
+/* Hide checkbox by default */
+#check {
+  display: none;
+}
+
+/* Large screens (1200px and above) */
+@media (max-width: 1200px) {
+  .nav-bar {
+    padding: 20px 25px; /* Reduced padding */
+    height: 60px; /* Reduced navbar height */
+  }
+
+  .logo img {
+    width: 75px; /* Scale down logo */
+  }
+
+  .menu li {
+    padding-left: 40px; /* Reduced padding for menu items */
+  }
+
+  .menu li a {
+    font-size: 18px; /* Reduced font size */
+  }
+
+  .open-menu {
+    display: none; /* Show hamburger on large screens */
+  }
+
+  .close-menu {
+    display: none;
+  }
+}
+
+/* Medium Screens (992px and below) */
+@media (max-width: 992px) {
+  .nav-bar {
+    padding: 15px 20px; /* Further reduced padding */
+    height: 55px; /* Reduced height */
+  }
+
+  .logo img {
+    width: 70px; /* Scale down logo */
+  }
+
+  .menu li {
+    padding-left: 30px; /* Further reduced padding */
+  }
+
+  .menu li a {
+    font-size: 14.5px; /* Reduced font size */
+  }
+
+  .open-menu {
+    display: none;
+  }
+
+  .close-menu {
+    display: none;
+  }
+}
+
+/* Small Screens (768px and below) */
+@media (max-width: 768px) {
+  .nav-bar {
+    flex-direction: column; /* Stack navbar items vertically */
+    padding: 10px 15px; /* Reduced padding */
+    height: 70px; /* Auto height */
+  }
+
+.logo img {
+  width: 320px;
+  margin-top: -122px;
+  position: absolute;
+  left: 0;
+  margin-left: -10px;
+}
+
+  .menu {
+    flex-direction: column; /* Stack menu items vertically */
+    position: fixed;
+    top: 0;
+    right: -100%;
+    background-color: #ffffff;
+    width: 250px;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    transition: 0.3s ease-in-out;
+    z-index: 10;
+  }
+
+  .menu li {
+    padding-left: 0;
+    margin: 10px 0;
+  }
+
+  .menu li a {
+    font-size: 18px; /* Smaller font size for mobile */
+    margin-top: 10px;
+  }
+
+  .open-menu {
+    display: block; /* Show hamburger menu */
+    right: 10px;
+    font-size: 40px;
+    margin-right: 10px;
+  }
+
+  .close-menu {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    display: block; /* Show close menu button */
+    font-size: 40px;
+  }
+
+  #check:checked ~ .menu {
+    right: 0; /* Menu appears when checkbox is checked */
+  }
+}
+
+/* Extra Small Screens (576px and below) */
+@media (max-width: 576px) {
+  .nav-bar {
+    padding: 10px 15px;
+    height: 55px; /* Auto height for extra small screens */
+  }
+
+  .logo img {
+    width: 77px; /* Smaller logo */
+    margin-top: -15px;
+  }
+
+  .menu li a {
+    font-size: 15px;
+    font-weight: 400;
+  }
+
+  .open-menu {
+    right: 10px;
+  }
+
+  .close-menu {
+    top: 5px;
+    right: 5px;
+  }
+}
+
+
+
+/* Gallery Section */
+h1 {
+  color: #3B82F6;
+  font-size: 50px;
+  margin-top: 80px;
+}
+h2 {
+  color: #000;
+  font-size: 32px;
+  align-items: center;
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+p {
+  margin-top: 30px;
+  margin-bottom: 30px;
+  color: #0056b3;
+  font-weight: 100%;
+  font-size: 20px;
+}
+
+.gallery-container {
+  overflow: hidden; /* Ensures images do not overflow outside the container */
+  position: relative;
+  width: 100%;
+}
+
+.gallery {
+  display: flex;
+  gap: 25px; /* Spacing between images */
+  animation: scroll 15s linear infinite;
+  margin-top: 40px;
+  margin-bottom: 30px;
+}
+
+.gallery img {
+  width: 700px; /* Increased width */
+  height: 323px; /* Height remains unchanged */
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Animation for smooth scrolling */
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-100%));
+  }
+}
+
+/* Extra Large Devices (Desktops, 1200px and up) */
+@media (min-width: 1200px) {
+  .gallery {
+    flex-wrap: nowrap; /* No wrapping, all images side by side */
+  }
+
+  .gallery img {
+    width: calc(100% / 5); /* Adjust for five images visible */
+  }
+}
+
+/* Large Devices (Laptops, 992px to 1199px) */
+@media (max-width: 1199px) {
+  .gallery {
+    flex-wrap: nowrap; /* No wrapping, all images side by side */
+    margin-top: 25px;
+  }
+
+  .gallery img {
+    width: calc(100% / 4); /* Adjust for four images visible */
+  }
+}
+
+/* Medium Devices (Tablets, 768px to 991px) */
+@media (max-width: 991px) {
+  .gallery {
+    flex-wrap: nowrap; /* No wrapping, all images side by side */
+  }
+
+  .gallery img {
+    width: calc(100% / 3); /* Adjust to show three images side by side */
+  }
+}
+
+/* Small Devices (Large Phones, 576px to 767px) */
+@media (max-width: 767px) {
+  .gallery {
+    flex-wrap: nowrap; /* No wrapping, all images side by side */
+  }
+
+  .gallery img {
+    width: calc(100% / 2); /* Adjust for two images visible */
+  }
+}
+
+/* Extra Small Devices (Small Phones, less than 576px) */
+@media (max-width: 575px) {
+  .gallery {
+    flex-wrap: nowrap; /* No wrapping, all images side by side */
+  }
+
+  .gallery img {
+    width: 100%; /* Only one image fully visible at a time */
+  }
+}
+
+/* For Very Small Screens (320px and below) */
+@media (max-width: 320px) {
+  .gallery {
+    flex-wrap: nowrap; /* No wrapping, all images side by side */
+  }
+
+  .gallery img {
+    width: 100%; /* Only one image fully visible at a time */
+  }
+}
+
+  
+/* Footer */
+footer {
+  background: linear-gradient(to bottom, #74C7F6, #e1f5fd);
+  color: #000;
+  padding: 20px 0;
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 0 10px; /* Ensures equal padding */
+  max-width: 1200px;
+  margin: 0 auto; /* Center container without gaps */
+  margin-left: 20px;
+  gap: 20px;
+}
+
+.footer-section {
+  flex: 1;
+  min-width: 200px;
+}
+
+.footer-section.logo {
+  flex: 2;
+  margin-bottom: 35px;
+}
+
+.footer-section.logo img{
+  margin-top: -95px;
+  margin-left: -35px;
+}
+
+.footer-section h2{
+  font-size: 20px;
+  color: #3B82F6; /* Dark color for headings */
+  margin-top: 95px;
+}
+
+.footer-section h3 {
+  font-size: 20px;
+  color: #3B82F6; /* Dark color for headings */
+  margin-bottom: 12px;
+}
+
+.footer-container p{
+  color: #000;
+}
+
+.footer-section.links h3,
+.footer-section.contact h3,
+.social-icons h3 {
+  color: #000;
+  font-size: 21px;
+  position: relative;
+  display: inline-block;
+  margin-bottom: 15px; /* Added gap below the underline */
+}
+
+/* Underline only half the word */
+.footer-section.links h3::after,
+.footer-section.contact h3::after {
+  content: "";
+  position: absolute;
+  bottom: -5px; /* Adds the gap below the underline */
+  left: 0;
+  width: 50%; /* Covers half the heading */
+  height: 2px;
+  background-color: #3B82F6;
+}
+
+.footer-section.links {
+  margin-top: 105px;
+  margin-left: 20px;
+}
+
+.footer-section.links ul li a {
+  color: #3B82F6;
+  font-size: 19px;
+}
+
+.footer-section.contact {
+  margin-top: 105px;
+}
+
+.footer-section.contact p {
+  color: #3B82F6;
+  font-size: 16px;
+  margin-top: 17px;
+}
+
+.footer-section.contact p i {
+  margin-top: 2px;
+  margin-right: 3px;
+  color: #000000;
+  font-size: 19px;
+}
+
+.footer-section p {
+  margin-bottom: 10px;
+}
+
+.social-icons {
+  margin-top: 10px; /* Space between the heading and icons */
+  text-align: left; /* Align icons under the heading */
+  clear: both; /* Ensure a new line below the heading */
+}
+
+.social-icons h3 {
+  font-size: 20px;
+  color: #000;
+  margin-bottom: 10px; /* Add space below the heading */
+  display: block; /* Forces the heading to occupy the full width */
+}
+
+.social-icons a {
+  display: inline-block; /* Ensures all icons are in the same line */
+  margin-right: 15px; /* Space between icons */
+  color: #000;
+  text-decoration: none;
+  font-size: 30px;
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-section ul li {
+  margin-bottom: 10px;
+  margin-top: 15px;
+}
+
+.footer-section ul li a {
+  color: #000;
+  text-decoration: none;
+}
+
+.footer-section.location iframe {
+  border: 1px solid #ccc;
+  width: 350px;
+  height: 270px;
+  margin-top: 75px;
+  margin-left: 120px;
+}
+
+.footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+  border-top: 1px solid #ccc;
+  padding: 10px 20px;
+}
+
+.footer-bottom p {
+  margin: 0;
+  font-size: 20px;
+  color: #000;
+}
+
+/* Style to make the link look normal */
+.no-style-link {
+  color: inherit; /* Inherit the text color of the parent */
+  text-decoration: none; /* Remove the underline */
+}
+
+.no-style-link:hover {
+  text-decoration: none; /* Prevent underline on hover */
+}
+
+/* Medium Screens (992px and below) */
+@media (max-width: 992px) {
+  .footer-container {
+    flex-direction: column; /* Stack sections vertically */
+    align-items: center; /* Center align sections */
+    text-align: center; /* Center align text */
+    gap: 20px; /* Space between sections */
+  }
+
+  .footer-section {
+    margin-bottom: 20px; /* Add spacing between sections */
+  }
+
+  .footer-section.location iframe {
+    width: 300px;
+    height: 200px; /* Reduce size for smaller screens */
+    margin: 20px auto; /* Center the map */
+  }
+
+  .footer-section h2,
+  .footer-section h3 {
+    font-size: 18px; /* Adjust heading font size */
+  }
+
+  .footer-section ul li a {
+    font-size: 17px; /* Adjust font size for links */
+  }
+
+  .social-icons {
+    text-align: center; /* Center-align the icons and heading */
+    margin: 0 auto; /* Center the section */
+  }
+
+  .social-icons h3 {
+    text-align: center; /* Center the "Follow Us" heading */
+    margin-bottom: 10px; /* Add spacing below the heading */
+    font-size: 18px;
+  }
+
+  .social-icons a {
+    margin-right: 10px; /* Adjust spacing between icons */
+    font-size: 25px; /* Resize icons */
+  }
+
+  .footer-bottom {
+    flex-direction: column; /* Stack elements */
+    text-align: center;
+    margin-top: 15px;
+  }
+
+  .footer-bottom p {
+    margin-bottom: 10px;
+    font-size: 16px;
+  }
+}
+
+/* Small Screens (768px and below) */
+@media (max-width: 768px) {
+  .footer-container {
+    padding: 0 15px; /* Add more padding for smaller screens */
+    gap: 15px; /* Reduce the gap between sections */
+  }
+
+  .footer-section {
+    margin-bottom: 15px; /* Add spacing between sections */
+  }
+
+  .footer-section.location iframe {
+    width: 250px;
+    height: 180px; /* Further reduce map size */
+    margin: 15px auto; /* Center the map */
+  }
+
+  .footer-section ul li {
+    margin-bottom: 8px; /* Reduce spacing between list items */
+  }
+
+  .footer-section ul li a {
+    font-size: 16px; /* Adjust font size for links */
+  }
+
+  .social-icons {
+    text-align: center; /* Center-align the entire section */
+    margin: 20px auto; /* Add vertical spacing */
+  }
+
+  .social-icons h3 {
+    font-size: 18px; /* Adjust heading size */
+    margin-bottom: 8px; /* Add spacing below the heading */
+  }
+
+  .social-icons a {
+    font-size: 22px; /* Resize icons for smaller screens */
+    margin-right: 8px; /* Reduce space between icons */
+  }
+
+  .footer-bottom {
+    text-align: center; /* Ensure bottom section is centered */
+    font-size: 14px; /* Smaller font size */
+  }
+}
+
+/* Extra Small Screens (576px and below) */
+@media (max-width: 576px) {
+  .footer-container {
+    text-align: center; /* Center-align text */
+    padding: 0 10px; /* Adjust padding for smaller screens */
+    gap: 10px; /* Reduce gap between sections */
+  }
+
+  .footer-section {
+    margin-bottom: 10px; /* Reduce spacing between sections */
+  }
+
+  .footer-section.location iframe {
+    width: 200px;
+    height: 150px; /* Smallest size for the map */
+    margin: 10px auto; /* Center the map */
+  }
+
+  .footer-section h2,
+  .footer-section h3 {
+    font-size: 16px; /* Smaller heading size */
+  }
+
+  .footer-section ul li a {
+    font-size: 15px; /* Smallest font size for links */
+  }
+
+  .social-icons {
+    text-align: center; /* Ensure the icons are centered */
+    margin: 15px auto; /* Add smaller vertical spacing */
+  }
+
+  .social-icons h3 {
+    font-size: 16px; /* Smaller font for the heading */
+    margin-bottom: 6px; /* Reduce spacing below the heading */
+  }
+
+  .social-icons a {
+    font-size: 20px; /* Smallest icon size */
+    margin-right: 6px; /* Tighten spacing between icons */
+  }
+
+  .footer-bottom {
+    text-align: center; /* Center-align the bottom section */
+    font-size: 14px;
+  }
+}
+
+/* Large Screens (1200px and above) */
+@media (max-width: 1285px) {
+  .footer-container {
+    gap: 30px; /* Increase gap between sections */
+  }
+
+  .footer-section.location iframe {
+    width: 250px;
+    height: 200px; /* Default map size */
+    margin-left: auto;
+    margin-top: 105px;
+  }
+
+  .footer-section h2,
+  .footer-section h3 {
+    font-size: 22px; /* Slightly larger headings */
+  }
+
+  .social-icons a {
+    font-size: 30px; /* Larger icons */
+  }
+}
+
+/*WhatsApp icon*/
+.whatsapp-float {
+  position: fixed;
+  bottom: 40px;
+  right: 40px;
+  z-index: 1000;
+}
+
+.whatsapp-float a {
+  display: block;
+  width: 60px;
+  height: 60px;
+  background-color: #25D366;
+  border-radius: 50%;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  line-height: 60px;
+  transition: transform 0.3s ease;
+}
+
+.whatsapp-float a:hover {
+  transform: scale(1.1);
+}
+
+.whatsapp-float img {
+  width: 35px;
+  height: 35px;
+  margin-top: 12px;
+}

@@ -1576,320 +1576,180 @@ footer {
   text-decoration: none; /* Prevent underline on hover */
 }
 
-/* Medium Screens (992px and below) */
-@media (max-width: 992px) {
+/* Media Queries */
+
+/* For devices with a max width of 1024px (Tablets in landscape mode and smaller) */
+@media (max-width: 1024px) {
   .footer-container {
-    flex-direction: column; /* Stack sections vertically */
-    align-items: center; /* Center align sections */
-    text-align: center; /* Center align text */
-    gap: 20px; /* Space between sections */
+    flex-wrap: wrap;
+    padding: 0 20px;
+    gap: 30px; /* Add spacing between sections */
   }
 
   .footer-section {
-    margin-bottom: 20px; /* Add spacing between sections */
+    flex: 1 1 45%; /* Make sections take up 45% of the container width */
+    min-width: 150px; /* Prevent sections from becoming too narrow */
   }
-.footer-section.logo img{
-     width:300px;
-     margin-right:-150px;
-}
-  .footer-section.location iframe {
-    width: 300px;
-    height: 200px; /* Reduce size for smaller screens */
-    margin: 20px auto; /* Center the map */
+
+  .footer-section.logo img {
+    margin-top: -70px;
+    margin-left: 0;
+    max-width: 100%; /* Ensure logo scales properly */
   }
 
   .footer-section h2,
   .footer-section h3 {
-    font-size: 18px; /* Adjust heading font size */
-  }
-
-  .footer-section ul li a {
-    font-size: 17px; /* Adjust font size for links */
-  }
-
-  .social-icons {
-    text-align: center; /* Center-align the icons and heading */
-    margin: 0 auto; /* Center the section */
-  }
-
-  .social-icons h3 {
-    text-align: center; /* Center the "Follow Us" heading */
-    margin-bottom: 10px; /* Add spacing below the heading */
     font-size: 18px;
   }
 
-  .social-icons a {
-    margin-right: 10px; /* Adjust spacing between icons */
-    font-size: 25px; /* Resize icons */
+  .footer-section.contact p i,
+  .footer-section.links ul li a {
+    font-size: 17px;
   }
 
-  .footer-bottom {
-    flex-direction: column; /* Stack elements */
-    text-align: center;
-    margin-top: 15px;
-  }
-
-  .footer-bottom p {
-    margin-bottom: 10px;
-    font-size: 16px;
-  }
-}
-
-@media (max-width: 1200px) {
-  .footer-container {
-    flex-direction: column; /* Stack sections vertically */
-    align-items: center; /* Center align sections */
-    text-align: center; /* Center align text */
-    gap: 20px; /* Space between sections */
-  }
-
-  .footer-section {
-    margin-bottom: 20px; /* Add spacing between sections */
-  }
-.footer-section.logo img{
-     width:300px;
-     margin-left:370px;
-}
   .footer-section.location iframe {
-    width: 300px;
-    height: 200px; /* Reduce size for smaller screens */
-    margin: 20px auto; /* Center the map */
-  }
-
-  .footer-section h2,
-  .footer-section h3 {
-    font-size: 18px; /* Adjust heading font size */
-  }
-
-  .footer-section ul li a {
-    font-size: 17px; /* Adjust font size for links */
-  }
-
-  .social-icons {
-    text-align: center; /* Center-align the icons and heading */
-    margin: 0 auto; /* Center the section */
-  }
-
-  .social-icons h3 {
-    text-align: center; /* Center the "Follow Us" heading */
-    margin-bottom: 10px; /* Add spacing below the heading */
-    font-size: 18px;
+    width: 100%; /* Use full width for map */
+    height: 200px;
+    margin: 20px 0;
   }
 
   .social-icons a {
-    margin-right: 10px; /* Adjust spacing between icons */
-    font-size: 25px; /* Resize icons */
-  }
-
-  .footer-bottom {
-    flex-direction: column; /* Stack elements */
-    text-align: center;
-    margin-top: 15px;
-  }
-
-  .footer-bottom p {
-    margin-bottom: 10px;
-    font-size: 16px;
+    font-size: 25px; /* Adjust icon size */
+    margin-right: 10px; /* Reduce spacing between icons */
   }
 }
 
-/* Small Screens (768px and below) */
+/* For devices with a max width of 768px (Tablets in portrait mode) */
 @media (max-width: 768px) {
   .footer-container {
-    padding: 0 15px; /* Add more padding for smaller screens */
-    gap: 15px; /* Reduce the gap between sections */
-  }
-
-  .footer-section {
-    margin-bottom: 15px; /* Add spacing between sections */
-  }
-
-  .footer-section.location iframe {
-    width: 250px;
-    height: 180px; /* Further reduce map size */
-    margin: 15px auto; /* Center the map */
-  }
-.footer-section.logo img {
-  margin-left: 230px;
-}
-
-  .footer-section ul li {
-    margin-bottom: 8px; /* Reduce spacing between list items */
-  }
-
-  .footer-section ul li a {
-    font-size: 16px; /* Adjust font size for links */
-  }
-
-  .social-icons {
-    text-align: center; /* Center-align the entire section */
-    margin: 20px auto; /* Add vertical spacing */
-  }
-
-  .social-icons h3 {
-    font-size: 18px; /* Adjust heading size */
-    margin-bottom: 8px; /* Add spacing below the heading */
-  }
-
-  .social-icons a {
-    font-size: 22px; /* Resize icons for smaller screens */
-    margin-right: 8px; /* Reduce space between icons */
-  }
-
-  .footer-bottom {
-    text-align: center; /* Ensure bottom section is centered */
-    font-size: 14px; /* Smaller font size */
-  }
-}
-
-/* Extra Small Screens (576px and below) */
-@media (max-width: 576px) {
-  .footer-container {
-    text-align: center; /* Center-align text */
-    padding: 0 10px; /* Adjust padding for smaller screens */
-    gap: 10px; /* Reduce gap between sections */
-  }
-
-  .footer-section {
-    margin-bottom: 10px; /* Reduce spacing between sections */
-    margin-top: 75px;
-  }
-
-  .footer-section h2{
-    margin-right: 25px;
-  }
-
-  .footer-section p{
-    margin-right: 25px;
-  }
-
-.footer-section.links ul li a{
-  justify-content: center;
-  align-items: center;
-}
-
-.footer-section.links h3{
-  margin-right: 40px;
-}
-
-.footer-section.links ul{
-  margin-right: 30px;
-}
-
-.footer-section.logo img{
-  margin-left: 78px;
-}
-  .footer-section.location iframe {
-    width: 200px;
-    height: 150px; /* Smallest size for the map */
-    margin: 10px auto; /* Center the map */
-  }
-
-  .footer-section h2,
-  .footer-section h3 {
-    font-size: 16px; /* Smaller heading size */
-  }
-
-  .footer-section ul li a {
-    font-size: 15px; /* Smallest font size for links */
-  }
-
-  .social-icons {
-    text-align: center; /* Ensure the icons are centered */
-    margin: 15px auto; /* Add smaller vertical spacing */
-  }
-
-  .social-icons h3 {
-    font-size: 16px; /* Smaller font for the heading */
-    margin-bottom: 6px; /* Reduce spacing below the heading */
-  }
-
-  .social-icons a {
-    font-size: 20px; /* Smallest icon size */
-    margin-right: 6px; /* Tighten spacing between icons */
-  }
-
-  .footer-bottom {
-    text-align: center; /* Center-align the bottom section */
-    font-size: 14px;
-  }
-}
-
-/* Large Screens (1200px and above) */
-@media (max-width: 1285px) {
-  .footer-container {
-    gap: 30px; /* Increase gap between sections */
-  }
-
-  .footer-section.location iframe {
-    width: 250px;
-    height: 200px; /* Default map size */
-    margin-left: auto;
-    margin-top: 105px;
-  }
-
-  .footer-section h2,
-  .footer-section h3 {
-    font-size: 22px; /* Slightly larger headings */
-  }
-
-  .social-icons a {
-    font-size: 30px; /* Larger icons */
-  }
-}
-
-/* @media (max-width: 1280px) {
-  .footer-container {
-    flex-direction: column;
-    align-items: center;
+    padding: 0 10px;
     gap: 20px;
   }
 
   .footer-section {
-    width: 100%;
-    text-align: center;
-    margin-bottom: 20px;
+    flex: 1 1 100%; /* Each section spans full width */
+    text-align: center; /* Center align text for a cleaner look */
   }
 
   .footer-section h2,
   .footer-section h3 {
-    font-size: 18px;
-  }
-
-  .footer-section ul li {
-    margin-bottom: 10px;
-  }
-
-  .footer-section ul li a {
     font-size: 16px;
+    margin-top: 10px;
+  }
+
+  .footer-section.contact p,
+  .footer-section.links ul li a {
+    font-size: 15px;
   }
 
   .footer-section.location iframe {
-    width: 90%;
-    height: 250px;
-    margin: 10px 0;
+    height: 180px;
+    margin: 10px auto; /* Center the map */
   }
 
-  .social-icons{
-    align-items: center;
-    justify-content: center;
+  .social-icons {
+    margin-top: 15px;
   }
 
   .social-icons a {
-    font-size: 24px;
-    margin-right: 20px;
+    font-size: 22px;
   }
 
   .footer-bottom {
     flex-direction: column;
+    align-items: center;
     text-align: center;
-    padding: 10px 0;
   }
 
   .footer-bottom p {
+    margin-bottom: 10px;
     font-size: 16px;
   }
-} */
+}
+
+/* For devices with a max width of 576px (Small smartphones) */
+@media (max-width: 576px) {
+  footer {
+    padding: 15px 0;
+  }
+
+  .footer-container {
+    padding: 0 5px;
+  }
+
+  .footer-section h2 {
+    margin-top: 185px;
+    margin-right: 10px;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+  }
+
+  .footer-section p {
+    margin-right: 15px;
+    font-size: 20px;
+  }
+
+  .footer-section h3 {
+    font-size: 14px;
+  }
+
+  .footer-section.links{
+    margin-right: 35px;
+    font-size: 20px;
+  }
+
+  .footer-section.links h3{
+    font-size: 20px;
+  }
+
+  .footer-section.logo img {
+    margin-left: 55px;
+    margin-top: 25px;
+  }
+
+  .footer-section.contact p,
+  .footer-section.links ul li a {
+    font-size: 20px;
+  }
+
+  .footer-section ul li {
+    margin-bottom: 5px;
+    margin-top: 10px;
+  }
+
+  .footer-section.location iframe {
+    height: 150px;
+    width: 270px;
+  }
+
+  .social-icons {
+    text-align: center; /* Center align the heading and icons */
+    margin-top: 15px;
+    margin-right: 20px;
+  }
+
+  .social-icons h3 {
+    font-size: 22px; /* Increased font size for the heading */
+    margin-bottom: 10px;
+    color: #000; /* Ensure visibility */
+  }
+
+  .social-icons i{
+    margin-left: 10px;
+  }
+
+  .social-icons a {
+    font-size: 20px;
+    margin-right: 9px;
+  }
+
+  .footer-bottom p {
+    font-size: 14px;
+  }
+}
+
+
 
 
 /* WhatsApp icon */

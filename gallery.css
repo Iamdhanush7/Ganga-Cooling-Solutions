@@ -664,9 +664,18 @@ footer {
     margin-bottom: 10px; /* Reduce spacing between sections */
     margin-top: 45px;
   }
+  
+  .footer-section h2{
+    margin-right: 18px;
+  }
+
+  .footer-section p{
+    margin-right: 15px;
+  }
+
   .footer-section.logo img{
     width: 300px;
-    margin-left: 25px;
+    margin-left: 55px;
     margin-top: -80px;
   }
   .footer-section.location iframe {
@@ -692,9 +701,22 @@ footer {
     font-size: 15px; /* Smallest font size for links */
   }
 
+  .social-icons h3{
+    font-size: 30px;
+  }
+
   .social-icons {
     text-align: center; /* Ensure the icons are centered */
     margin: 15px auto; /* Add smaller vertical spacing */
+    margin-right: 15px;
+  }
+
+  .footer-section.links h3{
+    font-size: 26px;
+  }
+
+  .footer-section.links ul li a{
+    font-size: 20px;
   }
 
   .social-icons h3 {

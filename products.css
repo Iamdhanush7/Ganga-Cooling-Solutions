@@ -671,58 +671,12 @@ footer {
   }
 
   .footer-section.logo img {
-    width: 450px;
-    margin-left: 265px; /* Center the logo */
-    margin-top: -110px;
+    width: 300px;
+    margin-left: 0; /* Center the logo */
+    margin-top: -60px;
   }
 
-  .footer-section h2{
-    margin-top: 125px;
-    font-size: 35px;
-  }
-
-  .footer-section p{
-    font-size: 30px;
-  }
-
-  .footer-section.links h3{
-    font-size: 40px;
-  }
-
-  .footer-section.links ul li a{
-    font-size: 32px;
-  }
-
-  .footer-section.contact h3{
-    font-size: 40px;
-  }
-
-  .footer-section.links{
-    margin-right: 35px;
-  }
-
-  .social-icons {
-    text-align: center; /* Center align the heading and icons */
-    margin-top: 15px;
-    margin-right: 20px;
-  }
-
-  .social-icons h3 {
-    font-size: 40px; /* Increased font size for the heading */
-    margin-bottom: 10px;
-    color: #000; /* Ensure visibility */
-  }
-
-  .social-icons i{
-    margin-left: 10px;
-    font-size: 40px;
-  }
-
-  .social-icons a {
-    font-size: 20px;
-    margin-right: 9px;
-  }
-
+  .footer-section h2,
   .footer-section h3 {
     margin-left: 0; /* Remove unnecessary margins */
     margin-top: 20px;
@@ -924,7 +878,7 @@ footer {
 
   .footer-section h2{
     margin-top: 85px;
-    margin-right: -58px;
+    margin-right: 28px;
     font-size: 20px;
   }
 
@@ -934,15 +888,6 @@ footer {
 
   .footer-section.links{
     margin-right: 35px;
-  }
-
-  .footer-section.links ul li a{
-    font-size: 13px;
-  }
-
-  .footer-section.contact p{
-
-    font-size: 29px;
   }
 
   .footer-section h3 {
@@ -958,6 +903,10 @@ footer {
   .footer-section p,
   .footer-section ul li a {
     font-size: 14px; /* Adjust text size */
+  }
+
+  .footer-section.links ul li a{
+    font-size: 20px;
   }
 
   .social-icons {

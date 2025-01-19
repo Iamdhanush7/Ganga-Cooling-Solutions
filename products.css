@@ -936,6 +936,10 @@ footer {
     margin-right: 35px;
   }
 
+  .footer-section.links ul li a{
+    font-size: 20px;
+  }
+
   .footer-section.contact p{
 
     font-size: 29px;

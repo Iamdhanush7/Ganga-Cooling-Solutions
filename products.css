@@ -511,7 +511,7 @@ footer {
 
 .footer-section.logo img{
   width: 355px;
-  margin-left: -55px;
+  margin-left: -21px;
   margin-top: -80px;
 }
 
@@ -873,7 +873,7 @@ footer {
   .footer-section.logo img {
     width: 300px; /* Smaller logo size */
     margin-top: -90px;
-    margin-left: 50px;
+    margin-left: 65px;
   }
 
   .footer-section h2{

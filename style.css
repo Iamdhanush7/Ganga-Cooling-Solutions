@@ -1441,7 +1441,7 @@ footer {
 
 .footer-section.logo img{
   margin-top: -90px;
-  margin-left: -25px;
+  margin-left: -1px;
 }
 
 .footer-section h2{
@@ -1704,7 +1704,7 @@ footer {
   }
 
   .footer-section.logo img {
-    margin-left: 55px;
+    margin-left: 75px;
     margin-top: 25px;
   }
 

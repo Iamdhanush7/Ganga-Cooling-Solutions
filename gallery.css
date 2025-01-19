@@ -398,7 +398,7 @@ footer {
 
 .footer-section.logo img{
   margin-top: -95px;
-  margin-left: -35px;
+  margin-left: -5px;
 }
 
 .footer-section h2{
@@ -675,7 +675,7 @@ footer {
 
   .footer-section.logo img{
     width: 300px;
-    margin-left: 55px;
+    margin-left: 75px;
     margin-top: -80px;
   }
   .footer-section.location iframe {

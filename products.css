@@ -169,7 +169,7 @@ body {
 /* For devices with a max width of 480px (Small smartphones) */
 @media (max-width: 576px) {
   .nav-bar {
-    max-width: 94%;
+    max-width: 96%;
     padding: 5px 10px;
     height: 20px;
   }

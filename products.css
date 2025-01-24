@@ -350,7 +350,7 @@ body {
 }
 
 /* Media Queries */
-@media (max-width: 1024px) {
+@media (max-width: 1200px) {
   .products {
     grid-template-columns: repeat(2, 1fr);
     margin-left: 0;

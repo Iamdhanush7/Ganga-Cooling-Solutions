@@ -317,11 +317,12 @@ html {
   background-color: rgba(255, 255, 255, 0.5);
   border-radius: 50%;
   cursor: pointer;
-  transition: background-color 0.3s;
+  transition: background-color 0.3s, transform 0.3s;
 }
 
 .dot.active {
   background-color: white;
+  transform: scale(1.2);
 }
 
 /* Slider Media Queries */

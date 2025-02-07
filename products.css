@@ -265,7 +265,7 @@ body {
   background-color: #f1f1f1;
 }
 
-/* Product Cards */
+/* Product Cards Container */
 .products {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -274,16 +274,23 @@ body {
   margin-left: 115px;
 }
 
+/* Product Card */
 .product-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Ensure even spacing between content */
+  align-items: center; /* Center content horizontally */
   background-color: rgba(0, 98, 255, 0.1);
   border: 1px solid #ddd;
   border-radius: 10px;
   width: 279px;
-  height: 290px;
+  height: 360px;
   padding: 15px;
   text-align: center;
+  box-sizing: border-box; /* Include padding in width/height */
 }
 
+/* Image Styling */
 .product-card img {
   width: 203px;
   height: 122px;
@@ -292,21 +299,46 @@ body {
   margin-bottom: 10px;
 }
 
+/* Title Styling */
 .product-card h3 {
   font-size: 1.2rem;
   color: #327dff;
   margin-bottom: 10px;
 }
 
+/* Description Styling */
 .product-card p {
   font-size: 12px;
   color: #000000;
+  margin-bottom: 10px;
 }
 
+/* Read More Styling */
 .read-more {
   color: #327dff;
   cursor: pointer;
 }
+
+/* View Button */
+.view-button {
+  display: block;
+  margin-top: auto; /* Push to the bottom of the card */
+  padding: 10px 15px;
+  font-size: 14px;
+  font-weight: bold;
+  color: #fff;
+  background-color: #327dff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  text-align: center; /* Center text within the button */
+}
+
+.view-button:hover {
+  background-color: #0056d4;
+}
+
 
 /* Morphing animation for product cards */
 @keyframes morphIn {

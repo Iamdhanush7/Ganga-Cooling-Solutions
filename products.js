@@ -63,7 +63,6 @@ const productData = {
   ],
 };
 
-// Render Products
 function renderProducts(category) {
   const productContainer = document.getElementById("products");
   productContainer.innerHTML = ""; // Clear the container
@@ -77,13 +76,34 @@ function renderProducts(category) {
       productCard.classList.add("morph-in");
     }, index * 150); // Stagger animation for each card
 
-    const truncatedDescription = product.description.slice(0, 200); // Truncate description
-    const fullDescription = product.description; // Full description
+    // Map product name to its respective HTML file
+    const productFileMap = {
+      "Split Air Conditioner": "categories/ac1.html",
+      "Cassette Air Conditioner": "ac2.html",
+      "Ductable Air Conditioner": "ac3.html",
+      "VRV AC": "ac4.html",
+      "VRF AC": "ac5.html",
+      "AC Chiller": "ac6.html",
+      "Cold Room": "ac7.html",
+      "Domestic Water Purifiation": "wf1.html",
+      "Commercial Water Purification": "wf2.html",
+      "Water Softners": "wf3.html",
+      "Domestic Solar": "shp1.html",
+      "Commercial Solar": "shp2.html",
+      "Heat Pumps": "shp3.html",
+      "Online UPS": "ups1.html",
+      "Offline UPS": "ups2.html",
+      "Solar UPS": "ups3.html",
+    };
+
+    // Get the product page URL from the map
+    const productPageUrl = productFileMap[product.name];
 
     productCard.innerHTML = `
       <img src="${product.image}" alt="${product.name}">
       <h3>${product.name}</h3>
-      <p class="product-description">${truncatedDescription}... <span class="read-more" onclick="toggleDescription(this, '${fullDescription}', '${truncatedDescription}')">Read More</span></p>
+      <p class="product-description">${product.description.slice(0, 200)}...</p>
+      <button class="view-button" onclick="window.location.href='${productPageUrl}'">View</button>
     `;
 
     productContainer.appendChild(productCard);

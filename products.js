@@ -63,72 +63,115 @@ const productData = {
   ],
 };
 
+// Map product names to their respective page URLs
+const productPageUrls = {
+  "Split Air Conditioner": "AC/ac1.html",
+  "Cassette Air Conditioner": "AC/ac2.html",
+  "Ductable Air Conditioner": "AC/ac3.html",
+  "VRV AC": "AC/ac4.html",
+  "VRF AC": "AC/ac5.html",
+  "AC Chiller": "AC/ac6.html",
+  "Cold Room": "AC/ac7.html",
+  "Domestic Water Purifiation": "WF/wf1.html",
+  "Commercial Water Purification": "WF/wf2.html",
+  "Water Softners": "WF/wf3.html",
+  "Domestic Solar": "SHP/shp1.html",
+  "Commercial Solar": "SHP/shp2.html",
+  "Heat Pumps": "SHP/shp3.html",
+  "Online UPS": "UPS/ups1.html",
+  "Offline UPS": "UPS/ups2.html",
+  "Solar UPS": "UPS/ups3.html",
+};
+
+// Render products for a specific category
 function renderProducts(category) {
   const productContainer = document.getElementById("products");
-  productContainer.innerHTML = ""; // Clear the container
+  productContainer.innerHTML = ""; // Clear existing products
 
   productData[category].forEach((product, index) => {
     const productCard = document.createElement("div");
     productCard.classList.add("product-card");
 
-    // Add a delay to each card
+    // Animation delay for staggered effect
     setTimeout(() => {
       productCard.classList.add("morph-in");
-    }, index * 150); // Stagger animation for each card
+    }, index * 150);
 
-    // Map product name to its respective HTML file
-    const productFileMap = {
-      "Split Air Conditioner": "categories/ac1.html",
-      "Cassette Air Conditioner": "ac2.html",
-      "Ductable Air Conditioner": "ac3.html",
-      "VRV AC": "ac4.html",
-      "VRF AC": "ac5.html",
-      "AC Chiller": "ac6.html",
-      "Cold Room": "ac7.html",
-      "Domestic Water Purifiation": "wf1.html",
-      "Commercial Water Purification": "wf2.html",
-      "Water Softners": "wf3.html",
-      "Domestic Solar": "shp1.html",
-      "Commercial Solar": "shp2.html",
-      "Heat Pumps": "shp3.html",
-      "Online UPS": "ups1.html",
-      "Offline UPS": "ups2.html",
-      "Solar UPS": "ups3.html",
-    };
-
-    // Get the product page URL from the map
-    const productPageUrl = productFileMap[product.name];
+    // Create the product card content
+    const fullDescription = product.description;
+    const truncatedDescription =
+      fullDescription.length > 100
+        ? `${fullDescription.slice(0, 100)}...`
+        : fullDescription;
 
     productCard.innerHTML = `
       <img src="${product.image}" alt="${product.name}">
       <h3>${product.name}</h3>
-      <p class="product-description">${product.description.slice(0, 200)}...</p>
-      <button class="view-button" onclick="window.location.href='${productPageUrl}'">View</button>
+      <p class="product-description" data-full="${fullDescription}" data-truncated="${truncatedDescription}">
+        ${truncatedDescription}
+        ${fullDescription.length > 100 ? '<span class="read-more">Read More</span>' : ""}
+      </p>
+      <button class="view-button">View</button>
     `;
 
     productContainer.appendChild(productCard);
   });
+
+  // Attach event listeners for "Read More" and "View" buttons
+  attachProductEventListeners();
 }
 
-// Toggle Description between Read More and Read Less
-function toggleDescription(element, fullDescription, truncatedDescription) {
-  const descriptionElement = element.parentElement;
+// Attach event listeners for product cards
+function attachProductEventListeners() {
+  // Handle "Read More" toggles
+  const readMoreElements = document.querySelectorAll(".read-more");
+  readMoreElements.forEach((element) => {
+    element.addEventListener("click", (e) => {
+      const parentParagraph = e.target.parentElement;
+      const isExpanded = parentParagraph.classList.contains("expanded");
 
-  if (descriptionElement.classList.contains('expanded')) {
-    descriptionElement.classList.remove('expanded');
-    descriptionElement.innerHTML = `${truncatedDescription}... <span class="read-more" onclick="toggleDescription(this, '${fullDescription}', '${truncatedDescription}')">Read More</span>`;
-  } else {
-    descriptionElement.classList.add('expanded');
-    descriptionElement.innerHTML = `${fullDescription} <span class="read-more" onclick="toggleDescription(this, '${fullDescription}', '${truncatedDescription}')">Read Less</span>`;
-  }
+      if (isExpanded) {
+        // Collapse the description
+        parentParagraph.innerHTML = `
+          ${parentParagraph.dataset.truncated}
+          <span class="read-more">Read More</span>
+        `;
+        parentParagraph.classList.remove("expanded");
+      } else {
+        // Expand the description
+        parentParagraph.innerHTML = `
+          ${parentParagraph.dataset.full}
+          <span class="read-more">Read Less</span>
+        `;
+        parentParagraph.classList.add("expanded");
+      }
+      attachProductEventListeners(); // Reattach listeners after dynamic content change
+    });
+  });
+
+  // Handle "View" button clicks
+  const viewButtons = document.querySelectorAll(".view-button");
+  viewButtons.forEach((button, index) => {
+    button.addEventListener("click", () => {
+      const category = document.querySelector(".category.active").dataset.category;
+      const product = productData[category][index];
+
+      // Redirect to the respective page based on product name
+      const productPageUrl = productPageUrls[product.name];
+      if (productPageUrl) {
+        window.location.href = productPageUrl; // Redirect to the product page
+      } else {
+        alert("Page for this product is not yet created!");
+      }
+    });
+  });
 }
 
-// Product Data (unchanged)
-// Render Products Function (unchanged)
-
-// Handle Category Clicks (Highlight & Render Products)
+// Handle category click events
 function handleCategoryClick(category, element) {
-  document.querySelectorAll(".category").forEach((btn) => btn.classList.remove("active"));
+  document.querySelectorAll(".category").forEach((btn) =>
+    btn.classList.remove("active")
+  );
   element.classList.add("active");
 
   const productContainer = document.getElementById("products");
@@ -139,20 +182,22 @@ function handleCategoryClick(category, element) {
     productContainer.classList.remove("morph-out");
     productContainer.classList.add("morph-in");
 
-    // Remove the fade-in class after the animation
     setTimeout(() => productContainer.classList.remove("morph-in"), 800);
-  }, 500); // Match the transition time in CSS
+  }, 500);
 }
 
-// On Page Load: Render Products for Default or Queried Category
+// Load the initial category based on the query parameter or default to 'ac'
 function loadCategoryFromQuery() {
   const params = new URLSearchParams(window.location.search);
-  const category = params.get('category') || 'ac'; // Default to 'ac' if no category is specified
-  const categoryElement = document.querySelector(`.category[data-category="${category}"]`);
+  const category = params.get("category") || "ac";
+  const categoryElement = document.querySelector(
+    `.category[data-category="${category}"]`
+  );
+
   if (categoryElement) {
     handleCategoryClick(category, categoryElement);
   }
 }
 
-// Initial Render
+// On page load
 window.onload = loadCategoryFromQuery;

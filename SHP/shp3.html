@@ -18,7 +18,7 @@
     .products-section {
       text-align: center;
       padding: 30px;
-      margin-top: -65px;
+      margin-top: 15px;
     }
 
     .section-title {
@@ -185,12 +185,352 @@
   }
 }
 
-  </style>
+/* Categories Container */
+.categories-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.categories {
+  display: flex;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  overflow: hidden;
+  background: #fff;
+  padding: 10px;
+  gap: 10px;
+}
+
+.category {
+  display: flex;
+  align-items: center;
+  padding: 25px 25px;
+  cursor: pointer;
+  flex: 1;
+  justify-content: center;
+  text-align: center;
+  border-right: 1px solid #ddd;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.category:last-child {
+  border-right: none;
+}
+
+.category img {
+  width: 80px;
+  height: auto;
+  margin-left: 50px;
+}
+
+.category.active {
+  background-color: #e0f7ff;
+  color: #007bff;
+}
+
+.category:hover {
+  background-color: #f1f1f1;
+  color: #3B82F6;
+}
+
+/* General Navbar */
+.nav-bar {
+  width: 100%; /* Makes the nav-bar span the full width of the viewport */
+  height: 86px;
+  display: flex;
+  justify-content: space-between; /* Aligns content inside the nav-bar */
+  align-items: center;
+  list-style: none;
+  position: fixed; /* Fixes the nav-bar to the top of the viewport */
+  top: 0;
+  left: 0; /* Ensures it starts at the left edge */
+  z-index: 10; /* Ensures the nav-bar stays above other elements */
+  background-color: #ffffff; /* White background */
+  padding: 0 25px; /* Adjusts horizontal padding */
+  border-bottom: 2px solid #1F509A; /* Blue border at the bottom */
+  margin: 0; /* Removes any default margin that might push it */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional: Add a subtle shadow for better visibility */
+}
+
+.logo img {
+  width: 320px;
+  margin-top: -122px;
+  position: absolute;
+  left: 0;
+  margin-left: -10px;
+}
+
+.menu {
+  display: flex;
+}
+
+.menu li {
+  padding-left: 30px;
+}
+
+.menu li a {
+  display: inline-block;
+  text-decoration: none;
+  color: #000000;
+  text-align: center;
+  margin-top: 37px;
+  margin-bottom: 35px;
+  margin-right: 32px;
+  font-size: 20px;
+  transition: 0.15s ease-in-out;
+  position: relative;
+  text-transform: lowercase; /* All text lowercase */
+}
+
+.menu li a:first-letter {
+  text-transform: uppercase; /* Capitalize the first letter */
+}
+
+.menu li a::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 3px;
+  background-color: #1F509A;
+  transition: 0.15s ease-in-out;
+}
+
+.menu li a:hover::after {
+  width: 100%;
+}
+
+/* Hamburger menu buttons */
+.open-menu,
+.close-menu {
+  position: absolute;
+  color: #327dff;
+  cursor: pointer;
+  font-size: 1.5rem;
+  display: none;
+}
+
+.open-menu {
+  top: 50%;
+  right: 20px;
+  transform: translateY(-50%);
+}
+
+.close-menu {
+  top: 20px;
+  right: 20px;
+}
+
+/* Hide checkbox by default */
+#check {
+  display: none;
+}
+
+/* Large screens (1200px and above) */
+@media (max-width: 1200px) {
+  .nav-bar {
+    padding: 20px 25px; /* Reduced padding */
+    height: 70px; /* Reduced navbar height */
+  }
+
+  .logo img {
+    width: 175px; /* Scale down logo */
+    position: absolute;
+    left: 0;
+    margin-top: -67px;
+  }
+
+  .menu li {
+    padding-left: 40px; /* Reduced padding for menu items */
+  }
+
+  .menu li a {
+    font-size: 18px; /* Reduced font size */
+  }
+
+  .open-menu {
+    display: none; /* Show hamburger on large screens */
+  }
+
+  .close-menu {
+    display: none;
+  }
+}
+
+/* Medium Screens (992px and below) */
+@media (max-width: 997px) {
+  .nav-bar {
+    padding: 15px 20px; /* Further reduced padding */
+    height: 55px; /* Reduced height */
+  }
+
+  .logo img {
+    width: 175px; /* Scale down logo */
+    margin-top: -70px;
+    margin-left: 2px;
+  }
+
+  .menu li {
+    padding-left: 30px; /* Further reduced padding */
+  }
+
+  .menu li a {
+    font-size: 13.5px; /* Reduced font size */
+  }
+
+  .open-menu {
+    display: none;
+  }
+
+  .close-menu {
+    display: none;
+  }
+}
+
+/* Small Screens (768px and below) */
+@media (max-width: 768px) {
+  .nav-bar {
+    flex-direction: column; /* Stack navbar items vertically */
+    padding: 10px 15px; /* Reduced padding */
+    height: 85px; /* Auto height */
+  }
+
+  .logo img {
+    width: 300px;
+    margin-top: -80px;
+    margin-left: 15px;
+  }
+
+  .menu {
+    flex-direction: column; /* Stack menu items vertically */
+    position: fixed;
+    top: 0;
+    right: -100%;
+    background-color: #ffffff;
+    width: 250px;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    transition: 0.3s ease-in-out;
+    z-index: 10;
+  }
+
+  .menu li {
+    padding-left: 0;
+    margin: 10px 0;
+  }
+
+  .menu li a {
+    font-size: 20px; /* Smaller font size for mobile */
+    margin-top: 10px;
+  }
+
+  .open-menu {
+    display: block; /* Show hamburger menu */
+    position: absolute;
+    right: 0px;
+    font-size: 40px;
+    margin-right: 25px;
+  }
+
+  .close-menu {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    display: block; /* Show close menu button */
+    font-size: 40px;
+  }
+
+  #check:checked ~ .menu {
+    right: 0; /* Menu appears when checkbox is checked */
+  }
+}
+
+/* Extra Small Screens (576px and below) */
+@media (max-width: 576px) {
+  .nav-bar {
+    padding: 10px 15px;
+    height: 70px; /* Auto height for extra small screens */
+  }
+
+  .logo img {
+    width: 300px; /* Smaller logo */
+    margin-top: -90px;
+    margin-left: -25px;
+  }
+
+  .menu li a {
+    font-size: 16px;
+  }
+
+  .open-menu {
+    right: 10px;
+    font-size: 32px;
+    margin-right: 15px;
+  }
+
+  .close-menu {
+    top: 5px;
+    right: 5px;
+    font-size: 35px;
+  }
+}
+</style>
 </head>
 <body>
+  <header>
+  <nav>
+    <ul class='nav-bar'>
+        <li class='logo'><a href='#'><img src='images/18.svg'/></a></li>
+        <input type='checkbox' id='check' />
+        <span class="menu">
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../index.html#about">About Us</a></li>
+            <li><a href="#product">Products</a></li>
+            <li><a href="../index.html#services">Services</a></li>
+            <li><a href="../gallery.html">Gallery</a></li>
+            <li><a href="../index.html#projects">Projects</a></li>
+            <li><a href="../index.html#footer">Contact Us</a></li>
+            <li><a href="https://forms.gle/pFJs1hXYYqZuxoWd7">Place Order</a></li>
+            <label for="check" class="close-menu"><i class="fas fa-times"></i></label>
+        </span>
+        <label for="check" class="open-menu"><i class="fas fa-bars"></i></label>
+    </ul>
+</nav>
+</header>
   <div class="products-section">
     <h2 class="section-title">Our Products</h2>
   </div>
+<!-- Categories Box -->
+<div class="categories-container">
+  <div class="categories">
+    <div class="category" onclick="redirectToPage('../products.html')">
+      <span>AC</span>
+      <img src="images/ac.svg" alt="AC">
+    </div>
+    <div class="category" onclick="redirectToPage('../products.html')">
+      <span>Water Purifier</span>
+      <img src="images/wf.svg" alt="Water Purifier">
+    </div>
+    <div class="category" onclick="redirectToPage('../products.html')">
+      <span>Solar & Heat Pumps</span>
+      <img src="images/shp.svg" alt="Solar & Heat Pumps">
+    </div>
+    <div class="category" onclick="redirectToPage('../products.html')">
+      <span>UPS</span>
+      <img src="images/ups.svg" alt="UPS">
+    </div>
+  </div>
+</div>
+<script>
+  function redirectToPage(url) {
+    // Redirect to the specified URL
+    window.location.href = url;
+  }
+</script>
 
   <div class="header">
     <h1>

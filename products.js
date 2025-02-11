@@ -78,8 +78,8 @@ const productPageUrls = {
   "Domestic Solar": "SHP/shp1.html",
   "Commercial Solar": "SHP/shp2.html",
   "Heat Pumps": "SHP/shp3.html",
-  "Online UPS": "UPS/ups1.html",
-  "Offline UPS": "UPS/ups2.html",
+  "Online UPS": "UPS/ups.html",
+  "Offline UPS": "UPS/ups1.html",
   "Solar UPS": "UPS/ups3.html",
 };
 

@@ -68,105 +68,109 @@
       justify-content: center;
     }
 
-    .card-container {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 70px;
-      width: 80%;
-    }
+  .card-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 70px;
+  width: 80%;
+}
 
-    .card {
-      width: 308px;
-      height: 319px;
-      perspective: 1000px;
-      cursor: pointer;
-    }
+.card {
+  width: 308px;
+  height: 319px;
+  perspective: 1000px;
+  cursor: pointer;
+}
 
-    .card-inner {
-      position: relative;
-      width: 100%;
-      height: 100%;
-      transform-style: preserve-3d;
-      transition: transform 0.6s;
-    }
+.card-front img{
+  border-radius: 15px;
+}
 
-    .card.flipped .card-inner {
-      transform: rotateY(180deg);
-    }
+.card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: transform 0.6s;
+}
 
-    .card-front,
-    .card-back {
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      backface-visibility: hidden;
-      border-radius: 30px;
-      box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      padding: 10px;
-    }
+.card.flipped .card-inner {
+  transform: rotateY(180deg);
+}
 
-    .card-front {
-      background-color: #77abfe94;
-    }
+.card-front,
+.card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 30px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px; /* Match the padding to ensure consistency */
+  box-sizing: border-box; /* Ensure padding doesn't affect size */
+}
 
-    .card-front p{
-      font-size: 25px;
-      font-weight: bolder;
-      color: #3B82F6;
-    }
+.card-front {
+  background-color: #77abfe94;
+}
 
-    .card-back {
-      background-color: #3b83f694;
-      transform: rotateY(180deg);
-      text-align: center;
-      font-size: 12px;
-      border: 2px solid #ffffff;
-      padding: 15px;
-    }
+.card-front p {
+  font-size: 25px;
+  font-weight: bolder;
+  color: #3B82F6;
+}
 
-    .card-back h3 {
-      font-size: 20px;
-      color: #000;
-      margin-bottom: 10px;
-    }
+.card-back {
+  background-color: #3b83f694;
+  transform: rotateY(180deg);
+  text-align: center;
+  font-size: 12px;
+  border: 2px solid #ffffff;
+}
 
-    .card-back p.price {
-      font-size: 20px;
-      color: #3b82f6;
-      margin-bottom: 10px;
-    }
+.card-back h3 {
+  font-size: 20px;
+  color: #000;
+  margin-bottom: 10px;
+}
 
-    .card-back .advantages,
-    .card-back .features {
-        font-size: 15px;
-      display: flex;
-      justify-content: space-between;
-      width: 100%;
-      margin-bottom: 10px;
-    }
+.card-back p.price {
+  font-size: 20px;
+  color: #3b82f6;
+  margin-bottom: 10px;
+}
 
-    .card-back ul {
-      list-style: none;
-      padding: 0;
-      font-size: 14px;
-      text-align: left;
-      color: #000;
-    }
+.card-back .advantages,
+.card-back .features {
+  font-size: 15px;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-bottom: 10px;
+}
 
-    .card-back .stars {
-      margin-top: -5px;
-    }
+.card-back ul {
+  list-style: none;
+  padding: 0;
+  font-size: 14px;
+  text-align: left;
+  color: #000;
+}
 
-    .stars span {
-      color: #ffd700;
-      font-size: 20px;
-    }
+.card-back .stars {
+  margin-top: -5px;
+}
 
-    /* Default: Desktop screens (3 cards in a row) */
+.stars span {
+  color: #ffd700;
+  font-size: 20px;
+}
+
+/* Default: Desktop screens (3 cards in a row) */
 .card-container {
   grid-template-columns: repeat(3, 1fr);
 }
@@ -233,6 +237,89 @@
 .category:hover {
   background-color: #f1f1f1;
   color: #3B82F6;
+}
+
+/* Medium Devices (Tablets) */
+@media (max-width: 1024px) {
+  .products {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+    padding: 15px;
+    margin-left: 0;
+  }
+
+  .categories {
+    flex-wrap: wrap;
+    gap: 15px;
+  }
+
+  .category {
+    padding: 20px;
+    flex: 1 1 calc(50% - 20px);
+    text-align: center;
+  }
+
+  .category img {
+    width: 70px;
+  }
+}
+
+/* Small Tablets and Large Mobile Screens */
+@media (max-width: 768px) {
+  .products {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    padding: 15px;
+  }
+
+  .category {
+    padding: 15px;
+    font-size: 14px;
+    text-align: center;
+  }
+
+  .category img {
+    width: 60px;
+  }
+}
+
+/* Small Devices (Mobile Phones) */
+@media (max-width: 576px) {
+  .products {
+    grid-template-columns: 1fr;
+    gap: 15px;
+    padding: 10px;
+  }
+
+  .category {
+    padding: 10px;
+    font-size: 12px;
+    text-align: center;
+  }
+
+  .category img {
+    width: 50px;
+  }
+}
+
+/* Extra Small Devices (Very Small Mobile Screens) */
+@media (max-width: 480px) {
+  .products {
+    grid-template-columns: 1fr;
+    gap: 15px;
+    padding: 5px;
+    margin-left: 20px;
+  }
+
+  .category {
+    padding: 8px;
+    font-size: 11px;
+    text-align: center;
+  }
+
+  .category img {
+    width: 45px;
+  }
 }
 
 /* General Navbar */
@@ -479,6 +566,43 @@
   }
 }
 </style>
+<script>
+  // Select all menu items
+const menuItems = document.querySelectorAll('.menu li a');
+
+// Add click event listener to each menu item
+menuItems.forEach(item => {
+  item.addEventListener('click', function(e) {
+    // Get the href attribute
+    const href = item.getAttribute('href');
+    
+    // If it's an internal link (starts with "#"), scroll smoothly
+    if (href.startsWith('#')) {
+      e.preventDefault(); // Prevent default action for internal links
+      
+      // Get the target section from the href (like #home, #about)
+      const target = document.querySelector(href);
+
+      // Scroll smoothly to the target section
+      window.scrollTo({
+        top: target.offsetTop,
+        behavior: 'smooth'
+      });
+
+    } else {
+      // For external links like "gallery.html", allow navigation
+      // Let the default action happen (page redirection)
+      return; // Allow the link to navigate normally
+    }
+
+    // Close the menu after clicking the header
+    const checkbox = document.getElementById('check');
+    if (checkbox.checked) {
+      checkbox.checked = false; // Uncheck the menu to close it
+    }
+  });
+});
+</script>
 </head>
 <body>
   <header>
@@ -581,7 +705,7 @@
     <div class="card">
         <div class="card-inner">
           <div class="card-front">
-            <img src="https://via.placeholder.com/100" alt="AC Image">
+            <img src="images/a2.png" alt="AC Image">
             <p>Ceiling Casette AC</p>
           </div>
           <div class="card-back">
@@ -617,7 +741,7 @@
     <div class="card">
         <div class="card-inner">
           <div class="card-front">
-            <img src="https://via.placeholder.com/100" alt="AC Image">
+            <img src="images/a3.png" alt="AC Image">
             <p>Ceiling Suspended AC</p>
           </div>
           <div class="card-back">
@@ -653,7 +777,7 @@
     <div class="card">
         <div class="card-inner">
           <div class="card-front">
-            <img src="https://via.placeholder.com/100" alt="AC Image">
+            <img src="images/a4.png" alt="AC Image">
             <p>Floor Mounted Split AC</p>
           </div>
           <div class="card-back">
@@ -689,7 +813,7 @@
     <div class="card">
         <div class="card-inner">
           <div class="card-front">
-            <img src="https://via.placeholder.com/100" alt="AC Image">
+            <img src="images/a5.png" alt="AC Image">
             <p>Multi Mounted AC</p>
           </div>
           <div class="card-back">
@@ -725,7 +849,7 @@
     <div class="card">
         <div class="card-inner">
           <div class="card-front">
-            <img src="https://via.placeholder.com/100" alt="AC Image">
+            <img src="images/a6.png" alt="AC Image">
             <p>Inverter Split AC</p>
           </div>
           <div class="card-back">
@@ -762,7 +886,7 @@
     <div class="card">
       <div class="card-inner">
         <div class="card-front">
-          <img src="https://via.placeholder.com/100" alt="AC Image">
+          <img src="images/a7.png" alt="AC Image">
           <p>Concealed Ducted AC</p>
         </div>
         <div class="card-back">

@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
   <title>Flip Cards</title>
   <style>
     body {
@@ -14,204 +15,14 @@
       margin: 0;
       padding: 20px;
     }
-
     .products-section {
       text-align: center;
       padding: 30px;
       margin-top: 15px;
     }
 
-    .section-title {
-      font-size: 3.1rem;
-      color: #327dff;
-      margin-bottom: 10px;
-    }
 
-    .header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  background-color: #e8f0fe;
-  padding: 10px 20px;
-  border-radius: 30px;
-  width: 427px;
-  height: 79px;
-  margin-bottom: 20px;
-  margin-left: 18px;
-  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-.header h1 {
-  font-size: 27px;
-  font-weight: bolder;
-  color: #3B82F6;
-  display: flex;
-  align-items: center;
-  margin-left: 25px;
-}
-
-.header img {
-  margin-right: 20px;
-}
-
-.close-button {
-  background-color: #3B82F6;
-  border: none;
-  color: #ffffff;
-  font-size: 37px;
-  width: 47px;
-  height: 47px;
-  border-radius: 50%;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-/* Media query for mobile screens */
-@media screen and (max-width: 576px) {
-  .header h1 {
-    display: none; /* Hide text on mobile */
-  }
-  .header {
-    justify-content: space-between;
-    width: auto;
-    height: auto;
-    padding: 10px;
-  }
-}
-
-
-  .card-container {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 70px;
-  width: 80%;
-}
-
-.card {
-  width: 308px;
-  height: 319px;
-  perspective: 1000px;
-  cursor: pointer;
-}
-
-.card-front img{
-  border-radius: 15px;
-}
-
-.card-inner {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  transform-style: preserve-3d;
-  transition: transform 0.6s;
-}
-
-.card.flipped .card-inner {
-  transform: rotateY(180deg);
-}
-
-.card-front,
-.card-back {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  backface-visibility: hidden;
-  border-radius: 30px;
-  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding: 20px; /* Match the padding to ensure consistency */
-  box-sizing: border-box; /* Ensure padding doesn't affect size */
-}
-
-.card-front {
-  background-color: #77abfe94;
-}
-
-.card-front p {
-  font-size: 25px;
-  font-weight: bolder;
-  color: #3B82F6;
-}
-
-.card-back {
-  background-color: #3b83f694;
-  transform: rotateY(180deg);
-  text-align: center;
-  font-size: 12px;
-  border: 2px solid #ffffff;
-}
-
-.card-back h3 {
-  font-size: 20px;
-  color: #000;
-  margin-bottom: 10px;
-}
-
-.card-back p.price {
-  font-size: 20px;
-  color: #3b82f6;
-  margin-bottom: 10px;
-}
-
-.card-back .advantages,
-.card-back .features {
-  font-size: 15px;
-  display: flex;
-  justify-content: space-between;
-  width: 100%;
-  margin-bottom: 10px;
-}
-
-.card-back ul {
-  list-style: none;
-  padding: 0;
-  font-size: 14px;
-  text-align: left;
-  color: #000;
-}
-
-.card-back .stars {
-  margin-top: -5px;
-}
-
-.stars span {
-  color: #ffd700;
-  font-size: 20px;
-}
-
-/* Default: Desktop screens (3 cards in a row) */
-.card-container {
-  grid-template-columns: repeat(3, 1fr);
-}
-
-/* Tablet screens (2 cards in a row) */
-@media (max-width: 1024px) {
-  .card-container {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-/* Mobile screens (1 card per row) */
-@media (max-width: 768px) {
-  .card-container {
-    grid-template-columns: 1fr;
-  }
-}
-
-/* Mobile screens (1 card per row) */
-@media (max-width: 568px) {
-  .card-container {
-    grid-template-columns: 1fr;
-    margin-right: 35px;
-  }
-}
-
-/* Categories Container */
+    /* Categories Container */
 .categories-container {
   display: flex;
   justify-content: center;
@@ -258,7 +69,205 @@
 
 .category:hover {
   background-color: #f1f1f1;
+  color:#3B82F6;
+}
+
+    .section-title {
+      font-size: 3.1rem;
+      color: #327dff;
+      margin-bottom: 10px;
+    }
+
+    .header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background-color: #e8f0fe;
+      padding: 10px 20px;
+      border-radius: 30px;
+      width: 427px;
+      height: 79px;
+      margin-bottom: 20px;
+      margin-left: 18px;
+      box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .header h1 {
+      font-size: 27px;
+      font-weight: bolder;
+      color: #3B82F6;
+      display: flex;
+      align-items: center;
+      margin-left: 25px;
+    }
+
+    .header img{
+      margin-right: 20px;
+    }
+
+    .close-button {
+      background-color: #3B82F6;
+      border: none;
+      color: #ffffff;
+      font-size: 20px;
+      width: 25px;
+      height: 25px;
+      border-radius: 50%;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .card-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 70px;
+  width: 80%;
+}
+
+.card {
+  width: 308px;
+  height: 319px;
+  perspective: 1000px;
+  cursor: pointer;
+  position: relative;
+  border-radius: 30px; /* Outer rounded corners */
+  background-color: #77abfe94; /* Background color */
+  padding: 10px; /* Space for the inner border effect */
+}
+
+.card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: transform 0.6s;
+  border-radius: 25px; /* Slightly smaller radius than .card */
+  background-color: #77abfe94; /* Keep the same background color */
+  box-shadow: inset 0 0 0 4px white; /* Inner white border */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.card-front img {
+  width:100%;
+  height: 200px; /* Adjust height as needed */
+  object-fit: cover; /* Ensures the image scales properly */
+  border-radius: 15px; /* Rounded corners for the image */
+}
+
+
+.card.flipped .card-inner {
+  transform: rotateY(180deg);
+}
+
+.card-front,
+.card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 30px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px; /* Match the padding to ensure consistency */
+  box-sizing: border-box; /* Ensure padding doesn't affect size */
+}
+h4{
+  text-align: left;
+}
+.card-front {
+  background-color: #77abfe94;
+}
+
+.card-front p {
+  font-size: 25px;
+  font-weight: bolder;
   color: #3B82F6;
+  text-align: center;
+  margin-bottom:05px;
+}
+
+.card-back {
+  background-color: #3b83f694;
+  transform: rotateY(180deg);
+  text-align: center;
+  font-size: 12px;
+  border: 2px solid #ffffff;
+}
+
+.card-back h3 {
+  font-size: 20px;
+  color: #000;
+  margin-bottom: 10px;
+}
+
+.card-back p.price {
+  font-size: 20px;
+  color: #3b82f6;
+  margin-bottom: 10px;
+}
+
+.card-back .advantages,
+.card-back .features {
+  font-size: 15px;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.advantages ul {
+    list-style-type: disc !important; /* Ensures dots appear */
+    padding-left: 20px; /* Adds spacing for better visibility */
+    margin: 0; /* Removes unwanted margin */
+    display: block; /* Ensures proper rendering */
+  }
+
+  .advantages li {
+    display: list-item; /* Forces list item behavior */
+  }
+
+.card-back ul {
+  list-style: none;
+  padding: 0;
+  font-size: 14px;
+  text-align: left;
+  color: #000;
+}
+
+.card-back .stars {
+  margin-top: -5px;
+}
+
+.stars span {
+  color: #ffd700;
+  font-size: 20px;
+}
+
+/* Default: Desktop screens (3 cards in a row) */
+.card-container {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+/* Tablet screens (2 cards in a row) */
+@media (max-width: 1024px) {
+  .card-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Mobile screens (1 card per row) */
+@media (max-width: 768px) {
+  .card-container {
+    grid-template-columns: 1fr;
+  }
 }
 
 /* Medium Devices (Tablets) */
@@ -437,237 +446,128 @@
 #check {
   display: none;
 }
-
-/* Large screens (1200px and above) */
-@media (max-width: 1200px) {
-  .nav-bar {
-    padding: 20px 25px; /* Reduced padding */
-    height: 70px; /* Reduced navbar height */
-  }
-
-  .logo img {
-    width: 175px; /* Scale down logo */
-    position: absolute;
-    left: 0;
-    margin-top: -67px;
-  }
-
-  .menu li {
-    padding-left: 40px; /* Reduced padding for menu items */
-  }
-
-  .menu li a {
-    font-size: 18px; /* Reduced font size */
-  }
-
-  .open-menu {
-    display: none; /* Show hamburger on large screens */
-  }
-
-  .close-menu {
-    display: none;
-  }
-}
-
-/* Medium Screens (992px and below) */
-@media (max-width: 997px) {
-  .nav-bar {
-    padding: 15px 20px; /* Further reduced padding */
-    height: 55px; /* Reduced height */
-  }
-
-  .logo img {
-    width: 175px; /* Scale down logo */
-    margin-top: -70px;
-    margin-left: 2px;
-  }
-
-  .menu li {
-    padding-left: 30px; /* Further reduced padding */
-  }
-
-  .menu li a {
-    font-size: 13.5px; /* Reduced font size */
-  }
-
-  .open-menu {
-    display: none;
-  }
-
-  .close-menu {
-    display: none;
-  }
-}
-
-/* Small Screens (768px and below) */
-@media (max-width: 768px) {
-  .nav-bar {
-    flex-direction: column; /* Stack navbar items vertically */
-    padding: 10px 15px; /* Reduced padding */
-    height: 85px; /* Auto height */
-  }
-
-  .logo img {
-    width: 300px;
-    margin-top: -80px;
-    margin-left: 15px;
-  }
-
+@media screen and (max-width: 992px) {
   .menu {
-    flex-direction: column; /* Stack menu items vertically */
     position: fixed;
     top: 0;
-    right: -100%;
-    background-color: #ffffff;
+    right: -100%; /* Hide the menu off-screen initially */
     width: 250px;
-    height: 100%;
-    justify-content: center;
+    height: 100vh;
+    background-color: #ffffff;
+    flex-direction: column;
     align-items: center;
-    transition: 0.3s ease-in-out;
-    z-index: 10;
+    justify-content: center;
+    transition: right 0.3s ease-in-out;
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
   }
 
   .menu li {
-    padding-left: 0;
-    margin: 10px 0;
+    padding: 15px 0;
   }
 
   .menu li a {
-    font-size: 20px; /* Smaller font size for mobile */
-    margin-top: 10px;
+    font-size: 18px;
+    margin: 0;
   }
 
-  .open-menu {
-    display: block; /* Show hamburger menu */
-    position: absolute;
-    right: 0px;
-    font-size: 40px;
-    margin-right: 25px;
-  }
-
+  .open-menu,
   .close-menu {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    display: block; /* Show close menu button */
-    font-size: 40px;
+    display: block;
   }
 
+  /* Show menu when checkbox is checked */
   #check:checked ~ .menu {
-    right: 0; /* Menu appears when checkbox is checked */
+    right: 0;
   }
 }
 
-/* Extra Small Screens (576px and below) */
-@media (max-width: 576px) {
-  .nav-bar {
-    padding: 10px 15px;
-    height: 70px; /* Auto height for extra small screens */
+/* Media Queries for Responsive Navbar */
+@media (max-width: 768px) {
+  .menu {
+    display: none; /* Hide the menu by default on small screens */
+    flex-direction: column;
+    position: fixed;
+    top: 86px; /* Height of the navbar */
+    left: 0;
+    width: 100%;
+    height: calc(100vh - 86px); /* Full height minus navbar height */
+    background-color: #ffffff;
+    padding: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    z-index: 9;
   }
 
-  .logo img {
-    width: 300px; /* Smaller logo */
-    margin-top: -90px;
-    margin-left: -25px;
+  .menu li {
+    padding: 15px 0;
+    text-align: center;
   }
 
   .menu li a {
-    font-size: 16px;
+    margin: 0;
+    font-size: 18px;
   }
 
-  .open-menu {
-    right: 10px;
-    font-size: 32px;
-    margin-right: 15px;
-  }
-
+  .open-menu,
   .close-menu {
-    top: 5px;
-    right: 5px;
-    font-size: 35px;
+    display: block; /* Show hamburger and close buttons */
+  }
+
+  /* Show menu when checkbox is checked */
+  #check:checked ~ .menu {
+    display: flex;
   }
 }
-</style>
-<script>
-  // Select all menu items
-const menuItems = document.querySelectorAll('.menu li a');
 
-// Add click event listener to each menu item
-menuItems.forEach(item => {
-  item.addEventListener('click', function(e) {
-    // Get the href attribute
-    const href = item.getAttribute('href');
-    
-    // If it's an internal link (starts with "#"), scroll smoothly
-    if (href.startsWith('#')) {
-      e.preventDefault(); // Prevent default action for internal links
-      
-      // Get the target section from the href (like #home, #about)
-      const target = document.querySelector(href);
-
-      // Scroll smoothly to the target section
-      window.scrollTo({
-        top: target.offsetTop,
-        behavior: 'smooth'
-      });
-
-    } else {
-      // For external links like "gallery.html", allow navigation
-      // Let the default action happen (page redirection)
-      return; // Allow the link to navigate normally
-    }
-
-    // Close the menu after clicking the header
-    const checkbox = document.getElementById('check');
-    if (checkbox.checked) {
-      checkbox.checked = false; // Uncheck the menu to close it
-    }
-  });
-});
-</script>
+  </style>
 </head>
 <body>
-  <header>
-  <nav>
-    <ul class='nav-bar'>
-        <li class='logo'><a href='#'><img src='images/18.svg'/></a></li>
-        <input type='checkbox' id='check' />
-        <span class="menu">
-            <li><a href="../index.html">Home</a></li>
-            <li><a href="../index.html#about">About Us</a></li>
-            <li><a href="#product">Products</a></li>
-            <li><a href="../index.html#services">Services</a></li>
-            <li><a href="../gallery.html">Gallery</a></li>
-            <li><a href="../index.html#projects">Projects</a></li>
-            <li><a href="../index.html#footer">Contact Us</a></li>
-            <li><a href="https://forms.gle/pFJs1hXYYqZuxoWd7">Place Order</a></li>
-            <label for="check" class="close-menu"><i class="fas fa-times"></i></label>
-        </span>
+ <header>
+    <nav>
+      <ul class="nav-bar">
+        <li class="logo">
+          <a href="#"><img src="images/18.svg" alt="Logo" /></a>
+        </li>
+        <input type="checkbox" id="check" />
+        <ul class="menu">
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="../index.html#about">About Us</a></li>
+          <li><a href="#product">Products</a></li>
+          <li><a href="../index.html#services">Services</a></li>
+          <li><a href="../gallery.html">Gallery</a></li>
+          <li><a href="../index.html#projects">Projects</a></li>
+          <li><a href="../index.html#footer">Contact Us</a></li>
+          <li><a href="https://forms.gle/pFJs1hXYYqZuxoWd7">Place Order</a></li>
+          <label for="check" class="close-menu"><i class="fas fa-times"></i></label>
+        </ul>
         <label for="check" class="open-menu"><i class="fas fa-bars"></i></label>
-    </ul>
-</nav>
-</header>
+      </ul>
+    </nav>
+  </header>
+  
+  
+
   <div class="products-section">
     <h2 class="section-title">Our Products</h2>
   </div>
-<!-- Categories Box -->
+
+  <!-- Categories Box -->
 <div class="categories-container">
   <div class="categories">
     <div class="category" onclick="redirectToPage('../products.html')">
       <span>AC</span>
-      <img src="images/ac.svg" alt="AC">
+      <img src="images/ac.png" alt="AC">
     </div>
     <div class="category" onclick="redirectToPage('../products.html')">
       <span>Water Purifier</span>
-      <img src="images/wf.svg" alt="Water Purifier">
+      <img src="images/wf.png" alt="Water Purifier">
     </div>
     <div class="category" onclick="redirectToPage('../products.html')">
       <span>Solar & Heat Pumps</span>
-      <img src="images/shp.svg" alt="Solar & Heat Pumps">
+      <img src="images/shp.png" alt="Solar & Heat Pumps">
     </div>
     <div class="category" onclick="redirectToPage('../products.html')">
       <span>UPS</span>
-      <img src="images/ups.svg" alt="UPS">
+      <img src="images/ups.png" alt="UPS">
     </div>
   </div>
 </div>
@@ -678,9 +578,11 @@ menuItems.forEach(item => {
   }
 </script>
 
+
+
   <div class="header">
     <h1>
-      <img src="images/img.png" alt="AC Icon">
+      <img src="images/img1.png" alt="AC Icon">
       Split Air Conditioner
     </h1>
     <button class="close-button">X</button>
@@ -695,23 +597,23 @@ menuItems.forEach(item => {
           <p>Wall Mounted AC</p>
         </div>
         <div class="card-back">
-          <h3>Four Way Cassette AC</h3>
-          <p class="price">₹60,000 - ₹90,000</p>
+          <h3>Wall Mounted AC</h3>
+          <!-- <p class="price">₹28,000 - ₹48,000</p> -->
           <div class="advantages">
             <div>
               <h4>Advantages</h4>
               <ul>
-                <li>Reliable Brand</li>
-                <li>Excellent Cooling</li>
-                <li>Advanced Features</li>
+                <li>Energy Efficiency</li>
+                <li>Cooling Capacity</li>
+                <li>Affordable</li>
               </ul>
             </div>
             <div>
               <h4>Features</h4>
               <ul>
-                <li>4-Way Air Discharge</li>
-                <li>Anti-Bacterial Filter</li>
-                <li>Wi-Fi Connectivity</li>
+                <li>Copper Condenser</li>
+                <li>R32 Refrigerant</li>
+                <li>Auto Cleaning</li>
               </ul>
             </div>
           </div>
@@ -731,23 +633,23 @@ menuItems.forEach(item => {
             <p>Ceiling Casette AC</p>
           </div>
           <div class="card-back">
-            <h3>Four Way Cassette AC</h3>
-            <p class="price">₹60,000 - ₹90,000</p>
+            <h3>Ceiling Casette AC</h3>
+            <!-- <p class="price">₹55,000 - ₹90,000</p> -->
             <div class="advantages">
               <div>
                 <h4>Advantages</h4>
                 <ul>
-                  <li>Reliable Brand</li>
-                  <li>Excellent Cooling</li>
-                  <li>Advanced Features</li>
+                  <li>Cooling Performance</li>
+                  <li>Stylish Design</li>
+                  <li>Quiet Operation</li>
                 </ul>
               </div>
               <div>
                 <h4>Features</h4>
                 <ul>
-                  <li>4-Way Air Discharge</li>
-                  <li>Anti-Bacterial Filter</li>
-                  <li>Wi-Fi Connectivity</li>
+                  <li>Powerful airflow</li>
+                  <li>Self-Cleaning</li>
+                  <li>R32 Refrigerant</li>
                 </ul>
               </div>
             </div>
@@ -767,23 +669,23 @@ menuItems.forEach(item => {
             <p>Ceiling Suspended AC</p>
           </div>
           <div class="card-back">
-            <h3>Four Way Cassette AC</h3>
-            <p class="price">₹60,000 - ₹90,000</p>
+            <h3>Ceiling Suspended AC</h3>
+            <!-- <p class="price">₹45,000 - ₹90,000</p> -->
             <div class="advantages">
               <div>
                 <h4>Advantages</h4>
                 <ul>
-                  <li>Reliable Brand</li>
-                  <li>Excellent Cooling</li>
+                  <li>Cooling Capacity</li>
+                  <li>Affordable</li>
                   <li>Advanced Features</li>
                 </ul>
               </div>
               <div>
                 <h4>Features</h4>
                 <ul>
-                  <li>4-Way Air Discharge</li>
-                  <li>Anti-Bacterial Filter</li>
-                  <li>Wi-Fi Connectivity</li>
+                  <li>Copper condenser</li>
+                  <li>Turbo cool mode</li>
+                  <li>Remote Control</li>
                 </ul>
               </div>
             </div>
@@ -803,23 +705,23 @@ menuItems.forEach(item => {
             <p>Floor Mounted Split AC</p>
           </div>
           <div class="card-back">
-            <h3>Four Way Cassette AC</h3>
-            <p class="price">₹60,000 - ₹90,000</p>
+            <h3>Floor Mounted Split AC</h3>
+            <!-- <p class="price">₹50,000 - ₹90,000</p> -->
             <div class="advantages">
               <div>
                 <h4>Advantages</h4>
                 <ul>
                   <li>Reliable Brand</li>
-                  <li>Excellent Cooling</li>
-                  <li>Advanced Features</li>
+                  <li>Cooling Performance</li>
+                  <li>Durable</li>
                 </ul>
               </div>
               <div>
                 <h4>Features</h4>
                 <ul>
+                  <li>Powerful Airflow</li>
+                  <li>Self-cleaning</li>
                   <li>4-Way Air Discharge</li>
-                  <li>Anti-Bacterial Filter</li>
-                  <li>Wi-Fi Connectivity</li>
                 </ul>
               </div>
             </div>
@@ -839,23 +741,23 @@ menuItems.forEach(item => {
             <p>Multi Mounted AC</p>
           </div>
           <div class="card-back">
-            <h3>Four Way Cassette AC</h3>
-            <p class="price">₹60,000 - ₹90,000</p>
+            <h3>Multi Mounted AC</h3>
+            <!-- <p class="price">₹1,20,000 - ₹2,00,000</p> -->
             <div class="advantages">
               <div>
                 <h4>Advantages</h4>
                 <ul>
                   <li>Reliable Brand</li>
-                  <li>Excellent Cooling</li>
-                  <li>Advanced Features</li>
+                  <li>Cooling Performance</li>
+                  <li>User-Friendly</li>
                 </ul>
               </div>
               <div>
                 <h4>Features</h4>
                 <ul>
-                  <li>4-Way Air Discharge</li>
+                  <li>Inverter Tecnology</li>
                   <li>Anti-Bacterial Filter</li>
-                  <li>Wi-Fi Connectivity</li>
+                  <li>4-Way Discharge</li>
                 </ul>
               </div>
             </div>
@@ -875,23 +777,23 @@ menuItems.forEach(item => {
             <p>Inverter Split AC</p>
           </div>
           <div class="card-back">
-            <h3>Four Way Cassette AC</h3>
-            <p class="price">₹60,000 - ₹90,000</p>
+            <h3>Inverter Split AC</h3>
+            <!-- <p class="price">₹1,20,000 - ₹2,00,000</p> -->
             <div class="advantages">
               <div>
                 <h4>Advantages</h4>
                 <ul>
-                  <li>Reliable Brand</li>
-                  <li>Excellent Cooling</li>
-                  <li>Advanced Features</li>
+                  <li>Good Value for Money</li>
+                  <li>Energy Efficient</li>
+                  <li>Flexibility</li>
                 </ul>
               </div>
               <div>
                 <h4>Features</h4>
                 <ul>
+                  <li>Convertible Cooling Modes</li>
+                  <li>Anti-Corrosive</li>
                   <li>4-Way Air Discharge</li>
-                  <li>Anti-Bacterial Filter</li>
-                  <li>Wi-Fi Connectivity</li>
                 </ul>
               </div>
             </div>
@@ -912,15 +814,15 @@ menuItems.forEach(item => {
           <p>Concealed Ducted AC</p>
         </div>
         <div class="card-back">
-          <h3>Four Way Cassette AC</h3>
-          <p class="price">₹60,000 - ₹90,000</p>
+          <h3>Concealed Ducted AC</h3>
+          <!-- <p class="price">₹50,000 - ₹1,50,000</p> -->
           <div class="advantages">
             <div>
               <h4>Advantages</h4>
               <ul>
-                <li>Reliable Brand</li>
-                <li>Excellent Cooling</li>
-                <li>Advanced Features</li>
+                <li>Affordable </li>
+                <li>Energy Efficient</li>
+                <li>User friendly feature</li>
               </ul>
             </div>
             <div>
@@ -928,7 +830,7 @@ menuItems.forEach(item => {
               <ul>
                 <li>4-Way Air Discharge</li>
                 <li>Anti-Bacterial Filter</li>
-                <li>Wi-Fi Connectivity</li>
+                <li>Self-Cleaning Function</li>
               </ul>
             </div>
           </div>
@@ -942,7 +844,7 @@ menuItems.forEach(item => {
     <!-- Add more cards as needed to make a total of 7 cards -->
   </div>
 
-  <script>
+    <script>
     document.querySelectorAll('.card').forEach(card => {
       card.addEventListener('click', () => {
         card.classList.toggle('flipped');
@@ -953,5 +855,6 @@ menuItems.forEach(item => {
   window.location.href = '../products.html';
 });
 </script>
+
 </body>
 </html>

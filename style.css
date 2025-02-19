@@ -1387,105 +1387,128 @@ button:hover {
 }
 
 
-/* Media Queries for Responsiveness */
-
 /* Extra Large Devices (Desktops, 1200px and up) */
 @media (min-width: 1200px) {
   .companies {
-    justify-content: space-between; /* More spacing between items */
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
   }
 
   .company-card {
-    height: 350px; /* Increased height for company cards */
+    width: 250px;
+    height: 350px;
   }
 
   .description {
-    font-size: 0.9rem; /* Slightly smaller font size for description */
+    font-size: 0.9rem;
   }
 }
 
 /* Large Devices (Laptops, 992px to 1199px) */
 @media (max-width: 1199px) {
   .companies {
+    display: flex;
     justify-content: space-evenly;
+    flex-wrap: wrap;
   }
 
   .company-card {
-    height: 320px; /* Increased height for company cards */
+    width: 230px;
+    height: 320px;
   }
 
   .description {
-    font-size: 0.85rem; /* Slightly smaller font size for description */
+    font-size: 0.85rem;
   }
 }
 
 /* Medium Devices (Tablets, 768px to 991px) */
 @media (max-width: 991px) {
   .companies {
-    justify-content: center; /* Center the cards */
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
   }
 
   .company-card {
-    height: 280px; /* Increased height for company cards */
+    width: 220px;
+    height: 280px;
   }
 
   .description {
-    font-size: 0.8rem; /* Slightly smaller font size for description */
+    font-size: 0.8rem;
+    opacity: 1;  /* Ensures visibility on touch devices */
+    transform: translateY(0);
   }
 }
 
 /* Small Devices (Phones, 576px to 767px) */
 @media (max-width: 767px) {
   .companies {
-    flex-direction: column; /* Stack the cards */
-    align-items: center; /* Center align the cards */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 
   .company-card {
-    height: 240px; /* Increased height for company cards */
-    margin-bottom: 20px; /* Add space between cards */
+    width: 90%;
+    max-width: 280px;
+    height: 260px;
+    margin-bottom: 20px;
   }
 
   .description {
-    font-size: 0.75rem; /* Slightly smaller font size for description */
+    font-size: 0.75rem;
+    opacity: 1;
+    transform: translateY(0);
   }
 }
 
 /* Extra Small Devices (Phones, less than 576px) */
 @media (max-width: 575px) {
   .companies {
-    flex-direction: column; /* Stack cards */
-    align-items: center;
-  }
-
-  .company-card {
-    height: 220px; /* Increased height for company cards */
-    margin-bottom: 15px;
-  }
-
-  .description {
-    font-size: 0.7rem; /* Slightly smaller font size for description */
-  }
-}
-
-/* For Very Small Screens (320px and below) */
-@media (max-width: 320px) {
-  .companies {
+    display: flex;
     flex-direction: column;
     align-items: center;
   }
 
   .company-card {
-    height: 200px; /* Increased height for company cards */
+    width: 90%;
+    max-width: 260px;
+    height: 240px;
+    margin-bottom: 15px;
+    overflow: visible;
+  }
+
+  .description {
+    font-size: 0.7rem;
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Very Small Screens (320px and below) */
+@media (max-width: 320px) {
+  .companies {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .company-card {
+    width: 90%;
+    max-width: 240px;
+    height: 220px;
     margin-bottom: 10px;
   }
 
   .description {
-    font-size: 0.65rem; /* Slightly smaller font size for description */
+    font-size: 0.65rem;
+    opacity: 1;
+    transform: translateY(0);
   }
 }
-
-
 
 
 /* Footer */

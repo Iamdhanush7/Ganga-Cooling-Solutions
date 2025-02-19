@@ -348,7 +348,28 @@
     width: 45px;
   }
 }
+/* Media Query: Hide text & Shrink Header */
+@media (max-width: 767px) {
+  .header {
+    padding: 5px 10px; /* Reduce padding */
+    height: 50px; /* Shrink header height */
+    width: 110px;
+  }
 
+  .header h1 {
+    font-size: 0; /* Hide text */
+  }
+
+  .header h1 img {
+    width: 30px; /* Smaller logo size */
+    height: auto;
+    margin-right: 0;
+  }
+
+  .close-button {
+    font-size: 1.2rem; /* Slightly smaller close button */
+  }
+}
 /* General Navbar */
 .nav-bar {
   width: 100%; /* Makes the nav-bar span the full width of the viewport */

@@ -306,6 +306,7 @@ html {
 }
 
 .slider .dots {
+  cursor: pointer;
   position: absolute;
   bottom: 10px;
   left: 0;
@@ -1739,6 +1740,7 @@ footer {
 @media (max-width: 576px) {
   footer {
     padding: 15px 0;
+    max-width: 100%;
   }
 
   .footer-container {
@@ -1786,7 +1788,7 @@ footer {
 
 
   .footer-section.logo img {
-    margin-left: 75px;
+    margin-left: 58px;
     margin-top: 25px;
   }
 

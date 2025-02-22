@@ -239,7 +239,7 @@ html {
   }
 
   .menu li a {
-    font-size: 16px;
+    font-size: 14px;
   }
 
   .open-menu {
@@ -363,6 +363,7 @@ html {
 /* Mobile Devices (480px and below) */
 @media screen and (max-width: 480px) {
   .slider {
+    width: 100%;
     height: 300px;
   }
 

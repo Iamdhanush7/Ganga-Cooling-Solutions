@@ -37,13 +37,13 @@
   <div class="slider">
     <div class="list">
         <div class="item">
-            <img src="images/b1.png" alt="">
+            <img src="images/b1.svg" alt="">
         </div>
         <div class="item">
-            <img src="images/b2.png" alt="">
+            <img src="images/b2.svg" alt="">
         </div>
         <div class="item">
-            <img src="images/b3.png" alt="">
+            <img src="images/b3.svg" alt="">
         </div>
     </div>
     <div class="buttons">
@@ -313,216 +313,42 @@ document.querySelectorAll('.read-more-btn').forEach((button, index) => {
 </script>
 
 <!--Projects Section-->
-<section class="clients-section" id="projects">
-  <div class="slider">
-    <h3 id="clients-title">OUR CLIENTS</h3>
-    <h1 id="clients-subtitle">Highlighting the partnerships that define us</h1>
-    <h2 id="extra-subtitle"></h2>
-    <div class="companies" id="companies">
-      <!-- Dynamic Content -->
-    </div>
-    <div class="nav-buttons">
-      <div class="dot active" onclick="changeSlide(0)"></div>
-      <div class="dot" onclick="changeSlide(1)"></div>
-      <div class="dot" onclick="changeSlide(2)"></div>
-      <div class="dot" onclick="changeSlide(3)"></div>
-    </div>
+<section class="clients" id="projects">
+  <h2>OUR CLIENTS</h2>
+  <p>Our collaborations are built to foster innovation, combining expertise and shared goals to drive impactful solutions</p>
+  <h3>COMPANIES</h3>
+
+  <div class="slider-container">
+      <div class="fixed-cards">
+          <div class="company-card">
+              <img class="logo" src="images/velca.png" alt="Velca">
+              <h4 class="title">Velca</h4>
+              <p class="description">Velca is a leader in modern cooling solutions, delivering efficiency and innovation.</p>
+          </div>
+          <div class="company-card">
+              <img class="logo" src="images/Dhl.png" alt="DHL">
+              <h4 class="title">DHL</h4>
+              <p class="description">DHL provides world-class logistics and supply chain services globally.</p>
+          </div>
+          <div class="company-card">
+              <img class="logo" src="images/ifb.png" alt="IFB">
+              <h4 class="title">IFB</h4>
+              <p class="description">IFB revolutionizes home appliances with cutting-edge technology.</p>
+          </div>
+          <div class="company-card">
+              <img class="logo" src="images/CTCI.jpeg" alt="Aero Platina">
+              <h4 class="title">CTCI</h4>
+              <p class="description">CTCI specializes in engineering and project management.</p>
+          </div>
+      </div>
+
+      <div class="dots">
+          <span class="dot active"></span>
+          <span class="dot"></span>
+          <span class="dot"></span>
+          <span class="dot"></span>
+      </div>
   </div>
-  <script>
-    const slides = [
-      {
-        title: "OUR CLIENTS",
-        subtitle: "Highlighting the partnerships that define us",
-        extraSubtitle: "COMPANIES",
-        companies: [
-          {
-            name: "Velca",
-            logo: "./images/velca.png",
-            description: "Velca is a leader in modern cooling solutions, delivering efficiency and innovation."
-          },
-          {
-            name: "DHL",
-            logo: "./images/dhl.png",
-            description: "DHL provides world-class logistics and supply chain services globally."
-          },
-          {
-            name: "IFB",
-            logo: "./images/ifb.png",
-            description: "IFB revolutionizes home appliances with cutting-edge technology."
-          },
-          {
-            name: "CTCI",
-            logo: "./images/CTCI.jpeg",
-            description: "CTCI specializes in engineering and project management."
-          }
-        ]
-      },
-      {
-        title: "OUR CLIENTS",
-        subtitle: "Highlighting the partnerships that define us",
-        extraSubtitle: "HOMES",
-        companies: [
-          {
-            name: "Prestige",
-            logo: "./images/prestige.png",
-            description: "Prestige is known for premium real estate development and iconic projects."
-          },
-          {
-            name: "Shobha",
-            logo: "./images/Shobha.png",
-            description: "Shobha is renowned for its luxury homes and design excellence."
-          },
-          {
-            name: "Godrej",
-            logo: "./images/godrej.png",
-            description: "Godrej Properties blends innovation and sustainability in real estate."
-          },
-          {
-            name: "Ozone",
-            logo: "./images/ozone.png",
-            description: "Ozone Group delivers future-ready homes with cutting-edge infrastructure."
-          }
-        ]
-      },
-      {
-        title: "OUR CLIENTS",
-        subtitle: "Highlighting the partnerships that define us",
-        extraSubtitle: "HOTELS",
-        companies: [
-          {
-            name: "Breeze Hotel",
-            logo: "./images/h1.png",
-            description: "Breeze Hotel offers unparalleled hospitality and comfort."
-          },
-          {
-            name: "Sattva",
-            logo: "./images/h2.png",
-            description: "Sattva Hotels deliver luxurious experiences in serene environments."
-          },
-          {
-            name: "Zion",
-            logo: "./images/h3.png",
-            description: "Zion Hotels offers comfort and luxury for memorable stays."
-          },
-          {
-            name: "Bridge",
-            logo: "./images/h4.png",
-            description: "Bridge Hotels combine elegance with state-of-the-art facilities."
-          }
-        ]
-      },
-      {
-        title: "OUR CLIENTS",
-        subtitle: "Highlighting the partnerships that define us",
-        extraSubtitle: "HOSPITALS",
-        companies: [
-          {
-            name: "Apollo",
-            logo: "./images/apollo.png",
-            description: "Apollo is a pioneer in healthcare, offering world-class medical services."
-          },
-          {
-            name: "Fortis",
-            logo: "./images/fortis.png",
-            description: "Fortis Healthcare excels in quality healthcare and advanced technology."
-          },
-          {
-            name: "Narayana",
-            logo: "./images/narayana.png",
-            description: "Narayana Health delivers affordable and high-quality medical care."
-          },
-          {
-            name: "Max",
-            logo: "./images/max.png",
-            description: "Max Healthcare provides integrated healthcare services with excellence."
-          }
-        ]
-      }
-    ];
-
-    let currentIndex = 0; // Keeps track of the current slide index
-  let autoSlideInterval; // Interval for automatic slide
-
-  const titleElement = document.getElementById("clients-title");
-  const subtitleElement = document.getElementById("clients-subtitle");
-  const extraSubtitleElement = document.getElementById("extra-subtitle");
-  const companiesElement = document.getElementById("companies");
-  const dots = document.querySelectorAll(".dot");
-
-  // Function to update the slider content
-  function changeSlide(index) {
-    titleElement.textContent = slides[index].title;
-    subtitleElement.textContent = slides[index].subtitle;
-    extraSubtitleElement.textContent = slides[index].extraSubtitle;
-    companiesElement.innerHTML = slides[index].companies
-      .map(
-        (company) =>
-          `<div class="company-card">
-            <div class="card-content">
-              <div class="logo-square">
-                <img src="${company.logo}" alt="${company.name}">
-              </div>
-              <p class="company-name">${company.name}</p>
-            </div>
-            <div class="description">
-              <p>${company.description}</p>
-            </div>
-          </div>`
-      )
-      .join("");
-
-    // Update active dot
-    dots.forEach((dot, i) => {
-      dot.classList.toggle("active", i === index);
-    });
-
-    currentIndex = index; // Update the current index
-    attachCardHoverListeners(); // Attach hover listeners to new cards
-  }
-
-  // Function to move to the next slide
-  function nextSlide() {
-    const nextIndex = (currentIndex + 1) % slides.length;
-    changeSlide(nextIndex);
-  }
-
-  // Start the automatic carousel
-  function startCarousel() {
-    autoSlideInterval = setInterval(nextSlide, 1700); // Change slide every 1.7 seconds
-  }
-
-  // Pause the carousel
-  function pauseCarousel() {
-    clearInterval(autoSlideInterval);
-  }
-
-  // Resume the carousel
-  function resumeCarousel() {
-    startCarousel();
-  }
-
-  // Attach hover listeners to all cards in the current slide
-  function attachCardHoverListeners() {
-    const cards = document.querySelectorAll(".company-card");
-    cards.forEach((card) => {
-      card.addEventListener("mouseenter", pauseCarousel); // Pause on hover
-      card.addEventListener("mouseleave", resumeCarousel); // Resume on mouse leave
-    });
-  }
-
-  // Add event listeners for the navigation dots
-  dots.forEach((dot, i) => {
-    dot.addEventListener("click", () => {
-      clearInterval(autoSlideInterval); // Stop automatic carousel when user manually interacts
-      changeSlide(i); // Change to the clicked slide
-      startCarousel(); // Resume the carousel
-    });
-  });
-
-  // Initialize the slider
-  changeSlide(0); // Load the first slide
-  startCarousel(); // Start the automatic carousel
-  </script>
 </section>
 
 

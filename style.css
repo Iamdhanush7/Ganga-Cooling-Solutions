@@ -228,7 +228,6 @@ html {
 /* Extra Small Screens (576px and below) */
 @media (max-width: 576px) {
   .nav-bar {
-    width: 100%;
     padding: 10px 15px;
     height: 70px; /* Auto height for extra small screens */
   }

@@ -37,7 +37,7 @@ menuItems.forEach(item => {
 
 // Product Data
 const productData = {
-  ac: [
+  "ac": [
     { name: "Split Air Conditioner", description: "A split air conditioner is a type of cooling system that comprises two separate units: the indoor unit and the outdoor unit.", image: "./images/ac1.png" },
     { name: "Cassette Air Conditioner", description: "A cassette air conditioner is a type of air conditioning system designed for ceiling installation. Its unique design allows it to be seamlessly integrated into the ceiling, providing efficient and even cooling for larger spaces.", image: "./images/ac2.png" },
     { name: "Ductable Air Conditioner", description: "A ductable air conditioner is a centralized cooling system designed to distribute air through a network of ducts installed in ceilings or walls.", image: "./images/ac3.png" },
@@ -56,7 +56,7 @@ const productData = {
     { name: "Commercial Solar", description: "Commercial Solar Heat Pumps systems are designed to meet the higher volume and quality demands of businesses, industries, and other large-scale applications.", image: "./images/shp2.png" },
     { name: "Heat Pumps", description: "Heat pumps offer an energy-efficient alternative to furnaces and air conditioners for all climates. Heat pumps use electricity to transfer heat, making the cool space cooler and the warm space warmer.", image: "./images/shp3.png" },
   ],
-  ups: [
+  "ups": [
     { name: "Online UPS", description: "Online UPS takes the incoming AC mains supply and converts it to DC which feeds the battery and the load via the inverter. If the mains supply fails, then the batteries feed the load with no interruption.", image: "./images/ups1.png" },
     { name: "Offline UPS", description: "Offline UPS are the most basic models and designed for small, non-critical applications that require protection against momentary loss of power.", image: "./images/ups2.png" },
     { name: "Solar UPS", description: "Solar UPS converts solar energy generated in DC form into usable home energy in AC form, while storing it in batteries for use at night or during power outages.", image: "./images/ups3.png" },

@@ -5,34 +5,16 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ganga Cooling Solutions</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="CSS/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;400&display=swap" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
   </head>
 <body>
-  <header>
-    <nav>
-        <ul class='nav-bar'>
-            <li class='logo'><a href='#'><img src='images/18.svg'/></a></li>
-            <input type='checkbox' id='check' />
-            <span class="menu">
-                <li><a href="#hero">Home</a></li>
-                <li><a href="#about">About Us</a></li>
-                <li><a href="#product">Products</a></li>
-                <li><a href="#services">Services</a></li>
-                <li><a href="gallery.html">Gallery</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#footer">Contact Us</a></li>
-                <li><a href="https://forms.gle/pFJs1hXYYqZuxoWd7">Place Order</a></li>
-                <label for="check" class="close-menu"><i class="fas fa-times"></i></label>
-            </span>
-            <label for="check" class="open-menu"><i class="fas fa-bars"></i></label>
-        </ul>
-    </nav>
-  </header> 
-  
 
+  <!-- Navbar Placeholder -->
+  <div id="navbar-container"></div>
+  
   <!--Banners-->
   <div class="slider">
     <div class="list">
@@ -83,32 +65,8 @@
           <p>Customer satisfaction rate</p>
         </div>
       </div>
-      
-      <script>
-        // Function to animate counting numbers
-        function animateCounter(id, start, end, duration) {
-          const element = document.getElementById(id);
-          const range = end - start;
-          const increment = Math.ceil(range / (duration / 10)); // Increment per step
-          let current = start;
-      
-          const timer = setInterval(() => {
-            current += increment;
-            if ((increment > 0 && current >= end) || (increment < 0 && current <= end)) {
-              current = end; // Ensure it ends exactly at `end`
-              clearInterval(timer);
-            }
-            element.textContent = current;
-          }, 10); // Update every 10ms for smoother animation
-        }
-      
-        // Trigger the counters
-        window.onload = () => {
-          animateCounter("customerCount", 0, 999, 2000); // 4 seconds
-          animateCounter("installCount", 0, 499, 1000);  // 3 seconds
-        };
-      </script>      
     </div>
+
     <div class="hero-image">
         <img src="images/256.png" alt="Technician">
     </div>
@@ -125,12 +83,6 @@
   <div class="content-section">
     <h3>ABOUT US</h3>
     <h1>Cooling & Power Solutions for a <br>Sustainable Future</h1>
-    <!-- <p class="description">
-      Ganga Cooling Solutions established in 2023,previously named Aqua Water Solution in 2012, located in Bangalore, Karnataka, India, is a trusted provider of a diverse range of cooling and power solutions.
-    </p>
-    <p class="description">
-      We offer energy-efficient, eco-friendly products designed to enhance comfort while promoting environmental well-being.
-    </p> -->
     <p class="expandable-text">
       Ganga Cooling Solutions established in 2023,previously named Aqua Water Solution in 2012, located in Bangalore, Karnataka, India, is a trusted provider of a diverse range of cooling and power solutions. Our product line includes air conditioners, water purifiers, solar water heaters, and uninterruptible power supplies. We are committed to delivering high-quality products that ensure comfort and convenience for our customers. Our mission is to provide innovative and sustainable solutions that contribute to the well-being of our customers and the environment. Our air conditioners are designed with the latest technology, ensuring optimal cooling while being energy-efficient. Our water purifiers use advanced purification methods to provide clean and safe drinking water. Our solar water heaters harness the power of the sun, providing an eco-friendly solution for heating water. Our uninterruptible power supplies ensure that your devices are protected from power surges and provide backup power during power outages. Customer satisfaction is at the heart of everything we do. We strive to provide exceptional customer service, from the moment you contact us to the after-sales service. Our team is always ready to assist you with any queries or concerns you may have about our products. We understand the importance of sustainability and are committed to reducing our environmental impact. Our products are designed to be energy-efficient, helping to reduce carbon emissions. We also offer solar water heaters, which utilize renewable energy, further contributing to environmental conservation. Thank you for considering Ganga Cooling Solutions. We look forward to serving you.
     </p>
@@ -173,21 +125,6 @@
     </div>
   </div>
 </div>
-<script>
-  const readMore = document.querySelector('.read-more');
-const expandableText = document.querySelector('.expandable-text');
-
-// Toggle Read More / Read Less functionality
-readMore.addEventListener('click', () => {
-  expandableText.classList.toggle('expanded');
-  if (expandableText.classList.contains('expanded')) {
-    readMore.textContent = 'Read Less';
-  } else {
-    readMore.textContent = 'Read More';
-  }
-});
-
-</script>
 
 <!-- Product Section -->
 <section class="products-section" id="product">
@@ -238,17 +175,6 @@ readMore.addEventListener('click', () => {
   </div>
 </section>
 
-<script>
-  // Redirect to product.html with category query parameter
-  function redirectToCategory(category) {
-    window.location.href = `products.html?category=${category}`;
-  }
-
-  function redirect(page) {
-    window.location.href = page;
-  }
-</script>
-
 
   <!-- Services Section -->
 <section class="services-section" id="services">
@@ -296,21 +222,6 @@ readMore.addEventListener('click', () => {
     </div>
   </div>
 </section>
-<script>
-document.querySelectorAll('.read-more-btn').forEach((button, index) => {
-  button.addEventListener('click', function() {
-    const paragraph = this.previousElementSibling; // The paragraph element before the button
-    paragraph.classList.toggle('expanded');
-    
-    // Toggle the button text between "Read More" and "Read Less"
-    if (paragraph.classList.contains('expanded')) {
-      this.textContent = 'Read Less';
-    } else {
-      this.textContent = 'Read More';
-    }
-  });
-});
-</script>
 
 <!--Projects Section-->
 <section class="clients" id="projects">
@@ -411,6 +322,6 @@ document.querySelectorAll('.read-more-btn').forEach((button, index) => {
     <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" />
   </a>
 </div>
-    <script src="script.js"></script>
+    <script src="JS/script.js"></script>
 </body>
 </html>

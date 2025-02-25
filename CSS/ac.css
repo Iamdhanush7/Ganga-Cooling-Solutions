@@ -413,6 +413,7 @@ grid-template-columns: repeat(3, 1fr);
 
 /* General Navbar */
 .navbar {
+          width: 100%;
           display: flex;
           justify-content: space-between;
           align-items: center;
@@ -436,7 +437,7 @@ grid-template-columns: repeat(3, 1fr);
          margin-top: -122px;
          position: absolute;
          left: 0;
-         margin-left: -10px;
+         margin-left: 10px;
       }
       .nav-links {
           display: flex;

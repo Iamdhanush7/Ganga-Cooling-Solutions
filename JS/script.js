@@ -1,38 +1,99 @@
-// Select all menu items
-const menuItems = document.querySelectorAll('.menu li a');
+document.addEventListener("DOMContentLoaded", function () {
+  fetch("Components/navbar.html")
+      .then(response => response.text())
+      .then(data => {
+          document.getElementById("navbar-container").innerHTML = data;
 
-// Add click event listener to each menu item
-menuItems.forEach(item => {
-  item.addEventListener('click', function(e) {
-    // Get the href attribute
-    const href = item.getAttribute('href');
-    
-    // If it's an internal link (starts with "#"), scroll smoothly
-    if (href.startsWith('#')) {
-      e.preventDefault(); // Prevent default action for internal links
-      
-      // Get the target section from the href (like #home, #about)
-      const target = document.querySelector(href);
-
-      // Scroll smoothly to the target section
-      window.scrollTo({
-        top: target.offsetTop,
-        behavior: 'smooth'
-      });
-
-    } else {
-      // For external links like "gallery.html", allow navigation
-      // Let the default action happen (page redirection)
-      return; // Allow the link to navigate normally
-    }
-
-    // Close the menu after clicking the header
-    const checkbox = document.getElementById('check');
-    if (checkbox.checked) {
-      checkbox.checked = false; // Uncheck the menu to close it
-    }
-  });
+          // Add smooth scrolling after navbar is loaded
+          setupMenu();
+      })
+      .catch(error => console.error("Error loading navbar:", error));
 });
+
+function setupMenu() {
+  const menuItems = document.querySelectorAll('.menu li a');
+
+  menuItems.forEach(item => {
+      item.addEventListener('click', function(e) {
+          const href = item.getAttribute('href');
+
+          if (href.startsWith('#')) {
+              e.preventDefault();
+              const target = document.querySelector(href);
+              window.scrollTo({
+                  top: target.offsetTop,
+                  behavior: 'smooth'
+              });
+          }
+
+          const checkbox = document.getElementById('check');
+          if (checkbox) checkbox.checked = false;
+      });
+  });
+}
+
+// Function to animate counting numbers
+function animateCounter(id, start, end, duration) {
+  const element = document.getElementById(id);
+  const range = end - start;
+  const increment = Math.ceil(range / (duration / 10)); // Increment per step
+  let current = start;
+
+  const timer = setInterval(() => {
+    current += increment;
+    if ((increment > 0 && current >= end) || (increment < 0 && current <= end)) {
+      current = end; // Ensure it ends exactly at `end`
+      clearInterval(timer);
+    }
+    element.textContent = current;
+  }, 10); // Update every 10ms for smoother animation
+}
+
+//Hero page
+// Trigger the counters
+window.onload = () => {
+  animateCounter("customerCount", 0, 999, 2000); // 4 seconds
+  animateCounter("installCount", 0, 499, 1000);  // 3 seconds
+};
+
+const readMore = document.querySelector('.read-more');
+const expandableText = document.querySelector('.expandable-text');
+
+//About us section
+// Toggle Read More / Read Less functionality
+readMore.addEventListener('click', () => {
+  expandableText.classList.toggle('expanded');
+  if (expandableText.classList.contains('expanded')) {
+    readMore.textContent = 'Read Less';
+  } else {
+    readMore.textContent = 'Read More';
+  }
+});
+
+  //Products section
+  // Redirect to product.html with category query parameter
+  function redirectToCategory(category) {
+    window.location.href = `products.html?category=${category}`;
+  }
+
+  function redirect(page) {
+    window.location.href = page;
+  }
+
+  //Services section
+  document.querySelectorAll('.read-more-btn').forEach((button, index) => {
+    button.addEventListener('click', function() {
+      const paragraph = this.previousElementSibling; // The paragraph element before the button
+      paragraph.classList.toggle('expanded');
+      
+      // Toggle the button text between "Read More" and "Read Less"
+      if (paragraph.classList.contains('expanded')) {
+        this.textContent = 'Read Less';
+      } else {
+        this.textContent = 'Read More';
+      }
+    });
+  });
 
 
 document.addEventListener("DOMContentLoaded", function() {

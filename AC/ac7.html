@@ -38,31 +38,32 @@
     <h2 class="section-title">Our Products</h2>
   </div>
 
-  <!-- Categories Box -->
+ <!-- Categories Box -->
 <div class="categories-container">
   <div class="categories">
-    <div class="category" onclick="redirectToPage('../products.html')">
-      <span>AC</span>
-      <img src="images/ac.png" alt="AC">
-    </div>
-    <div class="category" onclick="redirectToPage('../products.html')">
-      <span>Water Purifier</span>
-      <img src="images/wf.png" alt="Water Purifier">
-    </div>
-    <div class="category" onclick="redirectToPage('../products.html')">
-      <span>Solar & Heat Pumps</span>
-      <img src="images/shp.png" alt="Solar & Heat Pumps">
-    </div>
-    <div class="category" onclick="redirectToPage('../products.html')">
-      <span>UPS</span>
-      <img src="images/ups.png" alt="UPS">
-    </div>
+      <div class="category" onclick="redirectToCategory('ac')">
+          <span>AC</span>
+          <img src="images/ac.png" alt="AC">
+      </div>
+      <div class="category" onclick="redirectToCategory('water-purifier')">
+          <span>Water Purifier</span>
+          <img src="images/wf.png" alt="Water Purifier">
+      </div>
+      <div class="category" onclick="redirectToCategory('solar-pumps')">
+          <span>Solar & Heat Pumps</span>
+          <img src="images/shp.png" alt="Solar & Heat Pumps">
+      </div>
+      <div class="category" onclick="redirectToCategory('ups')">
+          <span>UPS</span>
+          <img src="images/ups.png" alt="UPS">
+      </div>
   </div>
 </div>
+
 <script>
-  function redirectToPage(url) {
-    // Redirect to the specified URL
-    window.location.href = url;
+  function redirectToCategory(category) {
+    // Redirect to products.html with the category as a URL parameter
+    window.location.href = `../products.html?category=${category}`;
   }
 </script>
 

@@ -60,6 +60,10 @@ html {
   text-transform: lowercase; /* All text lowercase */
 }
 
+.menu li a:hover{
+  color: #3B82F6;
+}
+
 .menu li a:first-letter {
   text-transform: uppercase; /* Capitalize the first letter */
 }
@@ -71,7 +75,6 @@ html {
   left: 0;
   width: 0;
   height: 3px;
-  background-color: #1F509A;
   transition: 0.15s ease-in-out;
 }
 
@@ -361,10 +364,61 @@ html {
 }
 
 /* Mobile Devices (480px and below) */
+@media screen and (max-width: 576px) {
+  .slider {
+    width: 100%;
+    height: 290px;
+  }
+
+  .slider .list img {
+    width: 418px;
+  }
+
+  .slider .buttons button {
+    font-size: 35px;
+    width: 35px;
+    height: 35px;
+  }
+}
+
 @media screen and (max-width: 480px) {
   .slider {
     width: 100%;
-    height: 280px;
+    height: 290px;
+  }
+
+  .slider .list img {
+    width: 418px;
+  }
+
+  .slider .buttons button {
+    font-size: 35px;
+    width: 35px;
+    height: 35px;
+  }
+}
+
+@media screen and (min-width:428)and(max-width: 430px) {
+  .slider {
+    width: 100%;
+    height: 290px;
+  }
+
+  .slider .list img {
+    width: 457px;
+  }
+
+  .slider .buttons button {
+    font-size: 35px;
+    width: 35px;
+    height: 35px;
+  }
+}
+
+@media screen and (max-width: 380px) {
+  .slider {
+    width: 100%;
+    height: 290px;
   }
 
   .slider .list img {
@@ -375,7 +429,6 @@ html {
     font-size: 35px;
     width: 35px;
     height: 35px;
-    margin-bottom: 15px;
   }
 }
 

@@ -57,6 +57,10 @@ body {
     position: relative;
     text-transform: lowercase; /* All text lowercase */
   }
+
+  .menu li a:hover{
+    color: #3B82F6;
+  }
   
   .menu li a:first-letter {
     text-transform: uppercase; /* Capitalize the first letter */
@@ -69,7 +73,6 @@ body {
     left: 0;
     width: 0;
     height: 2.7px;
-    background-color: #1F509A;
     transition: 0.15s ease-in-out;
   }
   

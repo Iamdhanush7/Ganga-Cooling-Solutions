@@ -142,8 +142,8 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
 const logos = [
-  "images/velca.png", "images/dhl.png", "images/ifb.png", "images/CTCI.jpeg",
-  "images/prestige.png", "images/shobha.png", "images/godrej.png", "images/ozone.png",
+  "images/velca.png", "https://i.pinimg.com/1200x/e3/41/34/e3413486197a1f23b47ea1135166034e.jpg", "images/ifb.png", "images/CTCI.jpeg",
+  "https://upload.wikimedia.org/wikipedia/commons/2/22/Prestige_Group.png", "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSWA2aqWWmrh8e9BG_NqwpKcggOY-EzpXbD1w&s", "images/godrej.png", "images/ozone.png",
   "images/h1.png", "images/h2.png", "images/h3.png", "images/h4.png",
   "images/apollo.png", "images/fortis.png", "images/narayana.png", "images/max.png"
 ];

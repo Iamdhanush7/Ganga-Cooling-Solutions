@@ -279,9 +279,9 @@ html {
 }
 
 .slider .list img {
-  width: 1575px;
+  width: 1535px;
   height: 100%;
-  object-fit: contain; /* Ensures the entire image fits inside without cropping */
+  object-fit: contain;
 }
 
 

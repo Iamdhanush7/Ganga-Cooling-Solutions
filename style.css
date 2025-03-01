@@ -517,23 +517,6 @@ html {
   }
 }
 
-@media screen and (max-width: 344px) {
-  .slider {
-    width: 100%;
-    height: 290px;
-  }
-
-  .slider .list img {
-    width: 260px;
-  }
-
-  .slider .buttons button {
-    font-size: 35px;
-    width: 35px;
-    height: 35px;
-  }
-}
-
 
 @media screen and (max-width: 412px) {
   .slider {

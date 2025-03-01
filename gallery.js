@@ -37,15 +37,15 @@ function setupMenu() {
 
 
 const images = [
-  'images/img1.png',
-  'images/img2.png',
-  'images/img3.png',
-  'images/img4.png',
-  'images/img5.png',
-  'images/img6.png',
-  'images/img7.png',
-  'images/img8.png',
-  'images/img9.png'
+  'https://res.cloudinary.com/dyk23evs1/image/upload/v1740825686/img1_os9c7f.png',
+  'https://res.cloudinary.com/dyk23evs1/image/upload/v1740825686/img2_wmdll1.png',
+  'https://res.cloudinary.com/dyk23evs1/image/upload/v1740825687/img3_rt52nt.png',
+  'https://res.cloudinary.com/dyk23evs1/image/upload/v1740825686/img4_cyyx2z.png',
+  'https://res.cloudinary.com/dyk23evs1/image/upload/v1740825687/img5_po3ukg.png',
+  'https://res.cloudinary.com/dyk23evs1/image/upload/v1740825687/img6_kwgxuy.png',
+  'https://res.cloudinary.com/dyk23evs1/image/upload/v1740825688/img7_t77afb.png',
+  'https://res.cloudinary.com/dyk23evs1/image/upload/v1740825687/img8_saytts.png',
+  'https://res.cloudinary.com/dyk23evs1/image/upload/v1740825688/img9_svpufs.png'
 ];
 
 const gallery = document.getElementById('gallery');

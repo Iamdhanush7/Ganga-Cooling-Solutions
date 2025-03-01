@@ -142,10 +142,22 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
 const logos = [
-  "images/velca.png", "https://i.pinimg.com/1200x/e3/41/34/e3413486197a1f23b47ea1135166034e.jpg", "images/ifb.png", "images/CTCI.jpeg",
-  "https://upload.wikimedia.org/wikipedia/commons/2/22/Prestige_Group.png", "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSWA2aqWWmrh8e9BG_NqwpKcggOY-EzpXbD1w&s", "images/godrej.png", "images/ozone.png",
-  "images/h1.png", "images/h2.png", "images/h3.png", "images/h4.png",
-  "images/apollo.png", "images/fortis.png", "images/narayana.png", "images/max.png"
+  "https://res.cloudinary.com/dyk23evs1/image/upload/v1740825677/velca_nz0bro.png", 
+  "https://i.pinimg.com/1200x/e3/41/34/e3413486197a1f23b47ea1135166034e.jpg", 
+  "https://res.cloudinary.com/dyk23evs1/image/upload/v1740825685/ifb_trfpaj.png", 
+  "https://res.cloudinary.com/dyk23evs1/image/upload/v1740825682/CTCI_t8gnmi.jpg",
+  "https://upload.wikimedia.org/wikipedia/commons/2/22/Prestige_Group.png", 
+  "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSWA2aqWWmrh8e9BG_NqwpKcggOY-EzpXbD1w&s", 
+  "https://res.cloudinary.com/dyk23evs1/image/upload/v1740825685/godrej_dtxcpu.png", 
+  "https://res.cloudinary.com/dyk23evs1/image/upload/v1740825688/ozone_eminbm.png",
+  "https://res.cloudinary.com/dyk23evs1/image/upload/v1740825685/h1_jerixn.png", 
+  "https://res.cloudinary.com/dyk23evs1/image/upload/v1740825685/h2_opkgbf.png", 
+  "https://res.cloudinary.com/dyk23evs1/image/upload/v1740825685/h3_fvqjxc.png", 
+  "https://res.cloudinary.com/dyk23evs1/image/upload/v1740825685/h3_fvqjxc.png",
+  "https://res.cloudinary.com/dyk23evs1/image/upload/v1740825678/apollo_cygyhu.png", 
+  "https://res.cloudinary.com/dyk23evs1/image/upload/v1740825684/fortis_gpabph.png", 
+  "https://res.cloudinary.com/dyk23evs1/image/upload/v1740825688/narayana_dxtpix.png", 
+  "https://res.cloudinary.com/dyk23evs1/image/upload/v1740825688/max_uoa6yz.png"
 ];
 
 const titles = [

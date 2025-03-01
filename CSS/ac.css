@@ -167,7 +167,7 @@ color:#3B82F6;
 
 
 
-  .card-container {
+.card-container {
 display: grid;
 grid-template-columns: repeat(3, 1fr);
 gap: 70px;
@@ -489,7 +489,7 @@ grid-template-columns: repeat(3, 1fr);
       display: none;
       flex-direction: column;
       position: absolute;
-      top: 60px;
+      top: 45px;
       left: 0;
       width: 100%;
       background: white;
@@ -520,15 +520,15 @@ grid-template-columns: repeat(3, 1fr);
       margin: 5px 0;
   }
   .logo img {
-      width: 200px;
-      margin-top: -60px;
+      width: 250px;
+      margin-top: -90px;
   }
 }
 
 @media screen and (max-width: 768px) {
   .logo img {
-      width: 180px;
-      margin-top: -50px;
+      width: 210px;
+      margin-top: -75px;
   }
   .nav-links {
       top: 50px;

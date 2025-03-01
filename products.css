@@ -318,33 +318,102 @@ body {
   background-color: #f1f1f1;
 }
 
-/* Responsive Categories */
-@media (max-width: 768px) {
+/* Tablets: Adjust layout for medium screens */
+@media (max-width: 1024px) {
   .categories {
     flex-wrap: wrap;
     justify-content: center;
-    gap: 15px;
+    gap: 5px;
+    padding: 8px;
   }
+
   .category {
-    flex: 1 1 calc(50% - 10px);
-    padding: 15px;
-    font-size: 14px;
+    flex: 1 1 45%;
+    padding: 20px;
+    border-right: none;
+    border-bottom: 1px solid #ddd;
   }
+
+  .category:nth-child(even) {
+    border-right: none;
+  }
+
   .category img {
     width: 60px;
+    margin-left: 10px;
+  }
+
+  /* Active effect for the whole box */
+  .categories.active {
+    background-color: #e0f7ff;
+    border-color: #007bff;
   }
 }
 
-@media (max-width: 480px) {
-  .category {
-    flex: 1 1 100%;
-    padding: 10px;
-    font-size: 12px;
+/* Mobile screens: Stack categories while keeping them in one box */
+@media (max-width: 768px) {
+  .categories-container {
+    width: 90%;
   }
+
+  .categories {
+    flex-direction: column;
+    width: 100%;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 10px;
+    background: #fff;
+  }
+
+  .category {
+    width: 100%;
+    padding: 15px;
+    border-right: none;
+    border-bottom: 1px solid #ddd;
+  }
+
+  .category:last-child {
+    border-bottom: none;
+  }
+
   .category img {
     width: 50px;
+    margin-left: 5px;
+  }
+
+  /* Active effect for the whole box */
+  .categories.active {
+    background-color: #e0f7ff;
+    border-color: #007bff;
   }
 }
+
+/* Extra small screens: Further refinements */
+@media (max-width: 480px) {
+  .categories-container {
+    width: 95%;
+  }
+
+  .categories {
+    padding: 8px;
+  }
+
+  .category {
+    padding: 12px;
+    font-size: 14px;
+  }
+
+  .category img {
+    width: 40px;
+  }
+
+  /* Active effect for the whole box */
+  .categories.active {
+    background-color: #e0f7ff;
+    border-color: #007bff;
+  }
+}
+
 
 /* Product Cards Container */
 .products {

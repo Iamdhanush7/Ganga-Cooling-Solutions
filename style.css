@@ -388,7 +388,58 @@ html {
   }
 
   .slider .list img {
-    width: 418px;
+    width: 392px;
+  }
+
+  .slider .buttons button {
+    font-size: 35px;
+    width: 35px;
+    height: 35px;
+  }
+}
+
+@media screen and (max-width: 418px) {
+  .slider {
+    width: 100%;
+    height: 290px;
+  }
+
+  .slider .list img {
+    width: 414px;
+  }
+
+  .slider .buttons button {
+    font-size: 35px;
+    width: 35px;
+    height: 35px;
+  }
+}
+
+@media screen and (max-width: 413px) {
+  .slider {
+    width: 100%;
+    height: 290px;
+  }
+
+  .slider .list img {
+    width: 392px;
+  }
+
+  .slider .buttons button {
+    font-size: 35px;
+    width: 35px;
+    height: 35px;
+  }
+}
+
+@media screen and (max-width: 431px) {
+  .slider {
+    width: 100%;
+    height: 290px;
+  }
+
+  .slider .list img {
+    width: 432px;
   }
 
   .slider .buttons button {
@@ -406,6 +457,23 @@ html {
 
   .slider .list img {
     width: 457px;
+  }
+
+  .slider .buttons button {
+    font-size: 35px;
+    width: 35px;
+    height: 35px;
+  }
+}
+
+@media screen and (max-width: 393px) {
+  .slider {
+    width: 100%;
+    height: 290px;
+  }
+
+  .slider .list img {
+    width: 390px;
   }
 
   .slider .buttons button {

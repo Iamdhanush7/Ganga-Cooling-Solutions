@@ -678,7 +678,7 @@ footer {
 
   .footer-section.logo img{
     width: 300px;
-    margin-left: 75px;
+    margin-left: 60px;
     margin-top: -80px;
   }
   .footer-section.location iframe {
@@ -735,6 +735,192 @@ footer {
   .footer-bottom {
     text-align: center; /* Center-align the bottom section */
     font-size: 14px;
+  }
+}
+
+@media (max-width: 345px) {
+  .footer-container {
+    text-align: center; /* Center-align text */
+    padding: 0 10px; /* Adjust padding for smaller screens */
+    gap: 10px; /* Reduce gap between sections */
+  }
+
+  .footer-section {
+    margin-bottom: 10px; /* Reduce spacing between sections */
+    margin-top: 45px;
+  }
+  
+  .footer-section h2{
+    margin-right: 18px;
+  }
+
+  .footer-section p{
+    margin-right: 15px;
+  }
+
+  .footer-section.logo img{
+    width: 300px;
+    margin-left: 20px;
+    margin-top: -80px;
+  }
+  .footer-section.location iframe {
+    width: 200px;
+    height: 150px; /* Smallest size for the map */
+    margin: 10px auto; /* Center the map */
+  }
+
+  .footer-section.links h3{
+    margin-right: 45px;
+  }
+
+  .footer-section.links ul{
+    margin-right: 45px;
+  }
+
+  .footer-section h2,
+  .footer-section h3 {
+    font-size: 16px; /* Smaller heading size */
+  }
+
+  .footer-section ul li a {
+    font-size: 15px; /* Smallest font size for links */
+  }
+
+  .social-icons h3{
+    font-size: 30px;
+  }
+
+  .social-icons {
+    text-align: center; /* Ensure the icons are centered */
+    margin: 15px auto; /* Add smaller vertical spacing */
+    margin-right: 15px;
+  }
+
+  .footer-section.links h3{
+    font-size: 26px;
+  }
+
+  .footer-section.links ul li a{
+    font-size: 20px;
+  }
+
+  .social-icons h3 {
+    font-size: 16px; /* Smaller font for the heading */
+    margin-bottom: 6px; /* Reduce spacing below the heading */
+  }
+
+  .social-icons a {
+    font-size: 20px; /* Smallest icon size */
+    margin-right: 6px; /* Tighten spacing between icons */
+  }
+
+  .footer-bottom {
+    text-align: center; /* Center-align the bottom section */
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 541px) {
+  .footer-container {
+    text-align: center; /* Center-align text */
+    padding: 0 10px; /* Adjust padding for smaller screens */
+    gap: 10px; /* Reduce gap between sections */
+  }
+
+  .footer-section {
+    margin-bottom: 10px; /* Reduce spacing between sections */
+    margin-top: 45px;
+  }
+  
+  .footer-section h2{
+    margin-right: 18px;
+  }
+
+  .footer-section p{
+    margin-right: 15px;
+  }
+
+  .footer-section.logo img{
+    width: 300px;
+    margin-left: 60px;
+    margin-top: -80px;
+  }
+  .footer-section.location iframe {
+    width: 200px;
+    height: 150px; /* Smallest size for the map */
+    margin: 10px auto; /* Center the map */
+  }
+
+  .footer-section.links h3{
+    margin-right: 45px;
+  }
+
+  .footer-section.links ul{
+    margin-right: 45px;
+  }
+
+  .footer-section h2,
+  .footer-section h3 {
+    font-size: 16px; /* Smaller heading size */
+  }
+
+  .footer-section ul li a {
+    font-size: 15px; /* Smallest font size for links */
+  }
+
+  .social-icons h3{
+    font-size: 30px;
+  }
+
+  .social-icons {
+    text-align: center; /* Ensure the icons are centered */
+    margin: 15px auto; /* Add smaller vertical spacing */
+    margin-right: 15px;
+  }
+
+  .footer-section.links h3{
+    font-size: 26px;
+  }
+
+  .footer-section.links ul li a{
+    font-size: 20px;
+  }
+
+  .social-icons h3 {
+    font-size: 16px; /* Smaller font for the heading */
+    margin-bottom: 6px; /* Reduce spacing below the heading */
+  }
+
+  .social-icons a {
+    font-size: 20px; /* Smallest icon size */
+    margin-right: 6px; /* Tighten spacing between icons */
+  }
+
+  .footer-bottom {
+    text-align: center; /* Center-align the bottom section */
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .footer-container {
+    gap: 30px; /* Increase gap between sections */
+  }
+
+  .footer-section.location iframe {
+    width: 1150px;
+    height: 200px; /* Default map size */
+    margin-left: auto;
+    margin-top: 50px;
+  }
+
+  .footer-section h2,
+  .footer-section h3 {
+    font-size: 22px; /* Slightly larger headings */
+  }
+
+  .social-icons a {
+    font-size: 30px; /* Larger icons */
   }
 }
 

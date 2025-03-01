@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Product Cards</title>
+  <link rel="stylesheet" href="products.css">
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;300&display=swap" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+  
+  <!-- Navbar Placeholder -->
+  <div id="navbar-container"></div>
+
+  <!-- Product Section-->    
+<div class="products-section">
+  <h2 class="section-title">Our Products</h2>
+  <p class="section-subtitle">
+    Explore innovative products designed to meet all your cooling needs with Ganga Cooling Systems
+  </p>
+
+  <!-- Categories Box -->
+  <div class="categories-container">
+    <div class="categories">
+        <div class="category" data-category="ac">
+            <span>AC</span>
+            <img src="images/ac.png" alt="AC">
+        </div>
+        <div class="category" data-category="water-purifier">
+            <span>Water Purifier</span>
+            <img src="images/wf.png" alt="Water Purifier">
+        </div>
+        <div class="category" data-category="solar-pumps">
+            <span>Solar & Heat Pumps</span>
+            <img src="images/shp.png" alt="Solar & Heat Pumps">
+        </div>
+        <div class="category" data-category="ups">
+            <span>UPS</span>
+            <img src="images/ups.png" alt="UPS">
+        </div>
+    </div>
+</div>
+
+<script>
+  // Function to get the URL parameter value
+  function getUrlParameter(name) {
+    const urlParams = new URLSearchParams(window.location.search);
+    return urlParams.get(name);
+  }
+
+  // Function to scroll to the selected category
+  function scrollToCategory() {
+    const category = getUrlParameter('category'); // Get the category from the URL
+    if (category) {
+      const categoryElement = document.querySelector(`[data-category="${category}"]`);
+      if (categoryElement) {
+        categoryElement.scrollIntoView({ behavior: 'smooth' }); // Scroll to the category
+      }
+    }
+  }
+
+  // Function to handle category clicks
+  function handleCategoryClick(event) {
+    const category = event.currentTarget.getAttribute('data-category');
+    if (category) {
+      // Update the URL with the new category
+      window.location.href = `products.html?category=${category}`;
+    }
+  }
+
+  // Add click event listeners to all category elements
+  document.querySelectorAll('.category').forEach(categoryElement => {
+    categoryElement.addEventListener('click', handleCategoryClick);
+  });
+
+  // Call the scrollToCategory function when the page loads
+  window.onload = scrollToCategory;
+</script>
+  
+  
+
+  <!-- Product Cards -->
+  <div class="products" id="products">
+    <!-- Cards will be dynamically inserted here -->
+  </div>
+</div>
+
+<script src="product.js"></script>
+<script>
+  // Load the appropriate category based on the URL query
+  function loadCategoryFromQuery() {
+    const params = new URLSearchParams(window.location.search);
+    const category = params.get('category') || 'ac'; // Default to 'ac' if no category is specified
+    const categoryElement = document.querySelector(`.category[data-category="${category}"]`);
+    if (categoryElement) {
+      handleCategoryClick(category, categoryElement);
+    }
+  }
+
+  // Initialize the page with the correct category
+  window.onload = loadCategoryFromQuery;
+</script>
+
+
+
+<!--Footer Section-->
+<footer>
+  <div class="footer-container" id="footer">
+    <div class="footer-section logo">
+      <img src="images/18.svg" alt="Logo">
+      <h2>Ganga Cooling Solutions</h2>
+      <p>Ganga Cooling Solutions provides efficient cooling products and exceptional services.</p>
+      <br>
+      <div class="social-icons">
+        <h3>Follow Us</h3>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-facebook"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-youtube"></i></a>
+      </div>
+    </div>
+    <div class="footer-section links">
+      <h3>Overview</h3>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="#footer">Contact Us</a></li>
+        <li><a href="https://forms.gle/pFJs1hXYYqZuxoWd7">Place Order</a></li>
+      </ul>
+    </div>
+    <div class="footer-section links">
+      <h3>Work</h3>
+      <ul>
+        <li><a href="products.html">Products</a></li>
+        <li><a href="index.html#services">Services</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+      </ul>
+    </div>
+    <div class="footer-section contact">
+      <h3>Contact Us</h3>
+      <p><i class="fas fa-phone"></i> +91-9731399099</p>
+      <p><i class="fas fa-envelope"></i> gchvacworks@gmail.com</p>
+      <p><i class="fas fa-map-marker-alt"></i> Narayanachar Complex, Sulibele Road, Devanhalli Town</p>
+    </div>
+    <div class="footer-section location">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3883.70804886547!2d77.71432657492323!3d13.243629587097358!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae1d00377bb35f%3A0x846b796fba76eeac!2sGanga%20Cooling%20Solutions!5e0!3m2!1sen!2sin!4v1736777696782!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>&copy; Ganga Cooling Solutions. All rights reserved.</p>
+    <p>
+      Powered by 
+      <a href="https://www.devcreationsblr.com/index.html" target="_blank" class="no-style-link">
+        Dev Creations and Solutions
+      </a>
+    </p>
+  </div>    
+</footer>
+
+<div class="whatsapp-float">
+  <a href="https://wa.me/9731399099" target="_blank">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" />
+  </a>
+</div>
+
+  <script src="products.js"></script>
+</body>
+</html>

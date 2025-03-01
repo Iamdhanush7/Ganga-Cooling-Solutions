@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flip Cards</title>
+  <link rel="stylesheet" href="../CSS/ac.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">
+            <img src="images/18.svg" alt="Logo">
+            
+        </div>
+        <ul class="nav-links">
+            <li><a href="../index.html#hero">Home</a></li>
+            <li><a href="../index.html#about">About us</a></li>
+            <li><a href="../index.html#product">Products</a></li>
+            <li><a href="../index.html#services">Services</a></li>
+            <li><a href="../gallery.html">Gallery</a></li>
+            <li><a href="../index.html#projects">Projects</a></li>
+            <li><a href="../index.html#footer">Contact us</a></li>
+            <li><a href="https://forms.gle/pFJs1hXYYqZuxoWd7">Place order</a></li>
+        </ul>
+        <div class="hamburger" onclick="toggleMenu()">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </nav>
+    <script>
+        function toggleMenu() {
+            document.querySelector('.nav-links').classList.toggle('active');
+        }
+    </script>
+  
+
+  <div class="products-section">
+    <h2 class="section-title">Our Products</h2>
+  </div>
+
+<!-- Categories Box -->
+<div class="categories-container">
+  <div class="categories">
+      <div class="category" onclick="redirectToCategory('ac')">
+          <span>AC</span>
+          <img src="images/ac.png" alt="AC">
+      </div>
+      <div class="category" onclick="redirectToCategory('water-purifier')">
+          <span>Water Purifier</span>
+          <img src="images/wf.png" alt="Water Purifier">
+      </div>
+      <div class="category" onclick="redirectToCategory('solar-pumps')">
+          <span>Solar & Heat Pumps</span>
+          <img src="images/shp.png" alt="Solar & Heat Pumps">
+      </div>
+      <div class="category" onclick="redirectToCategory('ups')">
+          <span>UPS</span>
+          <img src="images/ups.png" alt="UPS">
+      </div>
+  </div>
+</div>
+
+<script>
+  function redirectToCategory(category) {
+    // Redirect to products.html with the category as a URL parameter
+    window.location.href = `../products.html?category=${category}`;
+  }
+</script>
+
+
+
+  <div class="header">
+    <h1>
+      <img src="images/img1.png" alt="AC Icon">
+      Water Softeners
+    </h1>
+    <button class="close-button">X</button>
+  </div>
+
+  <div class="card-container">
+    <!-- Repeat this block for each card -->
+    <div class="card">
+      <div class="card-inner">
+        <div class="card-front">
+          <img src="images/w9.png" alt="AC Image">
+          <p>Domestic water softener</p>
+        </div>
+        <div class="card-back">
+          <h3>Domestic water softener</h3>
+          <!-- <p class="price">₹28,000 - ₹48,000</p> -->
+          <div class="advantages">
+            <div>
+              <h4>Advantages</h4>
+              <ul>
+                <li>Reduces waterhardness</li>
+                <li>Prevents scaling</li>
+                <li>Affordable</li>
+              </ul>
+            </div>
+            <div>
+              <h4>Features</h4>
+              <ul>
+                <li>Automatic refrigeration</li>
+                <li>Low maintainance</li>
+                <li>Smart digital control</li>
+              </ul>
+            </div>
+          </div>
+          <div class="stars">
+            <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+            <p>3-5 star rating</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Repeat card block ends -->
+     <!-- Repeat this block for each card -->
+    <div class="card">
+        <div class="card-inner">
+          <div class="card-front">
+            <img src="images/w10.png" alt="AC Image">
+            <p>Commercial water softener</p>
+          </div>
+          <div class="card-back">
+            <h3>Commercial water softener</h3>
+            <!-- <p class="price">₹55,000 - ₹90,000</p> -->
+            <div class="advantages">
+              <div>
+                <h4>Advantages</h4>
+                <ul>
+                  <li>Ideal for hotel</li>
+                  <li>Prevents buildup</li>
+                  <li>Improves Quality</li>
+                </ul>
+              </div>
+              <div>
+                <h4>Features</h4>
+                <ul>
+                  <li>Multi-tank</li>
+                  <li>Automatic Refrigeration</li>
+                  <li>Corrosion resistant</li>
+                </ul>
+              </div>
+            </div>
+            <div class="stars">
+              <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+              <p>3-5 star rating</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Repeat card block ends -->
+       <!-- Repeat this block for each card -->
+    <div class="card">
+        <div class="card-inner">
+          <div class="card-front">
+            <img src="images/w11.png" alt="AC Image">
+            <p>Industrial water softener</p>
+          </div>
+          <div class="card-back">
+            <h3>Industrial water softener</h3>
+            <!-- <p class="price">₹45,000 - ₹90,000</p> -->
+            <div class="advantages">
+              <div>
+                <h4>Advantages</h4>
+                <ul>
+                  <li>Reduces Cost</li>
+                  <li>Enhances efficency</li>
+                  <li>Advanced Features</li>
+                </ul>
+              </div>
+              <div>
+                <h4>Features</h4>
+                <ul>
+                  <li>Heavy-duty Resintanks</li>
+                  <li>High flow rate </li>
+                  <li>Remote Monitoring</li>
+                </ul>
+              </div>
+            </div>
+            <div class="stars">
+              <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+              <p>3-5 star rating</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Repeat card block ends -->
+       <!-- Repeat this block for each card -->
+    <div class="card">
+        <div class="card-inner">
+          <div class="card-front">
+            <img src="images/w12.png" alt="AC Image">
+            <p>Salt-Free Water Softener</p>
+          </div>
+          <div class="card-back">
+            <h3>Salt-Free Water Softener</h3>
+            <!-- <p class="price">₹50,000 - ₹90,000</p> -->
+            <div class="advantages">
+              <div>
+                <h4>Advantages</h4>
+                <ul>
+                  <li>Environmentally friendly</li>
+                  <li>Requires no salt</li>
+                  <li>Removes scale</li>
+                </ul>
+              </div>
+              <div>
+                <h4>Features</h4>
+                <ul>
+                  <li>TAC Technology</li>
+                  <li>Self-cleaning</li>
+                  <li>Cemical-free</li>
+                </ul>
+              </div>
+            </div>
+            <div class="stars">
+              <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+              <p>3-5 star rating</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Repeat card block ends -->
+       <!-- Repeat this block for each card -->
+    <div class="card">
+        <div class="card-inner">
+          <div class="card-front">
+            <img src="images/w13.png" alt="AC Image">
+            <p>Dual Tank Water Softerner</p>
+          </div>
+          <div class="card-back">
+            <h3>Dual Tank Water Softerner</h3>
+            <!-- <p class="price">₹1,20,000 - ₹2,00,000</p> -->
+            <div class="advantages">
+              <div>
+                <h4>Advantages</h4>
+                <ul>
+                  <li>Reliable Brand</li>
+                  <li>Cooling Performance</li>
+                  <li>User-Friendly</li>
+                </ul>
+              </div>
+              <div>
+                <h4>Features</h4>
+                <ul>
+                  <li>Inverter Tecnology</li>
+                  <li>Anti-Bacterial Filter</li>
+                  <li>4-Way Discharge</li>
+                </ul>
+              </div>
+            </div>
+            <div class="stars">
+              <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+              <p>3-5 star rating</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Repeat card block ends -->
+       <!-- Repeat this block for each card -->
+    
+    <!-- Add more cards as needed to make a total of 7 cards -->
+  </div>
+
+    <script>
+    document.querySelectorAll('.card').forEach(card => {
+      card.addEventListener('click', () => {
+        card.classList.toggle('flipped');
+      });
+    });
+
+    document.querySelector('.close-button').addEventListener('click', () => {
+  window.location.href = '../products.html';
+});
+</script>
+
+</body>
+</html>

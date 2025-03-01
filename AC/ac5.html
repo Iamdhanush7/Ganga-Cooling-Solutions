@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flip Cards</title>
+  <link rel="stylesheet" href="../CSS/ac.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">
+            <img src="images/18.svg" alt="Logo">
+            
+        </div>
+        <ul class="nav-links">
+            <li><a href="../index.html#hero">Home</a></li>
+            <li><a href="../index.html#about">About us</a></li>
+            <li><a href="../index.html#product">Products</a></li>
+            <li><a href="../index.html#services">Services</a></li>
+            <li><a href="../gallery.html">Gallery</a></li>
+            <li><a href="../index.html#projects">Projects</a></li>
+            <li><a href="../index.html#footer">Contact us</a></li>
+            <li><a href="https://forms.gle/pFJs1hXYYqZuxoWd7">Place order</a></li>
+        </ul>
+        <div class="hamburger" onclick="toggleMenu()">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </nav>
+    <script>
+        function toggleMenu() {
+            document.querySelector('.nav-links').classList.toggle('active');
+        }
+    </script>
+  
+
+  <div class="products-section">
+    <h2 class="section-title">Our Products</h2>
+  </div>
+
+<!-- Categories Box -->
+<div class="categories-container">
+  <div class="categories">
+      <div class="category" onclick="redirectToCategory('ac')">
+          <span>AC</span>
+          <img src="images/ac.png" alt="AC">
+      </div>
+      <div class="category" onclick="redirectToCategory('water-purifier')">
+          <span>Water Purifier</span>
+          <img src="images/wf.png" alt="Water Purifier">
+      </div>
+      <div class="category" onclick="redirectToCategory('solar-pumps')">
+          <span>Solar & Heat Pumps</span>
+          <img src="images/shp.png" alt="Solar & Heat Pumps">
+      </div>
+      <div class="category" onclick="redirectToCategory('ups')">
+          <span>UPS</span>
+          <img src="images/ups.png" alt="UPS">
+      </div>
+  </div>
+</div>
+
+<script>
+  function redirectToCategory(category) {
+    // Redirect to products.html with the category as a URL parameter
+    window.location.href = `../products.html?category=${category}`;
+  }
+</script>
+
+
+  <div class="header">
+    <h1>
+      <img src="images/img1.png" alt="AC Icon">
+      VRF Air Conditioner
+    </h1>
+    <button class="close-button">X</button>
+  </div>
+
+  <div class="card-container">
+    <!-- Repeat this block for each card -->
+    <div class="card">
+      <div class="card-inner">
+        <div class="card-front">
+          <img src="images/a23.png" alt="AC Image">
+          <p>VRF Heat Pumps</p>
+        </div>
+        <div class="card-back">
+          <h3>VRF Heat Pump</h3>
+          <!-- <p class="price">₹2,00,000 - ₹6,00,000</p> -->
+          <div class="advantages">
+            <div>
+              <h4>Advantages</h4>
+              <ul>
+                <li>Energy Efficiency </li>
+                <li>Flexible<br> Installation</li>
+                <li>Provides Heating <br>& Cooling</li>
+              </ul>
+            </div>
+            <div>
+              <h4>Features</h4>
+              <ul>
+                <li>Wi-Fi Connectivity</li>
+                <li>Centralized Control System</li>
+                <li>Long Piping Length</li>
+              </ul>
+            </div>
+          </div>
+          <div class="stars">
+            <span>★</span><span>★</span><span>★</span><span>★</span><span>☆</span>
+            <p>3-5 star rating</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Repeat card block ends -->
+     <!-- Repeat this block for each card -->
+    <div class="card">
+        <div class="card-inner">
+          <div class="card-front">
+            <img src="images/a24.png" alt="AC Image">
+            <p>VRF Heat Recovery</p>
+          </div>
+          <div class="card-back">
+            <h3>VRF Heat Recovery</h3>
+            <!-- <p class="price">₹2,50,000 - ₹7,00,000</p> -->
+            <div class="advantages">
+              <div>
+                <h4>Advantages</h4>
+                <ul>
+                  <li>Energy Efficiency</li>
+                  <li>Suitable for large spaces </li>
+                  <li>Heating and <br>Cooling</li>
+                </ul>
+              </div>
+              <div>
+                <h4>Features</h4>
+                <ul>
+                  <li>Heat Recovery System</li>
+                  <li>Refrigerant Control</li>
+                  <li>Energy Saving Modes</li>
+                </ul>
+              </div>
+            </div>
+            <div class="stars">
+              <span>★</span><span>★</span><span>★</span><span>★</span><span>☆</span>
+              <p>3-5 star rating</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Repeat card block ends -->
+       <!-- Repeat this block for each card -->
+    <div class="card">
+        <div class="card-inner">
+          <div class="card-front">
+            <img src="images/a25.png" alt="AC Image">
+            <p>Modular VRF System</p>
+          </div>
+          <div class="card-back">
+            <h3>Modular VRF System</h3>
+            <!-- <p class="price">₹1,80,000 - ₹5,00,000</p> -->
+            <div class="advantages">
+              <div>
+                <h4>Advantages</h4>
+                <ul>
+                  <li>Scalable <br>System</li>
+                  <li>Energy Efficiency</li>
+                  <li>Optimal Performance</li>
+                </ul>
+              </div>
+              <div>
+                <h4>Features</h4>
+                <ul>
+                  <li>Wifi-Integration</li>
+                  <li>Centralized Control System</li>
+                  <li>Expandable Capacity</li>
+                </ul>
+              </div>
+            </div>
+            <div class="stars">
+              <span>★</span><span>★</span><span>★</span><span>★</span><span>☆</span>
+              <p>3-5 star rating</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Repeat card block ends -->
+       <!-- Repeat this block for each card -->
+    <div class="card">
+        <div class="card-inner">
+          <div class="card-front">
+            <img src="images/a26.png" alt="AC Image">
+            <p>Compact VRF System</p>
+          </div>
+          <div class="card-back">
+            <h3>Compact VRF System</h3>
+            <!-- <p class="price">₹1,50,000 - ₹4,00,000</p> -->
+            <div class="advantages">
+              <div>
+                <h4>Advantages</h4>
+                <ul>
+                  <li>Space saving</li>
+                  <li>Cost Saving</li>
+                  <li>Flexible Zoning</li>
+                </ul>
+              </div>
+              <div>
+                <h4>Features</h4>
+                <ul>
+                  <li>Compact outdoor unit</li>
+                  <li>Inverter Technology</li>
+                  <li>Multiple outdoor unit</li>
+                </ul>
+              </div>
+            </div>
+            <div class="stars">
+              <span>★</span><span>★</span><span>★</span><span>★</span><span>☆</span>
+              <p>3-5 star rating</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Repeat card block ends -->
+       <!-- Repeat this block for each card -->
+    <div class="card">
+        <div class="card-inner">
+          <div class="card-front">
+            <img src="images/a27.png" alt="AC Image">
+            <p>VRF Single module</p>
+          </div>
+          <div class="card-back">
+            <h3>VRF Single module</h3>
+            <!-- <p class="price">₹1,00,000 - ₹3,00,000</p> -->
+            <div class="advantages">
+              <div>
+                <h4>Advantages</h4>
+                <ul>
+                  <li>Simple<br>Installation</li>
+                  <li>Cost effective</li>
+                  <li>Residential area</li>
+                </ul>
+              </div>
+              <div>
+                <h4>Features</h4>
+                <ul>
+                  <li>Single outdoor unit</li>
+                  <li>Inverter driven</li>
+                  <li>Smart remote control</li>
+                </ul>
+              </div>
+            </div>
+            <div class="stars">
+              <span>★</span><span>★</span><span>★</span><span>★</span><span>☆</span>
+              <p>3-5 star rating</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    <!-- Add more cards as needed to make a total of 7 cards -->
+  </div>
+
+  <script>
+    document.querySelectorAll('.card').forEach(card => {
+      card.addEventListener('click', () => {
+        card.classList.toggle('flipped');
+      });
+    });
+
+    document.querySelector('.close-button').addEventListener('click', () => {
+  window.location.href = '../products.html';
+});
+</script>
+</body>
+</html>

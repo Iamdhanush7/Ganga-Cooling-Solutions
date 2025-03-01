@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flip Cards</title>
+  <link rel="stylesheet" href="../CSS/ac.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">
+            <img src="images/18.svg" alt="Logo">
+            
+        </div>
+        <ul class="nav-links">
+            <li><a href="../index.html#hero">Home</a></li>
+            <li><a href="../index.html#about">About us</a></li>
+            <li><a href="../index.html#product">Products</a></li>
+            <li><a href="../index.html#services">Services</a></li>
+            <li><a href="../gallery.html">Gallery</a></li>
+            <li><a href="../index.html#projects">Projects</a></li>
+            <li><a href="../index.html#footer">Contact us</a></li>
+            <li><a href="https://forms.gle/pFJs1hXYYqZuxoWd7">Place order</a></li>
+        </ul>
+        <div class="hamburger" onclick="toggleMenu()">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </nav>
+    <script>
+        function toggleMenu() {
+            document.querySelector('.nav-links').classList.toggle('active');
+        }
+    </script>
+  
+
+  <div class="products-section">
+    <h2 class="section-title">Our Products</h2>
+  </div>
+
+<!-- Categories Box -->
+<div class="categories-container">
+  <div class="categories">
+      <div class="category" onclick="redirectToCategory('ac')">
+          <span>AC</span>
+          <img src="images/ac.png" alt="AC">
+      </div>
+      <div class="category" onclick="redirectToCategory('water-purifier')">
+          <span>Water Purifier</span>
+          <img src="images/wf.png" alt="Water Purifier">
+      </div>
+      <div class="category" onclick="redirectToCategory('solar-pumps')">
+          <span>Solar & Heat Pumps</span>
+          <img src="images/shp.png" alt="Solar & Heat Pumps">
+      </div>
+      <div class="category" onclick="redirectToCategory('ups')">
+          <span>UPS</span>
+          <img src="images/ups.png" alt="UPS">
+      </div>
+  </div>
+</div>
+
+<script>
+  function redirectToCategory(category) {
+    // Redirect to products.html with the category as a URL parameter
+    window.location.href = `../products.html?category=${category}`;
+  }
+</script>
+
+  
+  <div class="header">
+    <h1>
+      <img src="images/img1.png" alt="AC Icon">
+      Online UPS
+    </h1>
+    <button class="close-button">X</button>
+  </div>
+
+  <div class="card-container">
+    <!-- Repeat this block for each card -->
+    <div class="card">
+      <div class="card-inner">
+        <div class="card-front">
+          <img src="images/u1.png" alt="AC Image">
+          <p>Single-phase online UPS</p>
+        </div>
+        <div class="card-back">
+          <h3>Single-phase online UPS</h3>
+          <!-- <p class="price">₹60,000 - ₹90,000</p> -->
+          <div class="advantages">
+            <div>
+              <h4>Advantages</h4>
+              <ul>
+                <li>Continuous power supply </li>
+                <li>Protects <br>equipment</li>
+                <li>Ideal for Homes</li>
+              </ul>
+            </div>
+            <div>
+              <h4>Features</h4>
+              <ul>
+                <li>Conversion Technology</li>
+                <li>Battery storage option</li>
+                <li>Remote monitoring </li>
+              </ul>
+            </div>
+          </div>
+          <div class="stars">
+            <span>★</span><span>★</span><span>★</span><span>★</span><span>☆</span>
+            <p>3-5 star rating</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Repeat card block ends -->
+     <!-- Repeat this block for each card -->
+    <div class="card">
+        <div class="card-inner">
+          <div class="card-front">
+            <img src="images/u2.png" alt="AC Image">
+            <p>Three-phase online UPS</p>
+          </div>
+          <div class="card-back">
+            <h3>Three-phase online UPS</h3>
+            <!-- <p class="price">₹60,000 - ₹90,000</p> -->
+            <div class="advantages">
+              <div>
+                <h4>Advantages</h4>
+                <ul>
+                  <li>Suitable for large offices</li>
+                  <li>Data Centers</li>
+                  <li>Industrial Setups</li>
+                </ul>
+              </div>
+              <div>
+                <h4>Features</h4>
+                <ul>
+                  <li>High-capacity power</li>
+                  <li>Modular design </li>
+                  <li>Remote Monitoring</li>
+                </ul>
+              </div>
+            </div>
+            <div class="stars">
+              <span>★</span><span>★</span><span>★</span><span>★</span><span>☆</span>
+              <p>3-5 star rating</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Repeat card block ends -->
+       <!-- Repeat this block for each card -->
+    <div class="card">
+        <div class="card-inner">
+          <div class="card-front">
+            <img src="images/u3.png" alt="AC Image">
+            <p>Industrial Online UPS</p>
+          </div>
+          <div class="card-back">
+            <h3>Industrial Online UPS</h3>
+            <!-- <p class="price">₹60,000 - ₹90,000</p> -->
+            <div class="advantages">
+              <div>
+                <h4>Advantages</h4>
+                <ul>
+                  <li>Stable power</li>
+                  <li>Factories</li>
+                  <li>Critical Infrastructure</li>
+                </ul>
+              </div>
+              <div>
+                <h4>Features</h4>
+                <ul>
+                  <li>High-power capacity</li>
+                  <li>Power factor correction </li>
+                  <li>Remote Diagnostics</li>
+                </ul>
+              </div>
+            </div>
+            <div class="stars">
+              <span>★</span><span>★</span><span>★</span><span>★</span><span>☆</span>
+              <p>3-5 star rating</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Repeat card block ends -->
+       <!-- Repeat this block for each card -->
+    <div class="card">
+        <div class="card-inner">
+          <div class="card-front">
+            <img src="images/u4.png" alt="AC Image">
+            <p>Modular Online UPS</p>
+          </div>
+          <div class="card-back">
+            <h3>Modular Online UPS</h3>
+            <!-- <p class="price">₹60,000 - ₹90,000</p> -->
+            <div class="advantages">
+              <div>
+                <h4>Advantages</h4>
+                <ul>
+                  <li>High <br>reliable </li>
+                  <li>Scalable </li>
+                  <li>IT facilities</li>
+                </ul>
+              </div>
+              <div>
+                <h4>Features</h4>
+                <ul>
+                  <li>Hot-swappable moodules</li>
+                  <li>N+1 redundancy</li>
+                  <li>High efficiency</li>
+                </ul>
+              </div>
+            </div>
+            <div class="stars">
+              <span>★</span><span>★</span><span>★</span><span>★</span><span>☆</span>
+              <p>3-5 star rating</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Repeat card block ends -->
+       <!-- Repeat this block for each card -->
+    <div class="card">
+        <div class="card-inner">
+          <div class="card-front">
+            <img src="images/u5.png" alt="AC Image">
+            <p>Medical-grade online UPS</p>
+          </div>
+          <div class="card-back">
+            <h3>Medical-grade online UPS</h3>
+            <!-- <p class="price">₹60,000 - ₹90,000</p> -->
+            <div class="advantages">
+              <div>
+                <h4>Advantages</h4>
+                <ul>
+                  <li>Ensures stable power</li>
+                  <li>Used in labs</li>
+                  <li>Diagnostic equipment</li>
+                </ul>
+              </div>
+              <div>
+                <h4>Features</h4>
+                <ul>
+                  <li>Ultra-fast switching</li>
+                  <li>Noise filtering </li>
+                  <li>Isolated battery backup</li>
+                </ul>
+              </div>
+            </div>
+            <div class="stars">
+              <span>★</span><span>★</span><span>★</span><span>★</span><span>☆</span>
+              <p>3-5 star rating</p>
+            </div>
+          </div>
+        </div>
+      </div>
+     
+    <!-- Add more cards as needed to make a total of 7 cards -->
+  </div>
+
+  <script>
+    document.querySelectorAll('.card').forEach(card => {
+      card.addEventListener('click', () => {
+        card.classList.toggle('flipped');
+      });
+    });
+
+    document.querySelector('.close-button').addEventListener('click', () => {
+  window.location.href = '../products.html';
+});
+</script>
+</body>
+</html>

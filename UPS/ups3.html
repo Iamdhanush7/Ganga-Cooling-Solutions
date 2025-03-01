@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flip Cards</title>
+  <link rel="stylesheet" href="../CSS/ac.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">
+            <img src="images/18.svg" alt="Logo">
+            
+        </div>
+        <ul class="nav-links">
+            <li><a href="../index.html#hero">Home</a></li>
+            <li><a href="../index.html#about">About us</a></li>
+            <li><a href="../index.html#product">Products</a></li>
+            <li><a href="../index.html#services">Services</a></li>
+            <li><a href="../gallery.html">Gallery</a></li>
+            <li><a href="../index.html#projects">Projects</a></li>
+            <li><a href="../index.html#footer">Contact us</a></li>
+            <li><a href="https://forms.gle/pFJs1hXYYqZuxoWd7">Place order</a></li>
+        </ul>
+        <div class="hamburger" onclick="toggleMenu()">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </nav>
+    <script>
+        function toggleMenu() {
+            document.querySelector('.nav-links').classList.toggle('active');
+        }
+    </script>
+  
+
+  <div class="products-section">
+    <h2 class="section-title">Our Products</h2>
+  </div>
+
+<!-- Categories Box -->
+<div class="categories-container">
+  <div class="categories">
+      <div class="category" onclick="redirectToCategory('ac')">
+          <span>AC</span>
+          <img src="images/ac.png" alt="AC">
+      </div>
+      <div class="category" onclick="redirectToCategory('water-purifier')">
+          <span>Water Purifier</span>
+          <img src="images/wf.png" alt="Water Purifier">
+      </div>
+      <div class="category" onclick="redirectToCategory('solar-pumps')">
+          <span>Solar & Heat Pumps</span>
+          <img src="images/shp.png" alt="Solar & Heat Pumps">
+      </div>
+      <div class="category" onclick="redirectToCategory('ups')">
+          <span>UPS</span>
+          <img src="images/ups.png" alt="UPS">
+      </div>
+  </div>
+</div>
+
+<script>
+  function redirectToCategory(category) {
+    // Redirect to products.html with the category as a URL parameter
+    window.location.href = `../products.html?category=${category}`;
+  }
+</script>
+  
+
+  <div class="header">
+    <h1>
+      <img src="images/img1.png" alt="AC Icon">
+      Solar UPS
+    </h1>
+    <button class="close-button">X</button>
+  </div>
+
+  <div class="card-container">
+    <!-- Repeat this block for each card -->
+    <div class="card">
+      <div class="card-inner">
+        <div class="card-front">
+          <img src="images/u11.png" alt="AC Image">
+          <p>Home Solar UPS</p>
+        </div>
+        <div class="card-back">
+          <h3>Home Solar UPS</h3>
+          <!-- <p class="price">₹60,000 - ₹90,000</p> -->
+          <div class="advantages">
+            <div>
+              <h4>Advantages</h4>
+              <ul>
+                <li>Ideal for households</li>
+                <li>Provides Backup power</li>
+                <li>Eco-friendly</li>
+              </ul>
+            </div>
+            <div>
+              <h4>Features</h4>
+              <ul>
+                <li>Pure sinewave O/P</li>
+                <li>Solar panel compatibility</li>
+                <li>LCD Display</li>
+              </ul>
+            </div>
+          </div>
+          <div class="stars">
+            <span>★</span><span>★</span><span>★</span><span>★</span><span>☆</span>
+            <p>3-5 star rating</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Repeat card block ends -->
+     <!-- Repeat this block for each card -->
+    <div class="card">
+        <div class="card-inner">
+          <div class="card-front">
+            <img src="images/u12.png" alt="AC Image">
+            <p>Commercial Solar UPS</p>
+          </div>
+          <div class="card-back">
+            <h3>Commercial Solar UPS</h3>
+            <!-- <p class="price">₹60,000 - ₹90,000</p> -->
+            <div class="advantages">
+              <div>
+                <h4>Advantages</h4>
+                <ul>
+                  <li>Best for offices</li>
+                  <li>Best for shops</li>
+                  <li>Grid electricity</li>
+                </ul>
+              </div>
+              <div>
+                <h4>Features</h4>
+                <ul>
+                  <li>Battery backup</li>
+                  <li>MPPT Solar charge</li>
+                  <li>Surge protection</li>
+                </ul>
+              </div>
+            </div>
+            <div class="stars">
+              <span>★</span><span>★</span><span>★</span><span>★</span><span>☆</span>
+              <p>3-5 star rating</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Repeat card block ends -->
+       <!-- Repeat this block for each card -->
+    <div class="card">
+        <div class="card-inner">
+          <div class="card-front">
+            <img src="images/u13.png" alt="AC Image">
+            <p>Industrial Solar UPS</p>
+          </div>
+          <div class="card-back">
+            <h3>Industrial Solar UPS</h3>
+            <!-- <p class="price">₹60,000 - ₹90,000</p> -->
+            <div class="advantages">
+              <div>
+                <h4>Advantages</h4>
+                <ul>
+                  <li>Manufacturing Units</li>
+                  <li>Data centers</li>
+                  <li>Ensures Stable power</li>
+                </ul>
+              </div>
+              <div>
+                <h4>Features</h4>
+                <ul>
+                  <li>High-kVA capacity</li>
+                  <li>Heavy-duty inverters</li>
+                  <li>Remote management</li>
+                </ul>
+              </div>
+            </div>
+            <div class="stars">
+              <span>★</span><span>★</span><span>★</span><span>★</span><span>☆</span>
+              <p>3-5 star rating</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Repeat card block ends -->
+       <!-- Repeat this block for each card -->
+    <div class="card">
+        <div class="card-inner">
+          <div class="card-front">
+            <img src="images/u14.png" alt="AC Image">
+            <p>Off-Grid Solar UPS</p>
+          </div>
+          <div class="card-back">
+            <h3>Off-Grid Solar UPS</h3>
+            <!-- <p class="price">₹60,000 - ₹90,000</p> -->
+            <div class="advantages">
+              <div>
+                <h4>Advantages</h4>
+                <ul>
+                  <li>Best for remote Areas</li>
+                  <li>High <br>performance</li>
+                  <li>Energy efficient</li>
+                </ul>
+              </div>
+              <div>
+                <h4>Features</h4>
+                <ul>
+                  <li>100% Solar-powered</li>
+                  <li>Multiple Output Sockets</li>
+                  <li>Durable design</li>
+                </ul>
+              </div>
+            </div>
+            <div class="stars">
+              <span>★</span><span>★</span><span>★</span><span>★</span><span>☆</span>
+              <p>3-5 star rating</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Repeat card block ends -->
+       <!-- Repeat this block for each card -->
+    <div class="card">
+        <div class="card-inner">
+          <div class="card-front">
+            <img src="images/u15.png" alt="AC Image">
+            <p>Hybrid Solar UPS</p>
+          </div>
+          <div class="card-back">
+            <h3>Hybrid Solar UPS</h3>
+            <!-- <p class="price">₹60,000 - ₹90,000</p> -->
+            <div class="advantages">
+              <div>
+                <h4>Advantages</h4>
+                <ul>
+                  <li>Ensures Stable power</li>
+                  <li>Energy efficient</li>
+                  <li>Cost efficient</li>
+                </ul>
+              </div>
+              <div>
+                <h4>Features</h4>
+                <ul>
+                  <li>Dual power Source</li>
+                  <li>Fast charging</li>
+                  <li>Seamless switch-over</li>
+                </ul>
+              </div>
+            </div>
+            <div class="stars">
+              <span>★</span><span>★</span><span>★</span><span>★</span><span>☆</span>
+              <p>3-5 star rating</p>
+            </div>
+          </div>
+        </div>
+      </div>
+     
+    <!-- Add more cards as needed to make a total of 7 cards -->
+  </div>
+
+  <script>
+    document.querySelectorAll('.card').forEach(card => {
+      card.addEventListener('click', () => {
+        card.classList.toggle('flipped');
+      });
+    });
+
+    document.querySelector('.close-button').addEventListener('click', () => {
+  window.location.href = '../products.html';
+});
+</script>
+</body>
+</html>

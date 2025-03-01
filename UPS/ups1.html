@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../CSS/ac.css">
+  <title>Flip Cards</title>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">
+            <img src="images/18.svg" alt="Logo">
+            
+        </div>
+        <ul class="nav-links">
+            <li><a href="../index.html#hero">Home</a></li>
+            <li><a href="../index.html#about">About us</a></li>
+            <li><a href="../index.html#product">Products</a></li>
+            <li><a href="../index.html#services">Services</a></li>
+            <li><a href="../gallery.html">Gallery</a></li>
+            <li><a href="../index.html#projects">Projects</a></li>
+            <li><a href="../index.html#footer">Contact us</a></li>
+            <li><a href="https://forms.gle/pFJs1hXYYqZuxoWd7">Place order</a></li>
+        </ul>
+        <div class="hamburger" onclick="toggleMenu()">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </nav>
+    <script>
+        function toggleMenu() {
+            document.querySelector('.nav-links').classList.toggle('active');
+        }
+    </script>
+  
+
+  <div class="products-section">
+    <h2 class="section-title">Our Products</h2>
+  </div>
+
+<!-- Categories Box -->
+<div class="categories-container">
+  <div class="categories">
+      <div class="category" onclick="redirectToCategory('ac')">
+          <span>AC</span>
+          <img src="images/ac.png" alt="AC">
+      </div>
+      <div class="category" onclick="redirectToCategory('water-purifier')">
+          <span>Water Purifier</span>
+          <img src="images/wf.png" alt="Water Purifier">
+      </div>
+      <div class="category" onclick="redirectToCategory('solar-pumps')">
+          <span>Solar & Heat Pumps</span>
+          <img src="images/shp.png" alt="Solar & Heat Pumps">
+      </div>
+      <div class="category" onclick="redirectToCategory('ups')">
+          <span>UPS</span>
+          <img src="images/ups.png" alt="UPS">
+      </div>
+  </div>
+</div>
+
+<script>
+  function redirectToCategory(category) {
+    // Redirect to products.html with the category as a URL parameter
+    window.location.href = `../products.html?category=${category}`;
+  }
+</script>
+  
+
+  <div class="header">
+    <h1>
+      <img src="images/img1.png" alt="AC Icon">
+      Offline UPS
+    </h1>
+    <button class="close-button">X</button>
+  </div>
+
+  <div class="card-container">
+    <!-- Repeat this block for each card -->
+    <div class="card">
+      <div class="card-inner">
+        <div class="card-front">
+          <img src="images/u6.png" alt="AC Image">
+          <p>Single-phase offline UPS</p>
+        </div>
+        <div class="card-back">
+          <h3>Single-phase offline UPS</h3>
+          <!-- <p class="price">₹60,000 - ₹90,000</p> -->
+          <div class="advantages">
+            <div>
+              <h4>Advantages</h4>
+              <ul>
+                <li>Cost effective</li>
+                <li>Backup Power/li>
+                <li>Ideal for home</li>
+              </ul>
+            </div>
+            <div>
+              <h4>Features</h4>
+              <ul>
+                <li>Line-Interactive design</li>
+                <li>LED indicators</li>
+                <li>Compact</li>
+              </ul>
+            </div>
+          </div>
+          <div class="stars">
+            <span>★</span><span>★</span><span>★</span><span>★</span><span>☆</span>
+            <p>3-5 star rating</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Repeat card block ends -->
+     <!-- Repeat this block for each card -->
+    <div class="card">
+        <div class="card-inner">
+          <div class="card-front">
+            <img src="images/u7.png" alt="AC Image">
+            <p>Line-interactive Offline UPS</p>
+          </div>
+          <div class="card-back">
+            <h3>Line-interactive Offline UPS</h3>
+            <!-- <p class="price">₹60,000 - ₹90,000</p> -->
+            <div class="advantages">
+              <div>
+                <h4>Advantages</h4>
+                <ul>
+                  <li>Voltage regulation</li>
+                  <li>Data centers</li>
+                  <li>Industrial setups</li>
+                </ul>
+              </div>
+              <div>
+                <h4>Features</h4>
+                <ul>
+                  <li>LCD status display</li>
+                  <li>Efficient energy</li>
+                  <li>Remote monitoring</li>
+                </ul>
+              </div>
+            </div>
+            <div class="stars">
+              <span>★</span><span>★</span><span>★</span><span>★</span><span>☆</span>
+              <p>3-5 star rating</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Repeat card block ends -->
+       <!-- Repeat this block for each card -->
+    <div class="card">
+        <div class="card-inner">
+          <div class="card-front">
+            <img src="images/u8.png" alt="AC Image">
+            <p>Industrial offline UPS</p>
+          </div>
+          <div class="card-back">
+            <h3>Industrial offline UPS</h3>
+            <!-- <p class="price">₹60,000 - ₹90,000</p> -->
+            <div class="advantages">
+              <div>
+                <h4>Advantages</h4>
+                <ul>
+                  <li>Voltage fluctuation</li>
+                  <li>Small Factories</li>
+                  <li>Manufacture</li>
+                </ul>
+              </div>
+              <div>
+                <h4>Features</h4>
+                <ul>
+                  <li>High load capacity</li>
+                  <li>AVR technology</li>
+                  <li>Low maintainance</li>
+                </ul>
+              </div>
+            </div>
+            <div class="stars">
+              <span>★</span><span>★</span><span>★</span><span>★</span><span>☆</span>
+              <p>3-5 star rating</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Repeat card block ends -->
+       <!-- Repeat this block for each card -->
+    <div class="card">
+        <div class="card-inner">
+          <div class="card-front">
+            <img src="images/u9.png" alt="AC Image">
+            <p>Gaming Offline UPS</p>
+          </div>
+          <div class="card-back">
+            <h3>Gaming Offline UPS</h3>
+            <!-- <p class="price">₹60,000 - ₹90,000</p> -->
+            <div class="advantages">
+              <div>
+                <h4>Advantages</h4>
+                <ul>
+                  <li>Power backup</li>
+                  <li>High <br>performance</li>
+                  <li>Gaming PCs</li>
+                </ul>
+              </div>
+              <div>
+                <h4>Features</h4>
+                <ul>
+                  <li>Pure sinewave output</li>
+                  <li>Fast switching </li>
+                  <li>AVR Support</li>
+                </ul>
+              </div>
+            </div>
+            <div class="stars">
+              <span>★</span><span>★</span><span>★</span><span>★</span><span>☆</span>
+              <p>3-5 star rating</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Repeat card block ends -->
+       <!-- Repeat this block for each card -->
+    <div class="card">
+        <div class="card-inner">
+          <div class="card-front">
+            <img src="images/u10.png" alt="AC Image">
+            <p>Multi-grade offline UPS</p>
+          </div>
+          <div class="card-back">
+            <h3>Multi-grade offline UPS</h3>
+            <!-- <p class="price">₹60,000 - ₹90,000</p> -->
+            <div class="advantages">
+              <div>
+                <h4>Advantages</h4>
+                <ul>
+                  <li>Ensures stable power</li>
+                  <li>Used in labs</li>
+                  <li>Diagnostic equipment</li>
+                </ul>
+              </div>
+              <div>
+                <h4>Features</h4>
+                <ul>
+                  <li>EMI/RFI Noise filtering </li>
+                  <li>AVR protection</li>
+                  <li>Portable</li>
+                </ul>
+              </div>
+            </div>
+            <div class="stars">
+              <span>★</span><span>★</span><span>★</span><span>★</span><span>☆</span>
+              <p>3-5 star rating</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+    
+    <!-- Add more cards as needed to make a total of 7 cards -->
+  </div>
+
+  <script>
+    document.querySelectorAll('.card').forEach(card => {
+      card.addEventListener('click', () => {
+        card.classList.toggle('flipped');
+      });
+    });
+
+    document.querySelector('.close-button').addEventListener('click', () => {
+  window.location.href = '../products.html';
+});
+</script>
+</body>
+</html>

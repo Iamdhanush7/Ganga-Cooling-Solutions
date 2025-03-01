@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ganga Cooling Solutions</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;400&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
+  </head>
+<body>
+
+  <!-- Navbar Placeholder -->
+  <div id="navbar-container"></div>
+  
+  <!--Banners-->
+  <div class="slider">
+    <div class="list">
+        <div class="item">
+            <img src="images/b1.svg" alt="">
+        </div>
+        <div class="item">
+            <img src="images/b2.svg" alt="">
+        </div>
+        <div class="item">
+            <img src="images/b3.svg" alt="">
+        </div>
+        <div class="item">
+          <img src="images/b4.svg" alt="">
+      </div>
+    </div>
+    <div class="buttons">
+        <button id="prev"></button>
+        <button id="next"></button>
+    </div>
+    <ul class="dots">
+        <li class="active"></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+</div>
+
+
+  <!-- Hero Section -->
+  <section class="hero" id="hero">
+    <div class="hero-text">
+        <h1><strong>COOLING</strong> <span class="highlight">COMFORT <br> CRAFTED WITH CARE</span></h1>
+        <p>
+            Ganga Cooling Solutions offers innovative and energy-efficient cooling systems, 
+            ensuring optimal comfort while prioritizing sustainability and performance.
+        </p>
+        <a href="#about">
+          <button class="explore-btn">Explore Now</button>
+      </a>
+      <div class="stats">
+        <div class="stat-item">
+          <p><span id="customerCount" data-suffix="+">0</span></p>
+          <p>Satisfied customers</p>
+        </div>
+        <div class="stat-item">
+          <p><span id="installCount" data-suffix="+">0</span></p>
+          <p>Installations complete</p>
+        </div>
+        <div class="stat-item">
+          <p><span id="satisfactionRate" data-suffix="%">99</span></p>
+          <p>Customer satisfaction rate</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero-image">
+        <img src="images/256.png" alt="Technician">
+    </div>
+  </section>
+
+  <!-- About Section -->
+<div class="container" id="about">
+  <!-- Left Section (Image) -->
+  <div class="image-section">
+    <img src="images/about.png" alt="Technician Working">
+  </div>
+
+  <!-- Right Section (Content) -->
+  <div class="content-section">
+    <h3>ABOUT US</h3>
+    <h1>Cooling & Power Solutions for a <br>Sustainable Future</h1>
+    <p class="expandable-text">
+      Ganga Cooling Solutions established in 2023,previously named Aqua Water Solution in 2012, located in Bangalore, Karnataka, India, is a trusted provider of a diverse range of cooling and power solutions. Our product line includes air conditioners, water purifiers, solar water heaters, and uninterruptible power supplies. We are committed to delivering high-quality products that ensure comfort and convenience for our customers. Our mission is to provide innovative and sustainable solutions that contribute to the well-being of our customers and the environment. Our air conditioners are designed with the latest technology, ensuring optimal cooling while being energy-efficient. Our water purifiers use advanced purification methods to provide clean and safe drinking water. Our solar water heaters harness the power of the sun, providing an eco-friendly solution for heating water. Our uninterruptible power supplies ensure that your devices are protected from power surges and provide backup power during power outages. Customer satisfaction is at the heart of everything we do. We strive to provide exceptional customer service, from the moment you contact us to the after-sales service. Our team is always ready to assist you with any queries or concerns you may have about our products. We understand the importance of sustainability and are committed to reducing our environmental impact. Our products are designed to be energy-efficient, helping to reduce carbon emissions. We also offer solar water heaters, which utilize renewable energy, further contributing to environmental conservation. Thank you for considering Ganga Cooling Solutions. We look forward to serving you.
+    </p>
+    <span class="read-more">Read More</span>
+
+    <h2>Why Choose Us?</h2>
+    <div class="features">
+      <!-- Feature Box 1 -->
+      <div class="feature">
+        <i class="fas fa-lightbulb icon"></i>
+        <div>
+          <h3>Innovative</h3>
+          <p><strong>Latest advancements for <br>efficiency</strong></p>
+        </div>
+      </div>
+      <!-- Feature Box 2 -->
+      <div class="feature">
+        <i class="fas fa-bolt icon"></i>
+        <div>
+          <h3>Reliable</h3>
+          <p><strong>for surge protection <br>and backup</strong></p>
+        </div>
+      </div>
+      <!-- Feature Box 3 -->
+      <div class="feature">
+        <i class="fas fa-recycle icon"></i>
+        <div>
+          <h3>Sustainable</h3>
+          <p><strong>Eco-friendly, green <br>products</strong></p>
+        </div>
+      </div>
+      <!-- Feature Box 4 -->
+      <div class="feature">
+        <i class="fas fa-user icon"></i>
+        <div>
+          <h3>Customer Centric</h3>
+          <p><strong>Focused on satisfaction <br>and support</strong></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Product Section -->
+<section class="products-section" id="product">
+  <h2>OUR PRODUCTS</h2>
+  <h1>Discover our eco-friendly, innovative products</h1>
+  <p class="subtext">
+    We help create a greener future with our eco-friendly, innovative products 
+    that combine sustainability with modern solutions.
+  </p>
+  
+  <div class="cards-container">
+    <div class="card" onclick="redirectToCategory('ac')">
+      <div class="logo-container">
+        <img src="images/ac.svg" alt="Air Conditioner">
+      </div>
+      <h3>Air Conditioner</h3>
+      <p>An air conditioner is a device that regulates indoor temperature and humidity.</p>
+    </div>
+  
+    <div class="card" onclick="redirectToCategory('water-purifier')">
+      <div class="logo-container">
+        <img src="images/wf.svg" alt="Water Purifier">
+      </div>
+      <h3>Water Purifier</h3>
+      <p>A water purifier is a device designed to remove contaminants from water.</p>
+    </div>
+  
+    <div class="card" onclick="redirectToCategory('solar-pumps')">
+      <div class="logo-container">
+        <img src="images/shp.svg" alt="Solar Heat Pump">
+      </div>
+      <h3>Solar Heat Pump</h3>
+      <p>A SAHP is a machine integrating a heat pump and thermal solar panels.</p>
+    </div>
+  
+    <div class="card" onclick="redirectToCategory('ups')">
+      <div class="logo-container">
+        <img src="images/ups.svg" alt="UPS">
+      </div>
+      <h3>UPS</h3>
+      <p>An uninterruptible power supply (UPS) is a type of continual power system.</p>
+    </div>
+  </div>
+  
+  <!-- View All Button -->
+  <div class="button-container">
+    <button onclick="redirect('products.html')">View All</button>
+  </div>
+</section>
+
+
+  <!-- Services Section -->
+<section class="services-section" id="services">
+  <h3>OUR SERVICES</h3>
+  <h1>We provide eco-friendly, innovative services for a sustainable future</h1>
+  <p class="subtext">
+    Our services are tailored to create a greener future, combining modern technology with environmentally conscious practices to support a healthier planet.
+  </p>
+  <div class="services-container">
+    <div class="service-card">
+      <div class="logo-card">
+        <img src="images/1.png" alt="Services Icon">
+      </div>
+      <h4>Services</h4>
+      <p class="service-description">
+        GCS, Ganga Cooling Solutions, has built a strong reputation for delivering not only high-quality products but also exceptional services in the cooling solutions sector. The company's commitment to providing top-notch services is evident in several key aspects.
+        <!-- Extra content for expanding -->
+        GCS offers tailored solutions to each client, ensuring that the needs are met efficiently, and with sustainable technologies that promote long-term environmental benefits.
+      </p>
+      <button class="read-more-btn">Read More</button>
+    </div>
+    <div class="service-card">
+      <div class="logo-card">
+        <img src="images/2.png" alt="AMC Icon">
+      </div>
+      <h4>AMC</h4>
+      <p class="service-description">
+        An Annual Maintenance Contract (AMC) with Ganga Cooling Solutions (GCS) offers a comprehensive and reliable way to ensure the optimal performance and longevity of your cooling systems. GCS's AMC includes regular preventive maintenance visits, during which the service team conducts thorough inspections of your cooling systems. The AMC provides a predefined schedule for service visits, ensuring that your cooling systems receive timely attention and care.
+        <!-- Extra content for expanding -->
+        With GCS's expertise, you can be assured of the best services for your cooling systems, contributing to energy efficiency and better performance in the long run.
+      </p>
+      <button class="read-more-btn">Read More</button>
+    </div>
+    <div class="service-card">
+      <div class="logo-card">
+        <img src="images/3.png" alt="Sales Icon">
+      </div>
+      <h4>Sales</h4>
+      <p class="service-description">
+        GCS, or Ganga Cooling Solutions, has distinguished itself as a leading company in the cooling solutions industry by consistently achieving high-quality sales. The company's success is rooted in its unwavering commitment to providing superior cooling products and services to its customers.
+        <!-- Extra content for expanding -->
+        Our sales team works closely with clients to identify the most efficient and cost-effective cooling solutions tailored to their needs.
+      </p>
+      <button class="read-more-btn">Read More</button>
+    </div>
+  </div>
+</section>
+
+<!--Projects Section-->
+<section class="clients" id="projects">
+  <h2>OUR CLIENTS</h2>
+  <p>Our collaborations are built to foster innovation, combining expertise and shared goals to drive impactful solutions</p>
+  <h3>COMPANIES</h3>
+
+  <div class="slider-container">
+      <div class="fixed-cards">
+          <div class="company-card">
+              <img class="logo" src="images/velca.png" alt="Velca">
+              <h4 class="title">Velca</h4>
+              <p class="description">Velca is a leader in modern cooling solutions, delivering efficiency and innovation.</p>
+          </div>
+          <div class="company-card">
+              <img class="logo" src="https://i.pinimg.com/1200x/e3/41/34/e3413486197a1f23b47ea1135166034e.jpg" alt="DHL">
+              <h4 class="title">DHL</h4>
+              <p class="description">DHL provides world-class logistics and supply chain services globally.</p>
+          </div>
+          <div class="company-card">
+              <img class="logo" src="images/ifb.png" alt="IFB">
+              <h4 class="title">IFB</h4>
+              <p class="description">IFB revolutionizes home appliances with cutting-edge technology.</p>
+          </div>
+          <div class="company-card">
+              <img class="logo" src="images/CTCI.jpeg" alt="Aero Platina">
+              <h4 class="title">CTCI</h4>
+              <p class="description">CTCI specializes in engineering and project management.</p>
+          </div>
+      </div>
+
+      <div class="dots">
+          <span class="dot active"></span>
+          <span class="dot"></span>
+          <span class="dot"></span>
+          <span class="dot"></span>
+      </div>
+  </div>
+</section>
+
+
+  <!--Footer Section-->
+  <footer>
+    <div class="footer-container" id="footer">
+      <div class="footer-section logo">
+        <img src="images/18.svg" alt="Logo">
+        <h2>Ganga Cooling Solutions</h2>
+        <p>Ganga Cooling Solutions provides efficient cooling products and exceptional services.</p>
+        <br>
+        <div class="social-icons">
+          <h3>Follow Us</h3>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-facebook"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-youtube"></i></a>
+        </div>
+      </div>
+      <div class="footer-section link">
+        <h3>Overview</h3>
+        <ul>
+          <li><a href="#about">About Us</a></li>
+          <li><a href="#footer">Contact Us</a></li>
+          <li><a href="https://forms.gle/pFJs1hXYYqZuxoWd7">Place Order</a></li>
+        </ul>
+      </div>
+      <div class="footer-section links">
+        <h3>Work</h3>
+        <ul>
+          <li><a href="products.html">Products</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+        </ul>
+      </div>
+      <div class="footer-section contact">
+        <h3>Contact Us</h3>
+        <p><i class="fas fa-phone"></i> +91-9731399099</p>
+        <p><i class="fas fa-envelope"></i> gchvacworks@gmail.com</p>
+        <p><i class="fas fa-map-marker-alt"></i> Narayanachar Complex, Sulibele Road, Devanhalli Town</p>
+      </div>
+      <div class="footer-section location">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3883.70804886547!2d77.71432657492323!3d13.243629587097358!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae1d00377bb35f%3A0x846b796fba76eeac!2sGanga%20Cooling%20Solutions!5e0!3m2!1sen!2sin!4v1736777696782!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; Ganga Cooling Solutions. All rights reserved.</p>
+      <p>
+        Powered by 
+        <a href="https://www.devcreationsblr.com/index.html" target="_blank" class="no-style-link">
+          Dev Creations and Solutions
+        </a>
+      </p>
+    </div>    
+  </footer>
+
+
+<div class="whatsapp-float">
+  <a href="https://wa.me/9731399099" target="_blank">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" />
+  </a>
+</div>
+    <script src="script.js"></script>
+</body>
+</html>

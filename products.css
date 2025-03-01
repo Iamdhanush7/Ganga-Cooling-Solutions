@@ -107,6 +107,51 @@ body {
 /* Media Queries */
 
 /* For devices with a max width of 1024px (Tablets in landscape mode and smaller) */
+@media (max-width: 1280px) {
+  .nav-bar {
+    flex-wrap: wrap;
+    height: 55px;
+    padding: 10px 15px;
+  }
+
+  .logo img {
+    width: 370px;
+    margin-top: -140px;
+  }
+
+  .menu {
+    display: none; /* Initially hidden */
+    flex-direction: column;
+    width: 100%;
+    background-color: #ffffff;
+    border-top: 2px solid #1F509A;
+    position: absolute;
+    top: 60px; /* Adjusted to avoid overlapping */
+    left: 0;
+    padding: 10px 0;
+    z-index: 1000;
+  }
+
+  .menu li {
+    padding: 10px 20px;
+  }
+
+  .menu li a {
+    font-size: 28px;
+    margin: 0;
+  }
+
+  .open-menu {
+    display: block;
+    font-size: 48px;
+  }
+
+  #check:checked ~ .menu {
+    display: flex;
+  }
+}
+
+
 @media (max-width: 1024px) {
   .nav-bar {
     flex-wrap: wrap;
@@ -116,7 +161,7 @@ body {
 
   .logo img {
     width: 370px;
-    margin-top: -150px;
+    margin-top: -140px;
   }
 
   .menu {
@@ -640,6 +685,56 @@ footer {
 /* Media Queries */
 
 /* For devices with a max width of 1024px (Tablets in landscape mode and smaller) */
+@media (max-width: 1280px) {
+  .footer-container {
+    flex-direction:row;
+    align-items: center;
+    padding: 20px;
+    gap: 30px; /* Increase the gap between sections */
+  }
+
+  .footer-section {
+    flex: unset; /* Reset flex property */
+    text-align: center; /* Center align content */
+  }
+
+  .footer-section.logo img {
+    width: 300px;
+    margin-left: 30px; /* Center the logo */
+    margin-top: -60px;
+  }
+
+  .footer-section.logo p{
+    margin-top: 25px;
+    margin-left: 10px;
+  }
+
+  .footer-container .footer-section.logo h2{
+    margin-top: 100px;
+  }
+
+  .footer-section h2,
+  .footer-section h3 {
+    margin-left: 0; /* Remove unnecessary margins */
+    margin-top: -15px;
+  }
+
+  .footer-section.location iframe {
+    width: 1080px;
+    height: 250px;
+    margin: 0 auto;
+    margin-left: 60px;
+  }
+
+  .social-icons a {
+    font-size: 25px; /* Adjust icon size */
+  }
+
+  .footer-section.logo .social-icons{
+    margin-left: 20px;
+  }
+}
+
 @media (max-width: 1024px) {
   .footer-container {
     flex-direction: column; /* Stack the sections vertically */

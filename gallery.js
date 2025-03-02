@@ -3,8 +3,6 @@ document.addEventListener("DOMContentLoaded", function () {
       .then(response => response.text())
       .then(data => {
           document.getElementById("navbar-container").innerHTML = data;
-
-          // Add smooth scrolling after navbar is loaded
           setupMenu();
       })
       .catch(error => console.error("Error loading navbar:", error));
@@ -49,8 +47,6 @@ const images = [
 ];
 
 const gallery = document.getElementById('gallery');
-
-// Duplicate images array to create an infinite loop effect
 const imageList = [...images, ...images];
 
 imageList.forEach(src => {

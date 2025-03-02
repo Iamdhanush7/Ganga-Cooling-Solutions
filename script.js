@@ -3,8 +3,6 @@ document.addEventListener("DOMContentLoaded", function () {
       .then(response => response.text())
       .then(data => {
           document.getElementById("navbar-container").innerHTML = data;
-
-          // Add smooth scrolling after navbar is loaded
           setupMenu();
       })
       .catch(error => console.error("Error loading navbar:", error));
@@ -42,11 +40,11 @@ function animateCounter(id, start, end, duration) {
   const timer = setInterval(() => {
     current += increment;
     if ((increment > 0 && current >= end) || (increment < 0 && current <= end)) {
-      current = end; // Ensure it ends exactly at `end`
+      current = end; 
       clearInterval(timer);
     }
     element.textContent = current;
-  }, 10); // Update every 10ms for smoother animation
+  }, 10); 
 }
 
 //Hero page
@@ -71,7 +69,6 @@ readMore.addEventListener('click', () => {
 });
 
   //Products section
-  // Redirect to product.html with category query parameter
   function redirectToCategory(category) {
     window.location.href = `products.html?category=${category}`;
   }
@@ -195,7 +192,7 @@ const companyCards = document.querySelectorAll(".company-card");
 const categoryTitle = document.querySelector(".clients h3");
 
 function changeContent() {
-  index = (index + 1) % 4; // Cycle through 4 slides
+  index = (index + 1) % 4; 
 
   for (let i = 0; i < companyCards.length; i++) {
       let newIndex = index * 4 + i;
@@ -206,7 +203,7 @@ function changeContent() {
       companyCards[i].querySelector(".description").innerText = descriptions[newIndex];
   }
 
-  categoryTitle.innerText = categories[index]; // Change <h3> title dynamically
+  categoryTitle.innerText = categories[index]; 
   updateDots();
 }
 
@@ -217,7 +214,7 @@ function updateDots() {
 }
 
 function startSlider() {
-  interval = setInterval(changeContent, 3000); // Change every 3 seconds
+  interval = setInterval(changeContent, 3000); 
 }
 
 function stopSlider() {

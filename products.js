@@ -3,8 +3,6 @@ document.addEventListener("DOMContentLoaded", function () {
       .then(response => response.text())
       .then(data => {
           document.getElementById("navbar-container").innerHTML = data;
-
-          // Add smooth scrolling after navbar is loaded
           setupMenu();
       })
       .catch(error => console.error("Error loading navbar:", error));
@@ -91,13 +89,9 @@ function renderProducts(category) {
   productData[category].forEach((product, index) => {
     const productCard = document.createElement("div");
     productCard.classList.add("product-card");
-
-    // Animation delay for staggered effect
     setTimeout(() => {
       productCard.classList.add("morph-in");
     }, index * 150);
-
-    // Create the product card content
     const fullDescription = product.description;
     const truncatedDescription =
       fullDescription.length > 100
@@ -116,14 +110,10 @@ function renderProducts(category) {
 
     productContainer.appendChild(productCard);
   });
-
-  // Attach event listeners for "Read More" and "View" buttons
   attachProductEventListeners();
 }
 
-// Attach event listeners for product cards
 function attachProductEventListeners() {
-  // Handle "Read More" toggles
   const readMoreElements = document.querySelectorAll(".read-more");
   readMoreElements.forEach((element) => {
     element.addEventListener("click", (e) => {
@@ -131,14 +121,12 @@ function attachProductEventListeners() {
       const isExpanded = parentParagraph.classList.contains("expanded");
 
       if (isExpanded) {
-        // Collapse the description
         parentParagraph.innerHTML = `
           ${parentParagraph.dataset.truncated}
           <span class="read-more">Read More</span>
         `;
         parentParagraph.classList.remove("expanded");
       } else {
-        // Expand the description
         parentParagraph.innerHTML = `
           ${parentParagraph.dataset.full}
           <span class="read-more">Read Less</span>
@@ -149,17 +137,14 @@ function attachProductEventListeners() {
     });
   });
 
-  // Handle "View" button clicks
   const viewButtons = document.querySelectorAll(".view-button");
   viewButtons.forEach((button, index) => {
     button.addEventListener("click", () => {
       const category = document.querySelector(".category.active").dataset.category;
       const product = productData[category][index];
-
-      // Redirect to the respective page based on product name
       const productPageUrl = productPageUrls[product.name];
       if (productPageUrl) {
-        window.location.href = productPageUrl; // Redirect to the product page
+        window.location.href = productPageUrl; 
       } else {
         alert("Page for this product is not yet created!");
       }
@@ -186,7 +171,6 @@ function handleCategoryClick(category, element) {
   }, 500);
 }
 
-// Load the initial category based on the query parameter or default to 'ac'
 function loadCategoryFromQuery() {
   const params = new URLSearchParams(window.location.search);
   const category = params.get("category") || "ac";

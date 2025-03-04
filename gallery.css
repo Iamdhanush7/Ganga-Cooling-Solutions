@@ -238,7 +238,7 @@
   }
 
   .open-menu {
-    right: 10px;
+    right: 20px;
     font-size: 32px;
   }
 
@@ -958,6 +958,7 @@ footer {
   bottom: 40px;
   right: 40px;
   z-index: 1000;
+  margin-right: -22px;
 }
 
 .whatsapp-float a {

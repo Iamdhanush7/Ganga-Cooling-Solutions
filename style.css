@@ -948,11 +948,27 @@ html {
   }
 }
 
+@media (max-width: 1024px){
+  .container .image-section img{
+    margin-left: 85px;
+  }
+}
+
+@media (max-width: 850px){
+  .container .image-section img{
+    margin-left: 85px;
+  }
+}
+
 /* Small Screens (Mobile: 480px - 768px) */
 @media (max-width: 768px) {
   .content-section h1 {
     font-size: 1.8rem;
     line-height: 1.2;
+  }
+
+  .container .image-section img{
+    margin-left: 75px;
   }
 
   .content-section p {
@@ -1198,12 +1214,12 @@ button:hover {
   }
 
   h1 {
-    font-size: 1.4rem;
+    font-size: 2rem;
     margin-bottom: 25px;
   }
 
   .subtext {
-    font-size: 0.85rem;
+    font-size: 1.85rem;
     margin-top: 30px;
   }
 
@@ -1217,20 +1233,20 @@ button:hover {
   }
 
   .logo-container {
-    width: 60px;
-    height: 60px;
+    width: 80px;
+    height: 80px;
   }
 
   .card h3 {
-    font-size: 1rem;
+    font-size: 2rem;
   }
 
   .card p {
-    font-size: 0.8rem;
+    font-size: 1.8rem;
   }
 
   button {
-    font-size: 0.9rem;
+    font-size: 1.9rem;
     padding: 0.5rem 1.2rem;
   }
 }

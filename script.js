@@ -150,7 +150,7 @@ const logos = [
   "https://res.cloudinary.com/dyk23evs1/image/upload/v1740825685/h1_jerixn.png", 
   "https://res.cloudinary.com/dyk23evs1/image/upload/v1740825685/h2_opkgbf.png", 
   "https://res.cloudinary.com/dyk23evs1/image/upload/v1740825685/h3_fvqjxc.png", 
-  "https://res.cloudinary.com/dyk23evs1/image/upload/v1740825685/h3_fvqjxc.png",
+  "images/h4.png",
   "https://res.cloudinary.com/dyk23evs1/image/upload/v1740825678/apollo_cygyhu.png", 
   "https://res.cloudinary.com/dyk23evs1/image/upload/v1740825684/fortis_gpabph.png", 
   "https://res.cloudinary.com/dyk23evs1/image/upload/v1740825688/narayana_dxtpix.png", 

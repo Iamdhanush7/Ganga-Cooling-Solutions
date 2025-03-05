@@ -150,7 +150,7 @@ const logos = [
   "https://res.cloudinary.com/dyk23evs1/image/upload/v1740825685/h1_jerixn.png", 
   "https://res.cloudinary.com/dyk23evs1/image/upload/v1740825685/h2_opkgbf.png", 
   "https://res.cloudinary.com/dyk23evs1/image/upload/v1740825685/h3_fvqjxc.png", 
-  "images/h4.png",
+  "images/h44.svg",
   "https://res.cloudinary.com/dyk23evs1/image/upload/v1740825678/apollo_cygyhu.png", 
   "https://res.cloudinary.com/dyk23evs1/image/upload/v1740825684/fortis_gpabph.png", 
   "https://res.cloudinary.com/dyk23evs1/image/upload/v1740825688/narayana_dxtpix.png", 
@@ -160,7 +160,7 @@ const logos = [
 const titles = [
   "Velca", "DHL", "IFB", "CTCI",
   "Prestige", "Shobha", "Godrej", "Ozone",
-  "Breeze Hotel", "Sattva", "Zion", "Bridge",
+  "Breeze Hotel", "Sattva", "Zion", "Golden Cherry",
   "Apollo", "Fortis", "Narayana", "Max"
 ];
 
@@ -176,7 +176,7 @@ const descriptions = [
   "Breeze Hotel offers unparalleled hospitality and comfort.", 
   "Sattva Hotels deliver luxurious experiences in serene environments.", 
   "Zion Hotels offers comfort and luxury for memorable stays.", 
-  "Bridge Hotels combine elegance with state-of-the-art facilities.",
+  "Golden Cherry Hotel offers luxury, comfort, and exceptional hospitality in a prime location.",
   "Apollo is a pioneer in healthcare, offering world-class medical services.", 
   "Fortis Healthcare excels in quality healthcare and advanced technology.", 
   "Narayana Health delivers affordable and high-quality medical care.", 
